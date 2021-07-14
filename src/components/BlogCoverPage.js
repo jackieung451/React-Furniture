@@ -7,6 +7,7 @@ import HomeTwo from "../images/img2.jpg";
 import HomeThree from "../images/img4.jpg";
 import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import Thanksgiving from "../pages/Thanksgiving";
+import FengShui from "../pages/FengShui";
 
 const Section = styled.section`
   width: 100%;
@@ -104,9 +105,12 @@ const BlogCoverPage = () => {
             >
               <Image src={HomeOne} alt="home" />
               <h2>Ideas de Decoracion Thanksgiving</h2>
-              <Link to="../Thanksgiving">Ver Mas</Link>
-              <Arrow />
-
+              {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
+              <Arrow /> */}
+              <InfoLink to="/Thanksgiving">
+                <p>Ver Mas</p>
+                <Arrow />
+              </InfoLink>
               {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
@@ -131,7 +135,8 @@ const BlogCoverPage = () => {
                 `}
               />
               <h2>Decoracion Feng Shui para tu Hogar</h2>
-              <InfoLink to="/homes">
+              {/* <Link to="../FengShui">Ver Mas</Link> */}
+              <InfoLink to="/FengShui">
                 <p>Ver Mas</p>
                 <Arrow />
               </InfoLink>
@@ -187,6 +192,9 @@ const BlogCoverPage = () => {
         {/* <Redirect from="/BlogCoverPage/" to="/Thanksgiving" /> */}
         <Redirect path="/Thanksgiving">
           <Thanksgiving />
+        </Redirect>
+        <Redirect path="/FengShui">
+          <FengShui />
         </Redirect>
       </Switch>
     </BrowserRouter>

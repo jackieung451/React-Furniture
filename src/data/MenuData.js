@@ -7,6 +7,7 @@ export const menuData = [
 
 export const menuDataTwo = [
   { title: "Thanksgiving", link: "/Thanksgiving" },
+  { title: "FengShui", link: "/FengShui" },
   { title: "Catalog", link: "/catalog" },
   { title: "Blog", link: "/blog" },
   { title: "History", link: "/history" },

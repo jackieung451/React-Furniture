@@ -14,6 +14,7 @@ import "aos/dist/aos.css";
 import Blog from "./pages/Blog";
 import History from "./pages/History";
 import Thanksgiving from "./pages/Thanksgiving";
+import FengShui from "./pages/FengShui";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,6 +47,7 @@ function App() {
         <Route path="/history" component={History} />
         <Route path="/contact" component={Contact} />
         <Route path="/Thanksgiving" component={Thanksgiving} />
+        <Route path="/FengShui" component={FengShui} />
       </Switch>
 
       <Footer />
