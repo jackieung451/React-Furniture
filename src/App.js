@@ -6,11 +6,14 @@ import Footer from "./components/Footer";
 import { Switch, Route, useLocation } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/About";
-import Rentals from "./pages/Rentals";
-import Homes from "./pages/Homes";
+// import Rentals from "./pages/Blog";
+import Catalog from "./pages/Catalog";
 import Contact from "./pages/Contact";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Blog from "./pages/Blog";
+import History from "./pages/History";
+import Thanksgiving from "./pages/Thanksgiving";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,10 +40,12 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/homes" component={Homes} />
-        <Route path="/rentals" component={Rentals} />
+        <Route path="/about" component={Home} />
+        <Route path="/catalog" component={Catalog} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/history" component={History} />
         <Route path="/contact" component={Contact} />
+        <Route path="/Thanksgiving" component={Thanksgiving} />
       </Switch>
 
       <Footer />

@@ -1,9 +1,11 @@
 import React from "react";
 import Hero from "../components/Hero";
+import Listings from "../components/Listings";
+// import Features from "../components/Features";
 import { SliderDataTwo } from "../data/SliderData";
 
-const Rentals = () => {
+const Catalog = () => {
   return <Hero slides={SliderDataTwo} />;
 };
 
-export default Rentals;
+export default Catalog;

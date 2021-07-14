@@ -10,9 +10,10 @@ const Home = () => {
   return (
     <>
       <Hero slides={SliderData} />
-      <InfoSection {...InfoData} />
+      {/* <InfoSection {...InfoData} /> */}
       <Listings />
-      <Features />
+      {/* <Features /> */}
+      <br />
       <InfoSection {...InfoDataTwo} />
     </>
   );

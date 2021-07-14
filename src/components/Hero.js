@@ -200,7 +200,7 @@ const Hero = ({ slides }) => {
                       >
                         {slide.price}
                       </p>
-                      <Button
+                      {/* <Button
                         data-aos="zoom-out"
                         data-aos-duration="500"
                         data-aos-delay="250"
@@ -212,7 +212,7 @@ const Hero = ({ slides }) => {
                       >
                         {slide.label}
                         <Arrow />
-                      </Button>
+                      </Button> */}
                     </HeroContent>
                   </HeroSlider>
                 )}

@@ -27,7 +27,7 @@ const NavLink = css`
 
 const Logo = styled(Link)`
   ${NavLink}
-  font-style: italic;
+  font-style: bold;
 `;
 
 const MenuBars = styled(FaBars)`
@@ -50,7 +50,7 @@ const NavMenu = styled.div`
   align-items: center;
   margin-right: -48px;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -63,7 +63,7 @@ const NavBtn = styled.div`
   display: flex;
   align-items: center;
   margin-right: 24px;
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -94,13 +94,13 @@ const Navbar = ({ toggle }) => {
 
   let style = {
     backgroundColor:
-      navbar || location.pathname !== "/" ? "#CD853F" : "transparent",
+      navbar || location.pathname !== "/" ? "#264348" : "transparent",
     transition: "0.4s",
   };
 
   return (
     <Nav style={style}>
-      <Logo to="/">LA Nayarit Furniture</Logo>
+      <Logo to="/">La Nayarit Furniture</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (

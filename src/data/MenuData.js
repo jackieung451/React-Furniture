@@ -1,5 +1,13 @@
 export const menuData = [
-  { title: "About", link: "/about" },
-  { title: "Homes", link: "/homes" },
-  { title: "Rentals", link: "/rentals" },
+  { title: "Home", link: "/" },
+  { title: "Catalog", link: "/catalog" },
+  { title: "Blog", link: "/blog" },
+  { title: "History", link: "/history" },
+];
+
+export const menuDataTwo = [
+  { title: "Thanksgiving", link: "/Thanksgiving" },
+  { title: "Catalog", link: "/catalog" },
+  { title: "Blog", link: "/blog" },
+  { title: "History", link: "/history" },
 ];

@@ -2,68 +2,96 @@ import ImageOne from "../images/img1.jpg";
 import ImageTwo from "../images/img2.jpg";
 import ImageThree from "../images/img3.jpg";
 import ImageFour from "../images/img4.jpg";
-import ImageFive from "../images/img5.jpg";
-import ImageSix from "../images/img6.jpg";
-import ImageSeven from "../images/img7.jpg";
+import ImageFive from "../images/img15.jpg";
+import ImageSix from "../images/img16.jpg";
+import ImageSeven from "../images/img17.jpg";
+import ImageEight from "../images/img18.jpg";
+import ImageNine from "../images/img19.jpg";
+import styled from "styled-components";
 
 export const SliderData = [
   {
-    title: "Luxury Villa in Bali, Indonesia",
-    price: "$4280000",
-    path: "/homes",
-    label: "View Home",
+    title: "Muebles de alta calidad",
+    price: "AL ALCANCE DE TODOS",
+    // path: "/homes",
+    // label: "View Home",
     image: ImageOne,
-    alt: "House",
+    alt: "Furniture",
   },
   {
-    title: "House in San Jose, Costa Rica",
-    price: "$2860000",
-    path: "/homes",
-    label: "View Home",
+    title: "Muebles de alta calidad",
+    price: "AL ALCANCE DE TODOS",
+    // path: "/homes",
+    // label: "View Home",
     image: ImageTwo,
-    alt: "House",
+    alt: "Furniture",
   },
   {
-    title: "House in Calabasas, California",
-    price: "$8420000",
-    path: "/homes",
-    label: "View Home",
+    title: "Muebles de alta calidad",
+    price: "AL ALCANCE DE TODOS",
+    // path: "/homes",
+    // label: "View Home",
     image: ImageThree,
-    alt: "House",
+    alt: "Furniture",
   },
-  {
-    title: "House in Houston, Texas",
-    price: "$6660000",
-    path: "/homes",
-    label: "View Home",
-    image: ImageFour,
-    alt: "House",
-  },
+  // {
+  //   title: "Muebles de alta calidad",
+  //   price: "AL ALCANCE DE TODOS",
+  //   // path: "/homes",
+  //   // label: "View Home",
+  //   image: ImageFour,
+  //   alt: "Furniture",
+  // },
 ];
+
+// const price = styled.div`
+//   width: 50px;
+// `;
 
 export const SliderDataTwo = [
   {
-    title: "House in Las Vegas, Nevada",
-    price: "$8980000",
-    path: "/homes",
-    label: "View Home",
+    title: "SALAS",
+    price:
+      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
+    path: "/catalog",
+    label: "Catalog",
     image: ImageFive,
-    alt: "House",
+    alt: "Furniture",
   },
   {
-    title: "House in Houston, Texas",
-    price: "$3,460,000",
-    path: "/homes",
-    label: "View Home",
+    title: "COMEDORES",
+    price:
+      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
+    path: "/catalog",
+    label: "Catalog",
     image: ImageSix,
-    alt: "House",
+    alt: "Furniture",
   },
   {
-    title: "House in Alajuela, Costa Rica",
-    price: "$8420000",
-    path: "/homes",
-    label: "View Home",
+    title: "FUTON/SOFA-CAMA",
+    price:
+      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
+    path: "/catalog",
+    label: "Catalog",
     image: ImageSeven,
-    alt: "House",
+    alt: "Furniture",
+  },
+  {
+    title: "RECAMARAS",
+    price:
+      "La recamara es el lugar mas intimo de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de recamaras, para que tu encuentres la que es perfecta para ti y tu familia.",
+    path: "/catalog",
+    label: "Catalog",
+    image: ImageEight,
+    alt: "Furniture",
+  },
+  {
+    title: "BUNK BEDS/LITERAS",
+    price:
+      "La recamara es el lugar mas intimo de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de recamaras, para que tu encuentres la que es perfecta para ti y tu familia.",
+    path: "/catalog",
+    label: "Catalog",
+    image: ImageNine,
+    alt: "Furniture",
   },
 ];

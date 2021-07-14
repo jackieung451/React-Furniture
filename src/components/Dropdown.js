@@ -10,7 +10,7 @@ const DropdownContainer = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #cd853f;
+  background: #696969;
   display: grid;
   align-items: center;
   top: 0;
@@ -66,6 +66,8 @@ const DropdownLink = styled(Link)`
 const BtnWrap = styled.div`
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 4rem;
 `;
 
 const Dropdown = ({ isOpen, toggle }) => {

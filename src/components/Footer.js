@@ -14,20 +14,24 @@ const Section = styled.section`
   background: #000d1a;
   color: #fff;
   width: 100%;
-  min-height: 600px;
-  padding: 3rem FaCalculator((100vw - 1300px) / 2);
+  ${
+    "" /* min-height: 600px;
+  padding: 3rem FaCalculator((100vw - 1300px) / 2); */
+  }
 `;
 
 const Container = styled.div`
   height: 100%;
   width: 100%;
-  padding: 2rem;
+  ${"" /* padding: 2rem; */}
 `;
 
 const FooterTop = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 4rem 0rem;
+  justify-content: center;
+  padding: 0rem 4rem;
+  ${"" /* padding: 4rem 0rem; */}
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -37,15 +41,36 @@ const Quote = styled.div`
   flex: 1;
   padding: 2rem 0rem;
 
-  h3 {
+  h6 {
     font-size: clamp(2rem, 8vw, 5rem);
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    line-height: 3;
+  }
+
+  ${
+    "" /* h3 {
+    font-size: clamp(2rem, 8vw, 5rem);
+  } */
   }
 `;
 const FooterInfo = styled.div`
   padding: 2rem;
   line-height: 3;
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  max-width: 700px;
+  ${
+    "" /* display: flex;
+  flex-direction: row; */
+  }
+  justify-content: space-around;
+  margin: auto;
 
   a {
     color: #fff;
@@ -53,12 +78,13 @@ const FooterInfo = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 0rem;
+    padding: 1rem 1rem;
   }
 `;
 const FooterBottom = styled.div`
   display: flex;
-  padding: 2rem 0rem;
+  justify-content: center;
+  padding: 0rem 0rem 1rem 0rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -67,6 +93,7 @@ const FooterBottom = styled.div`
 
 const SocialIcons = styled.div`
   display: flex;
+  justify-content: center;
   width: 50%;
 
   @media screen and (max-width: 768px) {
@@ -95,14 +122,14 @@ const Youtube = styled(FaYoutube)`
 `;
 
 const Contact = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
   }
 `;
 
@@ -112,23 +139,26 @@ const Footer = () => {
       <Container>
         <FooterTop>
           <Quote>
-            <h3>
-              Let's find <br /> your Dream Home
-            </h3>
+            <h6>Open: Monday to Saturday </h6>
+            <h6>10:00am - 7:00pm</h6>
+            <h6>Sunday 10:00am - 3:00pm</h6>
+            <p>2619 N Broadway Los Angeles, CA 90031</p>
+            <p>Call Now 323.247.9094</p>
           </Quote>
-          <FooterInfo>
-            <h4>Contact Us</h4>
-            <Link to="/homes">FAQ</Link>
-            <Link to="/homes">Support</Link>
-            <Link to="/homes">Questions</Link>
-          </FooterInfo>
-          <FooterInfo>
-            <h4>Offices</h4>
-            <Link to="/homes">United States</Link>
-            <Link to="/homes">Europe</Link>
-            <Link to="/homes">Canada</Link>
-          </FooterInfo>
         </FooterTop>
+        <FooterInfo>
+          <h4>Contact Us</h4>
+          <Link to="/homes">FAQ</Link>
+          <Link to="/homes">Support</Link>
+          <Link to="/homes">Questions</Link>
+        </FooterInfo>
+        {/* <FooterInfo>
+          <h4>Offices</h4>
+          <Link to="/homes">United States</Link>
+          <Link to="/homes">Europe</Link>
+          <Link to="/homes">Canada</Link>
+        </FooterInfo> */}
+
         <FooterBottom>
           <SocialIcons>
             <a
@@ -160,11 +190,11 @@ const Footer = () => {
               <LinkedIn />
             </a>
           </SocialIcons>
-          <Contact>
+          {/* <Contact>
             <Button to="/homes">
               Let's Chat <IoMdArrowRoundForward />
             </Button>
-          </Contact>
+          </Contact> */}
         </FooterBottom>
       </Container>
     </Section>
