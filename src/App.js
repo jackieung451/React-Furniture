@@ -3,9 +3,15 @@ import Dropdown from "./components/Dropdown";
 import Navbar from "./components/Navbar";
 import GlobalStyle from "./globalStyles";
 import Footer from "./components/Footer";
-import { Switch, Route, useLocation } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  useLocation,
+  Redirect,
+  BrowserRouter,
+} from "react-router-dom";
 import Home from "./pages";
-import About from "./pages/About";
+// import About from "./pages/About";
 // import Rentals from "./pages/Blog";
 import Catalog from "./pages/Catalog";
 import Contact from "./pages/Contact";
@@ -15,6 +21,7 @@ import Blog from "./pages/Blog";
 import History from "./pages/History";
 import Thanksgiving from "./pages/Thanksgiving";
 import FengShui from "./pages/FengShui";
+import Celebration from "./data/Celebration";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +42,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
@@ -49,9 +56,8 @@ function App() {
         <Route path="/Thanksgiving" component={Thanksgiving} />
         <Route path="/FengShui" component={FengShui} />
       </Switch>
-
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

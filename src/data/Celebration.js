@@ -20,7 +20,7 @@ const Heading = styled.div`
   h1 {
     display: flex;
     justify-content: center;
-    padding: 5rem 0 0 0;
+    padding: 0rem 0 0 0;
   }
 
   @media screen and (max-width: 768px) {

@@ -1,11 +1,18 @@
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
-import { BrowserRouter, Link } from "react-router-dom";
+// import {  } from "react-router-dom";
 import styled from "styled-components/macro";
 import HomeOne from "../images/img7.jpg";
 import HomeTwo from "../images/img2.jpg";
 import HomeThree from "../images/img4.jpg";
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  Switch,
+  Route,
+  NavLink,
+  Redirect,
+} from "react-router-dom";
 import Thanksgiving from "../pages/Thanksgiving";
 import FengShui from "../pages/FengShui";
 
@@ -22,7 +29,7 @@ const Container = styled.div`
 const Heading = styled.div`
   font-size: 1.5rem;
   ${"" /* padding: 2rem 1rem; */}
-  margin-bottom: 40px;
+  margin-top: 0px;
 
   h1 {
     display: flex;
@@ -51,11 +58,11 @@ const InfoWrap = styled.div`
   height: 100%;
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 400;
   }
   @media screen and (max-width: 768px) {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 `;
 const Image = styled.img`
@@ -64,7 +71,8 @@ const Image = styled.img`
   max-width: 600px;
   max-height: 400px;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 5rem;
 `;
 const InfoLink = styled(Link)`
 display: flex;
@@ -86,7 +94,7 @@ const BlogCoverPage = () => {
     <BrowserRouter>
       <Section>
         <Container>
-          <Heading>
+          {/* <Heading>
             <h1
               data-aos="fade-right"
               data-aos-duration="1000"
@@ -95,7 +103,7 @@ const BlogCoverPage = () => {
             >
               Todo lo que necesita para el hogar
             </h1>
-          </Heading>
+          </Heading> */}
           <InfoRow>
             <InfoWrap
               data-aos="zoom-out-up"
@@ -107,10 +115,13 @@ const BlogCoverPage = () => {
               <h2>Ideas de Decoracion Thanksgiving</h2>
               {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
               <Arrow /> */}
-              <InfoLink to="/Thanksgiving">
+              <Link to="/Thanksgiving">
+                {/* <Route path="/Thanksgiving" component={Thanksgiving} />
+              <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
+                {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
                 <p>Ver Mas</p>
                 <Arrow />
-              </InfoLink>
+              </Link>
               {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
@@ -127,12 +138,12 @@ const BlogCoverPage = () => {
               <Image
                 src={HomeTwo}
                 alt="home"
-                css={`
-                  // margin-top: 120px;
-                  @media screen and (max-width: 768px) {
-                    margin-top: 0px;
-                  }
-                `}
+                // css={`
+                // margin-top: 120px;
+                // @media screen and (max-width: 768px) {
+                //   margin-top: 0px;
+                // }
+                // `}
               />
               <h2>Decoracion Feng Shui para tu Hogar</h2>
               {/* <Link to="../FengShui">Ver Mas</Link> */}
@@ -150,12 +161,12 @@ const BlogCoverPage = () => {
               <Image
                 src={HomeTwo}
                 alt="home"
-                css={`
-                  // margin-top: 120px;
-                  @media screen and (max-width: 768px) {
-                    margin-top: 0px;
-                  }
-                `}
+                // css={`
+                //   // margin-top: 120px;
+                //   @media screen and (max-width: 768px) {
+                //     margin-top: 0px;
+                //   }
+                // `}
               />
               <h2>Decoracion Tendencias en Interiores</h2>
               <InfoLink to="/homes">
@@ -188,15 +199,20 @@ const BlogCoverPage = () => {
           </InfoRow>
         </Container>
       </Section>
-      <Switch>
-        {/* <Redirect from="/BlogCoverPage/" to="/Thanksgiving" /> */}
-        <Redirect path="/Thanksgiving">
-          <Thanksgiving />
-        </Redirect>
-        <Redirect path="/FengShui">
-          <FengShui />
-        </Redirect>
-      </Switch>
+
+      {/* <Redirect from="/BlogCoverPage/" to="/Thanksgiving" /> */}
+
+      <Redirect path="/Thanksgiving">
+        <Thanksgiving />
+      </Redirect>
+      <Route path="/Thanksgiving" component={Thanksgiving} />
+      {/* <Thanksgiving />
+         <Redirect>
+         
+        {/* <Route path="/FengShui" component={FengShui} /> */}
+      <Route path="/FengShui" component={FengShui} />
+      {/* <FengShui />
+        </Redirect> */}
     </BrowserRouter>
   );
 };
