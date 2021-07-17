@@ -22,6 +22,14 @@ const Heading = styled.div`
     justify-content: center;
     padding: 5rem 0 0 0;
   }
+  p {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0 0 0;
+  }
+  ul {
+    padding: 2rem;
+  }
 
   @media screen and (max-width: 768px) {
     text-align: start;
@@ -65,7 +73,7 @@ const InfoWrap = styled.div`
   }
 `;
 
-const Celebration = () => {
+const InteriorDesign = () => {
   return (
     <Section>
       <Container>
@@ -76,7 +84,7 @@ const Celebration = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            Ideas de Decoracion Thanksgiving
+            Decoracion Tendencias en Interiores
           </h1>
         </Heading>
         <InfoRow>
@@ -89,62 +97,68 @@ const Celebration = () => {
             {/* <Image src={HomeOne} alt="home" /> */}
 
             <Image src={HomeThree} alt="home" />
-            <h3>1. Una mesa en tonos tierra</h3>
+            <h3>1. Estilo nórdico predominaba en términos de decoración </h3>
+            <br />
+            <h2>
+              Ahora se busca romper con la neutralidad de los espacios nórdicos
+              combinándolo con piezas modernas y tapizados mas arriesgados.
+            </h2>
+            <h2>Para ello puedes usar:</h2>
+            <br />
+            <ul>
+              <li>
+                <strong>Corcho</strong>: se suele usar en la fabricación de
+                muebles, pero también para revestir paredes, además sirve para
+                aislar del ruido en ciertas zonas de nuestro hogar como la
+                habitación de los más pequeños.
+              </li>
+              <li>
+                <strong>Baldosas</strong>: como decíamos, se dejan de lado los
+                tonos fríos y nada mejor que las baldosas de terracota con
+                acabado mate para ello. No sólo sirven para el suelo ya que
+                también pueden usarse para revestir paredes o chimeneas.
+              </li>
+              <li>
+                <strong>Cabeceros tapizados</strong>: actualmente se usan
+                cabeceros de madera lisa o con algún detalle, pero próximamente
+                veremos cómo los tapizados, tanto los clásicos con botones y
+                tonos neutros, como los de terciopelo, se irán imponiendo poco a
+                poco.
+              </li>
+            </ul>
+            <br />
+            <h3>2. Decoración de interiores en salones modernos</h3>
             <br />
             <p>
-              Siguiendo el color característico del otoño, podemos poner un
-              mantel marrón o un mantel blanco con manteles individuales en
-              tonos marrones. Un buen recurso son las piezas de esparto o
-              loneta, no es caro y el efecto es muy rústico. Si la mesa es
-              grande, ancha y de madera es perfecto para no poner mantel y
-              simplemente complementar con algún detalle.
+              En los salones modernos, se buscan colores que ayuden a dar más
+              amplitud a la estancia. Esto se puede conseguir con colores
+              frescos y neutros.
             </p>
-            <br />
-            <h3>2. Naturaleza en la mesa de acción de gracias</h3>
-            <br />
             <p>
-              Preparando centros de mesa con flores secas y velas hechas a mano
-              con flores secas. Con parafina y hojas secas nos quedarán unas
-              velas muy bonitas. Cuándo las encendamos crearemos ese ambiente
-              tan tierno, cálido y familiar que nos trasmite la llama de las
-              velas.
+              Aunque se pueden llegar a{" "}
+              <strong>mezclar hasta tres colores en un salón</strong>, siempre
+              habrá uno que predomine sobre el resto y los demás servirán para
+              embellecer la estancia.
             </p>
-            <br />
-            <h3>
-              3. Los colores protagonistas pueden ser los marrones, anaranjados
-              o amarillos{" "}
-            </h3>
-            <br />
             <p>
-              Siguiendo la línea podemos hacer un detalle para cada comensal y
-              añadirle un cartelito con su nombre. Por ejemplo, con una piña
-              seca, de las que en esta época encontramos por el suelo, un trozo
-              de papel semejando antigüedad (Con café y quemando los bordes) y
-              un trozo de hilo hacemos un detalle muy sencillo y propio de la
-              decoración de Thanskgiving.
+              Algunos colores que veremos dentro de poco resaltando salones de
+              todo el mundo serán:
             </p>
-            <br />
-            <h3>4. Adornar los exteriores de casa</h3>
-            <br />
-            <p>
-              Colocar detalles en la entrada de la casa, como por ejemplo
-              podemos hacer un adorno para la puerta o también se pueden
-              comprar. Colocar unas manzanas rojas, como las que encontramos en
-              la frutería y unas hojas secas en la entrada. Hacemos una figura
-              con las manzanas y será un detalle que sorprenda a nuestros seres
-              queridos antes de ver la mesa que tenemos preparada para acción de
-              gracias.
-            </p>
-            <br />
-            <h3>5. Preparar la mesa con adornos Otoñales</h3>
-            <br />
-            <p>
-              Otra de las ideas para sorprender a nuestra familia en acción de
-              gracias es preparando una mesa con frutas de otoño, hojas secas,
-              velas blancas y, en el centro de la mesa podemos poner un jarrón
-              con ramas (enteras) que hayan estado cayendo estos días de los
-              árboles.
-            </p>
+            <ul>
+              <li>
+                <strong>Inspirados en el universo</strong>: colores como el
+                morado, azul o metálicos.
+              </li>
+              <li>
+                <strong>Verde oscuro</strong>: aporta profundidad a las
+                habitaciones y combina bien con el blanco y colores neutros como
+                el beige.
+              </li>
+              <li>
+                <strong>Rosa o fucsia</strong>: darán el toque brillante en un
+                salón donde el blanco sea el color principal.
+              </li>
+            </ul>
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>
@@ -200,4 +214,4 @@ const Celebration = () => {
   );
 };
 
-export default Celebration;
+export default InteriorDesign;

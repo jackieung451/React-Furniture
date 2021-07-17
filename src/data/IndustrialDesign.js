@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components/macro";
 import HomeThree from "../images/img7.jpg";
+import HomeTwo from "../images/img6.jpg";
+import HomeOne from "../images/img5.jpg";
 
 const Section = styled.section`
   width: 100%;
@@ -65,7 +67,7 @@ const InfoWrap = styled.div`
   }
 `;
 
-const Celebration = () => {
+const IndustrialDesign = () => {
   return (
     <Section>
       <Container>
@@ -76,7 +78,7 @@ const Celebration = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            Ideas de Decoracion Thanksgiving
+            Decoracion Industrial
           </h1>
         </Heading>
         <InfoRow>
@@ -89,62 +91,54 @@ const Celebration = () => {
             {/* <Image src={HomeOne} alt="home" /> */}
 
             <Image src={HomeThree} alt="home" />
-            <h3>1. Una mesa en tonos tierra</h3>
+
+            <p>
+              Sí, lo sé, la decoración industrial tiene poco de natural. Pero un
+              toque aquí y otro allá, siempre le aporta elegancia a cualquier
+              interior.
+            </p>
+            <p>
+              Predominantemente masculino, es un estilo que surgió en Nueva York
+              durante la década de los 50, cuando jóvenes artistas comenzaron a
+              instalarse en amplias y espaciosas fábricas abandonadas en busca
+              de <strong>espacio</strong> y <strong>luz.</strong>
+            </p>
+            <Image src={HomeTwo} alt="home" />
             <br />
             <p>
-              Siguiendo el color característico del otoño, podemos poner un
-              mantel marrón o un mantel blanco con manteles individuales en
-              tonos marrones. Un buen recurso son las piezas de esparto o
-              loneta, no es caro y el efecto es muy rústico. Si la mesa es
-              grande, ancha y de madera es perfecto para no poner mantel y
-              simplemente complementar con algún detalle.
+              Con el tiempo, el estilo evolucionó en lo que hoy conocemos como{" "}
+              <strong>lofts</strong>.
             </p>
             <br />
-            <h3>2. Naturaleza en la mesa de acción de gracias</h3>
+            <h3>1. Elementos estructurales a la vista</h3>
             <br />
             <p>
-              Preparando centros de mesa con flores secas y velas hechas a mano
-              con flores secas. Con parafina y hojas secas nos quedarán unas
-              velas muy bonitas. Cuándo las encendamos crearemos ese ambiente
-              tan tierno, cálido y familiar que nos trasmite la llama de las
-              velas.
+              La decoración de estilo industrial se caracteriza por no
+              enmascarar ni ocultar los materiales de construcción y no tener
+              miedo en mostrar sus estructuras al desnudo:
             </p>
+            <ul>
+              <li>Vigas de madera sin tratar</li>
+              <li>Paredes de ladrillos vista</li>
+              <li>Hierro y hormigón al descubierto</li>
+              <li>Ventanas desnudas</li>
+              <li>Tuberías y conductos de metal</li>
+            </ul>
+            <br />
+            <Image src={HomeOne} alt="home" />
             <br />
             <h3>
-              3. Los colores protagonistas pueden ser los marrones, anaranjados
-              o amarillos{" "}
+              2. La decoración industrial es un estilo que se ha convertido en
+              una de las mayores tendencias en el mundo del diseño de interiores
+              de los últimos años. Paredes de ladrillos vistas, vigas de madera,
+              muebles vintage…{" "}
             </h3>
-            <br />
             <p>
-              Siguiendo la línea podemos hacer un detalle para cada comensal y
-              añadirle un cartelito con su nombre. Por ejemplo, con una piña
-              seca, de las que en esta época encontramos por el suelo, un trozo
-              de papel semejando antigüedad (Con café y quemando los bordes) y
-              un trozo de hilo hacemos un detalle muy sencillo y propio de la
-              decoración de Thanskgiving.
+              No hay duda de que la decoración de estilo industrial seguirá
+              siendo una de las grandes tendencias de este 2019.
             </p>
-            <br />
-            <h3>4. Adornar los exteriores de casa</h3>
-            <br />
-            <p>
-              Colocar detalles en la entrada de la casa, como por ejemplo
-              podemos hacer un adorno para la puerta o también se pueden
-              comprar. Colocar unas manzanas rojas, como las que encontramos en
-              la frutería y unas hojas secas en la entrada. Hacemos una figura
-              con las manzanas y será un detalle que sorprenda a nuestros seres
-              queridos antes de ver la mesa que tenemos preparada para acción de
-              gracias.
-            </p>
-            <br />
-            <h3>5. Preparar la mesa con adornos Otoñales</h3>
-            <br />
-            <p>
-              Otra de las ideas para sorprender a nuestra familia en acción de
-              gracias es preparando una mesa con frutas de otoño, hojas secas,
-              velas blancas y, en el centro de la mesa podemos poner un jarrón
-              con ramas (enteras) que hayan estado cayendo estos días de los
-              árboles.
-            </p>
+            <p>¿Te animas a darle un acento industrial a tu hogar?</p>
+
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>
@@ -200,4 +194,4 @@ const Celebration = () => {
   );
 };
 
-export default Celebration;
+export default IndustrialDesign;

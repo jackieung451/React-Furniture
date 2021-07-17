@@ -12,6 +12,8 @@ import {
   Route,
   NavLink,
   Redirect,
+  useRouteMatch,
+  useHistory,
 } from "react-router-dom";
 import Thanksgiving from "../pages/Thanksgiving";
 import FengShui from "../pages/FengShui";
@@ -90,11 +92,13 @@ const Arrow = styled(IoMdArrowForward)`
 `;
 
 const BlogCoverPage = () => {
+  let history = useHistory();
+  // const { path, url } = useRouteMatch();
   return (
-    <BrowserRouter>
-      <Section>
-        <Container>
-          {/* <Heading>
+    // <BrowserRouter>
+    <Section>
+      <Container>
+        {/* <Heading>
             <h1
               data-aos="fade-right"
               data-aos-duration="1000"
@@ -104,116 +108,143 @@ const BlogCoverPage = () => {
               Todo lo que necesita para el hogar
             </h1>
           </Heading> */}
-          <InfoRow>
-            <InfoWrap
-              data-aos="zoom-out-up"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              data-aos-anchor-placement="center bottom"
-            >
-              <Image src={HomeOne} alt="home" />
-              <h2>Ideas de Decoracion Thanksgiving</h2>
-              {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
+        <InfoRow>
+          <InfoWrap
+            data-aos="zoom-out-up"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            <Image src={HomeTwo} alt="home" />
+            <h2>Ideas de Decoracion Thanksgiving</h2>
+            {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
               <Arrow /> */}
-              <Link to="/Thanksgiving">
-                {/* <Route path="/Thanksgiving" component={Thanksgiving} />
+            <button
+              onClick={() => {
+                history.push("/Thanksgiving");
+              }}
+            >
+              {/* <Route path="/Thanksgiving" component={Thanksgiving} />
               <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
-                {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
-                <p>Ver Mas</p>
-                <Arrow />
-              </Link>
-              {/* <Image src={HomeThree} alt="home" />
+              {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
+              Ver Mas
+              {/* <p>Ver Mas</p>
+              <Arrow /> */}
+            </button>
+            {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow /> */}
-              {/* </InfoLink> */}
-            </InfoWrap>
-            <InfoWrap
-              data-aos="zoom-out-down"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              data-aos-anchor-placement="center bottom"
+            {/* </InfoLink> */}
+          </InfoWrap>
+          <InfoWrap
+            data-aos="zoom-out-down"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            <Image
+              src={HomeTwo}
+              alt="home"
+              // css={`
+              // margin-top: 120px;
+              // @media screen and (max-width: 768px) {
+              //   margin-top: 0px;
+              // }
+              // `}
+            />
+            <h2>Decoracion Feng Shui para tu Hogar</h2>
+            <button
+              onClick={() => {
+                history.push("/FengShui");
+              }}
             >
-              <Image
-                src={HomeTwo}
-                alt="home"
-                // css={`
-                // margin-top: 120px;
-                // @media screen and (max-width: 768px) {
-                //   margin-top: 0px;
-                // }
-                // `}
-              />
-              <h2>Decoracion Feng Shui para tu Hogar</h2>
-              {/* <Link to="../FengShui">Ver Mas</Link> */}
-              <InfoLink to="/FengShui">
-                <p>Ver Mas</p>
-                <Arrow />
-              </InfoLink>
-            </InfoWrap>
-            <InfoWrap
-              data-aos="zoom-out-down"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              data-aos-anchor-placement="center bottom"
+              Ver Mas
+            </button>
+            {/* <Link to="../FengShui">Ver Mas</Link> */}
+            {/* <InfoLink to="/FengShui">
+              <p>Ver Mas</p>
+              <Arrow />
+            </InfoLink> */}
+          </InfoWrap>
+          <InfoWrap
+            data-aos="zoom-out-down"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            <Image
+              src={HomeTwo}
+              alt="home"
+              // css={`
+              //   // margin-top: 120px;
+              //   @media screen and (max-width: 768px) {
+              //     margin-top: 0px;
+              //   }
+              // `}
+            />
+            <h2>Decoracion Tendencias en Interiores</h2>
+            <button
+              onClick={() => {
+                history.push("/Interior");
+              }}
             >
-              <Image
-                src={HomeTwo}
-                alt="home"
-                // css={`
-                //   // margin-top: 120px;
-                //   @media screen and (max-width: 768px) {
-                //     margin-top: 0px;
-                //   }
-                // `}
-              />
-              <h2>Decoracion Tendencias en Interiores</h2>
-              <InfoLink to="/homes">
-                <p>Ver Mas</p>
-                <Arrow />
-              </InfoLink>
-            </InfoWrap>
-            <InfoWrap
-              data-aos="zoom-out-down"
-              data-aos-duration="1200"
-              data-aos-once="true"
-              data-aos-anchor-placement="center bottom"
+              Ver Mas
+            </button>
+            {/* <InfoLink to="/homes">
+              <p>Ver Mas</p>
+              <Arrow />
+            </InfoLink> */}
+          </InfoWrap>
+          <InfoWrap
+            data-aos="zoom-out-down"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            <Image
+              src={HomeTwo}
+              alt="home"
+              // css={`
+              //   // margin-top: 120px;
+              //   @media screen and (max-width: 768px) {
+              //     margin-top: 0px;
+              //   }
+              // `}
+            />
+            <h2>Decoracion Industrial</h2>
+            <button
+              onClick={() => {
+                history.push("/Industrial");
+              }}
             >
-              <Image
-                src={HomeTwo}
-                alt="home"
-                css={`
-                  // margin-top: 120px;
-                  @media screen and (max-width: 768px) {
-                    margin-top: 0px;
-                  }
-                `}
-              />
-              <h2>Decoracion Industrial</h2>
-              <InfoLink to="/homes">
-                <p>Ver Mas</p>
-                <Arrow />
-              </InfoLink>
-            </InfoWrap>
-          </InfoRow>
-        </Container>
-      </Section>
+              Ver Mas
+            </button>
+            {/* <InfoLink to="/homes">
+              <p>Ver Mas</p>
+              <Arrow />
+            </InfoLink> */}
+          </InfoWrap>
+        </InfoRow>
+      </Container>
+    </Section>
 
-      {/* <Redirect from="/BlogCoverPage/" to="/Thanksgiving" /> */}
-
-      <Redirect path="/Thanksgiving">
-        <Thanksgiving />
-      </Redirect>
-      <Route path="/Thanksgiving" component={Thanksgiving} />
-      {/* <Thanksgiving />
+    /* <Redirect from="/BlogCoverPage/" to="/Thanksgiving" /> */
+    /* <Switch>
+        {/* <Redirect path={`${path}/Thanksgiving`}>
+          <Thanksgiving />
+        </Redirect> */
+    /* <Route path={`${path}/Thanksgiving`} component={Thanksgiving} /> */
+    /* <Thanksgiving />
          <Redirect>
          
-        {/* <Route path="/FengShui" component={FengShui} /> */}
-      <Route path="/FengShui" component={FengShui} />
-      {/* <FengShui />
-        </Redirect> */}
-    </BrowserRouter>
+        {/* <Route path="/FengShui" component={FengShui} /> */
+    /* <Route path="/FengShui" component={FengShui} /> */
+    /* <FengShui />
+        </Redirect> */
+    /* </Switch> */
+    /* </BrowserRouter> */
   );
 };
 

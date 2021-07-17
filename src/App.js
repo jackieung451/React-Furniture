@@ -22,6 +22,8 @@ import History from "./pages/History";
 import Thanksgiving from "./pages/Thanksgiving";
 import FengShui from "./pages/FengShui";
 import Celebration from "./data/Celebration";
+import InteriorDesign from "./data/InteriorDesign";
+import IndustrialDesign from "./data/IndustrialDesign";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,13 +50,15 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/about" component={Home} />
-        <Route path="/catalog" component={Catalog} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/history" component={History} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/Thanksgiving" component={Thanksgiving} />
-        <Route path="/FengShui" component={FengShui} />
+        <Route path="/about" exact component={Home} />
+        <Route path="/catalog" exact component={Catalog} />
+        <Route path="/blog" exact component={Blog} />
+        <Route path="/history" exact component={History} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/Thanksgiving" exact component={Thanksgiving} />
+        <Route path="/FengShui" exact component={FengShui} />
+        <Route path="/Interior" exact component={InteriorDesign} />
+        <Route path="/Industrial" exact component={IndustrialDesign} />
       </Switch>
       <Footer />
     </BrowserRouter>
