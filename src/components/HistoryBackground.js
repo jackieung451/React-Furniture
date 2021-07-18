@@ -5,10 +5,13 @@ import styled from "styled-components/macro";
 // import HomeOne from "../images/img7.jpg";
 // import HomeTwo from "../images/img2.jpg";
 // import HomeThree from "../images/img4.jpg";
+import HistoryOne from "../images/img51.png";
+import HistoryTwo from "../images/img52.jpeg";
+import HistoryThree from "../images/img53.jpg";
 
 const Section = styled.section`
   width: 100%;
-  height: 100;
+  height: 100%;
   ${"" /* padding: 10rem calc((100vw - 1300px) / 2); */}
 `;
 const Container = styled.div`
@@ -56,6 +59,21 @@ const InfoWrap = styled.div`
     margin-bottom: 1rem;
   }
 `;
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0 0 2rem 0;
+`;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  margin-top: 5rem;
+`;
 // const Image = styled.img`
 //   width: 100%;
 //   height: 100%;
@@ -101,15 +119,16 @@ const HistoryBackground = () => {
             data-aos-anchor-placement="center bottom"
           >
             {/* <Image src={HomeOne} alt="home" /> */}
-            <h2>Nuestra Historia</h2>
+            <h2>
+              <strong>Nuestra Historia</strong>
+            </h2>
             <p>
               Fundado por Jose y su esposa, La Nayarit Furniture fue creada con
               el enfoque de poder servir más de cerca las necesidades de
               nuestros residentes de Lincoln Heights y sus alrededores.
             </p>
             <br />
-            <br />
-            <br />
+
             <p>
               Para nosotros, los mas importante es siempre ofrecer muebles de la
               mas alta calidad a un precio que sea accesible para nuestra
@@ -119,9 +138,7 @@ const HistoryBackground = () => {
               articulo deseado.
             </p>
             <br />
-            <br />
-            <br />
-            <br />
+
             <p>
               Jose Sanchez llego de Mexico como la mayoría de personas, buscando
               una mejor opción para el y su familia. Al poco tiempo de haber
@@ -138,6 +155,11 @@ const HistoryBackground = () => {
               excelente servicio y siempre poniendo las necesidades de el
               cliente primero.
             </p>
+            <ImageContainer>
+              <Image src={HistoryOne} alt="history" />
+              <Image src={HistoryTwo} alt="history" />
+              <Image src={HistoryThree} alt="history" />
+            </ImageContainer>
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>

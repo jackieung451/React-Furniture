@@ -5,7 +5,11 @@ import { Button } from "./Button";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  ${"" /* padding: 4rem 0rem; */}
+  padding: 4rem 0rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0rem 0rem;
+  }
 `;
 
 const Container = styled.div`
@@ -30,7 +34,7 @@ const ColumnLeft = styled.div`
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
   h1 {
-    ${"" /* margin-top: 4rem; */}
+     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
   }
@@ -39,22 +43,29 @@ const ColumnLeft = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    display: flex;
-    flex: 0 0 50%;}
+    margin-bottom: 0rem;
+    ${
+      "" /* display: flex;
+    flex: 0 0 50%;} */
+    }
 
 `;
 const ColumnRight = styled.div`
-  padding: 1rem 2rem 0rem 2rem;
+  padding: 0rem 2rem 0rem 2rem;
   order: ${({ reverse }) => (reverse ? "2" : "1")};
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 0rem;
 
   @media screen and (max-width: 768px) {
     order: ${({ reverse }) => (reverse ? "1" : "2")};
-    display: flex;
-    flex: 0 0 50%;
+    margin-top: 0rem;
+
+    ${
+      "" /* display: flex;
+    flex: 0 0 50%; */
+    }
   }
 
   img {
@@ -65,6 +76,7 @@ const ColumnRight = styled.div`
     @media screen and (max-width: 768px) {
       width: 90%;
       height: 90%;
+      margin-top: 0rem;
     }
   }
 `;

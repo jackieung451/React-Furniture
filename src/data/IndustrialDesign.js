@@ -101,8 +101,9 @@ const IndustrialDesign = () => {
               Predominantemente masculino, es un estilo que surgió en Nueva York
               durante la década de los 50, cuando jóvenes artistas comenzaron a
               instalarse en amplias y espaciosas fábricas abandonadas en busca
-              de <strong>espacio</strong> y <strong>luz.</strong>
+              de <strong>espacio</strong> y <strong>luz</strong>.
             </p>
+            <br />
             <Image src={HomeTwo} alt="home" />
             <br />
             <p>
@@ -117,6 +118,7 @@ const IndustrialDesign = () => {
               enmascarar ni ocultar los materiales de construcción y no tener
               miedo en mostrar sus estructuras al desnudo:
             </p>
+            <br />
             <ul>
               <li>Vigas de madera sin tratar</li>
               <li>Paredes de ladrillos vista</li>
@@ -133,6 +135,7 @@ const IndustrialDesign = () => {
               de los últimos años. Paredes de ladrillos vistas, vigas de madera,
               muebles vintage…{" "}
             </h3>
+            <br />
             <p>
               No hay duda de que la decoración de estilo industrial seguirá
               siendo una de las grandes tendencias de este 2019.

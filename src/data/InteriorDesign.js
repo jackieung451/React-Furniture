@@ -23,12 +23,11 @@ const Heading = styled.div`
     padding: 5rem 0 0 0;
   }
   p {
-    display: flex;
+    ${
+      "" /* display: flex;
     justify-content: center;
-    padding: 5rem 0 0 0;
-  }
-  ul {
-    padding: 2rem;
+    padding: 5rem 0 0 0; */
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -64,6 +63,12 @@ const InfoWrap = styled.div`
   height: 100%;
   margin-bottom: 2rem;
 
+  ul {
+    vertical-align: middle;
+    ${"" /* text-align: right; */}
+    ${"" /* margin-top: 2rem; */}
+  }
+
   h2 {
     margin-bottom: 1rem;
     font-weight: 400;
@@ -97,13 +102,14 @@ const InteriorDesign = () => {
             {/* <Image src={HomeOne} alt="home" /> */}
 
             <Image src={HomeThree} alt="home" />
+
             <h3>1. Estilo nórdico predominaba en términos de decoración </h3>
             <br />
-            <h2>
+            <p>
               Ahora se busca romper con la neutralidad de los espacios nórdicos
               combinándolo con piezas modernas y tapizados mas arriesgados.
-            </h2>
-            <h2>Para ello puedes usar:</h2>
+            </p>
+            <p>Para ello puedes usar:</p>
             <br />
             <ul>
               <li>
@@ -144,6 +150,7 @@ const InteriorDesign = () => {
               Algunos colores que veremos dentro de poco resaltando salones de
               todo el mundo serán:
             </p>
+            <br />
             <ul>
               <li>
                 <strong>Inspirados en el universo</strong>: colores como el
