@@ -28,21 +28,21 @@ const Container = styled.div`
   width: 100%;
   ${"" /* padding: 2rem 1rem; */}
 `;
-const Heading = styled.div`
-  font-size: 1.5rem;
-  ${"" /* padding: 2rem 1rem; */}
-  margin-top: 0px;
+// const Heading = styled.div`
+//   font-size: 1.5rem;
+//   ${"" /* padding: 2rem 1rem; */}
+//   margin-top: 0px;
 
-  h1 {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0 0 0;
-  }
+//   h1 {
+//     display: flex;
+//     justify-content: center;
+//     padding: 1rem 0 0 0;
+//   }
 
-  @media screen and (max-width: 768px) {
-    text-align: start;
-  }
-`;
+//   @media screen and (max-width: 768px) {
+//     text-align: start;
+//   }
+// `;
 const InfoRow = styled.div`
   display: flex;
   flex-direction: row;

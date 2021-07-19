@@ -35,19 +35,25 @@ const Container = styled.div`
 //   }
 // `;
 const InfoRow = styled.div`
-  display: flex;
-  flex-direction: row;
+  ${
+    "" /* display: flex;
+  flex-direction: row; */
+  }
   ${"" /* padding: 1rem 0rem; */}
   justify-content: space-around;
   margin: 0 200px 0 200px;
 
   @media screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-direction: column;
+    justify-content: center;
   }
 `;
 const InfoWrap = styled.div`
-  padding: 0rem 1rem;
-  min-height: 550px;
+  padding: 0rem 1rem 0rem 0rem;
+  ${"" /* min-height: 550px; */}
   height: 100%;
 
   h2 {
@@ -56,24 +62,57 @@ const InfoWrap = styled.div`
     font-weight: 400;
   }
   @media screen and (max-width: 768px) {
-    margin-bottom: 1rem;
+    ${"" /* padding-right: 5rem; */}
+    display: flex;
+    flex-flow: column;
+    justiy-content: flex-start;
+  }
+  @media screen and (max-width: 320px) {
+    padding-right: 5rem;
   }
 `;
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-content: center;
+  text-content: center;
   padding: 0 0 2rem 0;
+  flex-wrap: wrap;
 `;
+
+const ImageWrap = styled.div`
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  width: 280px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+`;
+
 const Image = styled.img`
   width: 100%;
   height: 100%;
   max-width: 600px;
   max-height: 400px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
-  margin-top: 5rem;
+  ${
+    "" /* margin-bottom: 0.5rem;
+  margin-top: 5rem; */
+  }
+  @media screen and (max-width: 320px) {
+    padding-right: 5rem;
+  }
 `;
+
+/* @media screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    ${"" /* flex-direction: column; */
+/* justify-content: center; */
+
 // const Image = styled.img`
 //   width: 100%;
 //   height: 100%;
@@ -155,12 +194,19 @@ const HistoryBackground = () => {
               excelente servicio y siempre poniendo las necesidades de el
               cliente primero.
             </p>
-            <ImageContainer>
+          </InfoWrap>
+          <ImageContainer>
+            <ImageWrap>
               <Image src={HistoryOne} alt="history" />
+            </ImageWrap>
+            <ImageWrap>
               <Image src={HistoryTwo} alt="history" />
+            </ImageWrap>
+            <ImageWrap>
               <Image src={HistoryThree} alt="history" />
-            </ImageContainer>
-            {/* <h3>
+            </ImageWrap>
+          </ImageContainer>
+          {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>
             <br />
@@ -170,24 +216,24 @@ const HistoryBackground = () => {
             <h3>
               (323) 247-9094 <br /> sales@lanayaritfurniture.com
             </h3> */}
-            {/* <InfoLink to="/homes">
+          {/* <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-            {/* <Image src={HomeThree} alt="home" />
+          {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow /> */}
-            {/* </InfoLink> */}
-          </InfoWrap>
-          <InfoWrap
+          {/* </InfoLink> */}
+
+          {/* <InfoWrap
             data-aos="zoom-out-down"
             data-aos-duration="1200"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
-          >
-            {/* <Image
+          > */}
+          {/* <Image
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13219.034848151507!2d-118.22374474556887!3d34.07569910088133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd15fe4935319e285!2sLa%20Nayarit%20Furniture!5e0!3m2!1sen!2sus!4v1625958138842!5m2!1sen!2sus"
               width="600"
               height="450"
@@ -195,7 +241,7 @@ const HistoryBackground = () => {
               // allowfullscreen=""
               // loading="lazy"
             /> */}
-            {/* alt="home"
+          {/* alt="home"
               css={`
                 // margin-top: 120px;
                 @media screen and (max-width: 768px) {
@@ -203,12 +249,12 @@ const HistoryBackground = () => {
                 }
               `}
             /> */}
-            {/* <h2>Recamaras</h2>
+          {/* <h2>Recamaras</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-          </InfoWrap>
+          {/* </InfoWrap> */}
         </InfoRow>
       </Container>
     </Section>

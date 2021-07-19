@@ -602,6 +602,7 @@ const ColumnLeft = styled.div`
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0rem;
+    padding-left: 4rem
     ${
       "" /* display: flex;
     flex: 0 0 50%;} */
@@ -651,6 +652,7 @@ const ColumnRight = styled.div`
       width: 90%;
       height: 90%;
       margin-top: 0rem;
+      object-fit: cover;
     }
   }
 `;
