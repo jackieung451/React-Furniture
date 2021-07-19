@@ -2,11 +2,11 @@ import ImageOne from "../images/img1.jpg";
 import ImageTwo from "../images/img2.jpg";
 import ImageThree from "../images/img3.jpg";
 import ImageFour from "../images/img4.jpg";
-import ImageFive from "../images/img15.jpg";
-import ImageSix from "../images/img16.jpg";
-import ImageSeven from "../images/img17.jpg";
-import ImageEight from "../images/img18.jpg";
-import ImageNine from "../images/img19.jpg";
+import ImageFive from "../images/img81.jpg";
+import ImageSix from "../images/img84.jpg";
+import ImageSeven from "../images/img85.jpg";
+import ImageEight from "../images/img83.jpg";
+import ImageNine from "../images/img82.jpg";
 import styled from "styled-components";
 
 export const SliderData = [
@@ -51,7 +51,7 @@ export const SliderData = [
 export const SliderDataTwo = [
   {
     title: "SALAS",
-    price:
+    caption:
       "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
     path: "/catalog",
     label: "Catalog",
@@ -60,25 +60,16 @@ export const SliderDataTwo = [
   },
   {
     title: "COMEDORES",
-    price:
-      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
+    caption:
+      "El comedor es donde la familia comparte alimentos, risas, amor y hace memorias. Nosotros sabemos la importancia de esta parte de tu hogar y es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de comedores, para que tu encuentres la que es perfecta para ti y tu familia.",
     path: "/catalog",
     label: "Catalog",
     image: ImageSix,
     alt: "Furniture",
   },
   {
-    title: "FUTON/SOFA-CAMA",
-    price:
-      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
-    path: "/catalog",
-    label: "Catalog",
-    image: ImageSeven,
-    alt: "Furniture",
-  },
-  {
     title: "RECAMARAS",
-    price:
+    caption:
       "La recamara es el lugar mas intimo de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de recamaras, para que tu encuentres la que es perfecta para ti y tu familia.",
     path: "/catalog",
     label: "Catalog",
@@ -86,8 +77,18 @@ export const SliderDataTwo = [
     alt: "Furniture",
   },
   {
+    title: "FUTON/SOFA-CAMA",
+    caption:
+      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
+    path: "/catalog",
+    label: "Catalog",
+    image: ImageSeven,
+    alt: "Furniture",
+  },
+
+  {
     title: "BUNK BEDS/LITERAS",
-    price:
+    caption:
       "La recamara es el lugar mas intimo de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de recamaras, para que tu encuentres la que es perfecta para ti y tu familia.",
     path: "/catalog",
     label: "Catalog",
