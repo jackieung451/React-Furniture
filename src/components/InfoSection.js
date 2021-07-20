@@ -5,7 +5,7 @@ import { Button } from "./Button";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  padding: 4rem 0rem;
+  ${"" /* padding: 4rem 0rem; */}
 `;
 
 const Container = styled.div`
@@ -74,12 +74,12 @@ const InfoSection = ({
           <h1>{heading}</h1>
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          <Button to="/homes" primary="true">
+          <Button to="/about-us" primary="true">
             {buttonLabel}
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
-          <img src={image} alt="home" />
+          <img src={image} alt="hairstyle" />
         </ColumnRight>
       </Container>
     </Section>

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "./Button";
-import ImageOne from "../images/img4.jpg";
+import ImageOne from "../images/img7.jpg";
 
 const Section = styled.section`
   background: #000d1a;
-  padding: 12rem 0rem;
+  padding: 3.5rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,10 +27,12 @@ const ColumnLeft = styled.div`
   margin: 0px -15px;
   justify-content: flex-start;
   padding: 1rem;
+  margin-bottom: 90px;
 `;
 
 const Content = styled.div`
   flex: 0 0 50%;
+  line-height: 1.8;
 
   @media screen and (max-width: 768px) {
     flex: 0 0 100%;
@@ -41,21 +43,39 @@ const Content = styled.div`
   h1 {
     margin-bottom: 2rem;
     font-size: 2 rem;
+    display: flex;
+
+    justify-content: center;
   }
 
-  p {
+  ul {
     margin-bottom: 1rem;
     line-height: 1.5;
+    font-weight: 400px;
+    padding: 0rem 12rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
   }
 `;
 const ColumnRight = styled.div`
   position: absolute;
-  top: -80px;
+  top: 0px;
   right: 0;
   max-width: 850px;
-  height: 140%;
+  height: 100%;
   width: 45%;
   padding-left: 1rem;
+  margin-bottom: 90px;
 
   @media screen and (max-width: 768px) {
     height: 320px;
@@ -78,10 +98,23 @@ const Features = () => {
         <Wrap>
           <ColumnLeft>
             <Content>
-              <h1>Stunning Interior</h1>
-              <p>Loerefasfasfasfdsafas</p>
-              <p>Lorwerewrfwewewfwa</p>
-              <Button to="/homes">Learn More</Button>
+              <h1>Our Services</h1>
+              <ul>
+                <li>Make Up</li>
+                <li>Hair Dye</li>
+                <li>Hair Cuts</li>
+                <li>Hair Style</li>
+                <li>Permanent</li>
+                <li>Comb Over</li>
+                <li>Permanent Straightening Wax</li>
+                <li>Low Taper</li>
+                <li>High Taper</li>
+                <li>Under Cut</li>
+                <li>Mid Fade Pompadour</li>
+                <div>
+                  <Button to="/contact-us">Call Now</Button>
+                </div>
+              </ul>
             </Content>
           </ColumnLeft>
           <ColumnRight>

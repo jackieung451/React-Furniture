@@ -2,13 +2,19 @@ import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
-import HomeOne from "../images/img1.jpg";
-import HomeTwo from "../images/img2.jpg";
+import HairOne from "../images/img2.jpg";
+import HairTwo from "../images/img36.jpg";
 
 const Section = styled.section`
   width: 100%;
   height: 100;
-  padding: 10rem calc((100vw - 1300px) / 2);
+  ${"" /* padding: 10rem calc((100vw - 1300px) / 2); */}
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 `;
 const Container = styled.div`
   height: 100%;
@@ -17,8 +23,13 @@ const Container = styled.div`
 `;
 const Heading = styled.div`
   font-size: 1.5rem;
-  padding: 2rem 1rem;
+  ${"" /* padding: 2rem 1rem; */}
   margin-bottom: 40px;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
 
   @media screen and (max-width: 768px) {
     text-align: start;
@@ -27,7 +38,9 @@ const Heading = styled.div`
 const InfoRow = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 1rem 0rem;
+  ${"" /* padding: 1rem 0rem; */}
+  justify-content: space-around;
+  margin: 0 200px 0 200px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -74,36 +87,43 @@ const Listings = () => {
     <Section>
       <Container>
         <Heading>
-          <h1>View our newest Homes</h1>
+          <h1>Special</h1>
         </Heading>
         <InfoRow>
           <InfoWrap>
-            <Image src={HomeOne} alt="home" />
-            <h2>8 Bed 10 Bath House in Venice, California</h2>
-            <InfoLink to="/homes">
+            <Image src={HairOne} alt="color and highlights" />
+            <h2>
+              Color & Highlights <br />
+              <span>FREE</span> Treatment
+            </h2>
+            <InfoLink to="/about-us">
               <p>View Details</p>
               <Arrow />
             </InfoLink>
           </InfoWrap>
           <InfoWrap>
             <Image
-              src={HomeTwo}
-              alt="home"
+              src={HairTwo}
+              alt="specials on makeup and hairstyles"
               css={`
-                margin-top: 120px;
+                // margin-top: 120px;
                 @media screen and (max-width: 768px) {
                   margin-top: 0px;
                 }
               `}
             />
-            <h2>4 Bed 2 Bath House in Miami, Florida</h2>
-            <InfoLink to="/homes">
+            <h2>
+              Ask For Our Specials On <br />
+              Makeup & Hairstyle For Any Events
+            </h2>
+            <InfoLink to="/about-us">
               <p>View Details</p>
               <Arrow />
             </InfoLink>
           </InfoWrap>
         </InfoRow>
       </Container>
+      <h3>Valid only with the flyer!</h3>
     </Section>
   );
 };
