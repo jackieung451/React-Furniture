@@ -147,7 +147,7 @@ const Footer = () => {
           </Quote>
         </FooterTop>
         <FooterInfo>
-          <h4>Contact Us</h4>
+          <Link to="/contact">Contact Us</Link>
           <Link to="/homes">FAQ</Link>
           <Link to="/homes">Support</Link>
           <Link to="/homes">Questions</Link>

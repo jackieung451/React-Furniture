@@ -2,9 +2,10 @@ import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
 // import {  } from "react-router-dom";
 import styled from "styled-components/macro";
-import HomeOne from "../images/img7.jpg";
-import HomeTwo from "../images/img2.jpg";
-import HomeThree from "../images/img4.jpg";
+import ImageOne from "../images/img91.jpg";
+import ImageTwo from "../images/img92.jpg";
+import ImageThree from "../images/img93.jpg";
+import ImageFour from "../images/img94.jpg";
 import {
   BrowserRouter,
   Link,
@@ -21,11 +22,18 @@ import FengShui from "../pages/FengShui";
 const Section = styled.section`
   width: 100%;
   height: 100%;
+  ${
+    "" /* @media screen and (max-width: 768px) {
+    padding: 5rem 0rem;
+    margin-bottom: 1rem;
+  } */
+  }
   ${"" /* padding: 10rem calc((100vw - 1300px) / 2); */}
 `;
 const Container = styled.div`
   height: 100%;
   width: 100%;
+
   ${"" /* padding: 2rem 1rem; */}
 `;
 // const Heading = styled.div`
@@ -44,39 +52,130 @@ const Container = styled.div`
 //   }
 // `;
 const InfoRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  ${"" /* padding: 1rem 0rem; */}
-  justify-content: space-around;
-  margin: 0 200px 0 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 500px;
+  justify-content: center;
+  ${"" /* flex-direction: column; */}
+  margin: 0rem 5rem 0rem 5rem;
+  padding: 10rem 0rem 0rem 0rem;
 
   @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin-bottom: 0rem;
+  }
+  ${"" /* padding: 1rem 0rem; */}
+
+  ${"" /* margin: 0 200px 0 200px; */}
+
+  ${
+    "" /* @media screen and (max-width: 768px) {
     flex-direction: column;
+  } */
   }
 `;
 const InfoWrap = styled.div`
-  padding: 0rem 1rem;
-  min-height: 550px;
-  height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin-bottom: 0rem;
+align-items: flex-start;
+${"" /* grid-template-columns: 1fr; */}
+  padding: 10rem 10rem;
+  ${"" /* margin-bottom: 10rem; */}
+  ${"" /* min-height: 550px; */}
+  ${"" /* height: 100%; */}
+button {background: black;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  min-width: 100px;
+  max-width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  ${"" /* transition: 0.3s; */}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 40px;
+  color: #fff;
+  font-size: 20px;
+  ${"" /* border-radius: 50px; */}
+
+  &:hover {
+    transform: translateY(-2px);
+  }}
 
   h2 {
     margin-bottom: 0.5rem;
     font-weight: 400;
   }
   @media screen and (max-width: 768px) {
+    margin: 10rem 0 0 0;
+    padding: 15rem 0 10rem 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media screen and (max-width: 320px) {
+    padding-right: 2rem;
+  }
+  ${
+    "" /* @media screen and (max-width: 768px) {
     margin-bottom: 0.5rem;
+  } */
   }
 `;
+const BoxOne = styled.div`
+  margin-bottom: 3rem;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  } ;
+`;
+const BoxTwo = styled.div`
+  margin-bottom: 3rem;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  } ;
+`;
+const BoxThree = styled.div`
+  margin-bottom: 3rem;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  } ;
+`;
+const BoxFour = styled.div`
+  margin-bottom: 3rem;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  } ;
+`;
+
 const Image = styled.img`
   width: 100%;
   height: 100%;
+
   max-width: 600px;
   max-height: 400px;
+
   object-fit: cover;
   margin-bottom: 0.5rem;
   margin-top: 5rem;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    height: 90%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    object-fit: contain;
+  }
 `;
-const InfoLink = styled(Link)`
+/* const InfoLink = styled(Link)`
 display: flex;
 align-items: center;
 text-decoration: none;
@@ -89,13 +188,12 @@ transition: 0.3s
 };`;
 const Arrow = styled(IoMdArrowForward)`
   margin-left: 10px;
-`;
+`; */
 
 const BlogCoverPage = () => {
   let history = useHistory();
-  // const { path, url } = useRouteMatch();
+
   return (
-    // <BrowserRouter>
     <Section>
       <Container>
         {/* <Heading>
@@ -115,28 +213,62 @@ const BlogCoverPage = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <Image src={HomeTwo} alt="home" />
-            <h2>Ideas de Decoracion Thanksgiving</h2>
-            {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
+            <BoxOne>
+              <Image src={ImageOne} alt="home" />
+              <h2>Ideas de Decoracion Thanksgiving</h2>
+              {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
               <Arrow /> */}
-            <button
-              onClick={() => {
-                history.push("/Thanksgiving");
-              }}
-            >
-              {/* <Route path="/Thanksgiving" component={Thanksgiving} />
+              <button
+                onClick={() => {
+                  history.push("/Thanksgiving");
+                }}
+              >
+                {/* <Route path="/Thanksgiving" component={Thanksgiving} />
               <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
-              {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
-              Ver Mas
-              {/* <p>Ver Mas</p>
+                {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
+                Ver Mas
+                {/* <p>Ver Mas</p>
               <Arrow /> */}
-            </button>
-            {/* <Image src={HomeThree} alt="home" />
+              </button>
+              {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow /> */}
-            {/* </InfoLink> */}
+              {/* </InfoLink> */}
+            </BoxOne>
+            {/* </InfoWrap>
+          <InfoWrap
+            data-aos="zoom-out-down"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          > */}
+            <BoxTwo>
+              <Image
+                src={ImageTwo}
+                alt="home"
+                // css={`
+                // margin-top: 120px;
+                // @media screen and (max-width: 768px) {
+                //   margin-top: 0px;
+                // }
+                // `}
+              />
+              <h2>Decoracion Feng Shui para tu Hogar</h2>
+              <button
+                onClick={() => {
+                  history.push("/FengShui");
+                }}
+              >
+                Ver Mas
+              </button>
+              {/* <Link to="../FengShui">Ver Mas</Link> */}
+              {/* <InfoLink to="/FengShui">
+              <p>Ver Mas</p>
+              <Arrow />
+            </InfoLink> */}
+            </BoxTwo>
           </InfoWrap>
           <InfoWrap
             data-aos="zoom-out-down"
@@ -144,87 +276,61 @@ const BlogCoverPage = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <Image
-              src={HomeTwo}
-              alt="home"
-              // css={`
-              // margin-top: 120px;
-              // @media screen and (max-width: 768px) {
-              //   margin-top: 0px;
-              // }
-              // `}
-            />
-            <h2>Decoracion Feng Shui para tu Hogar</h2>
-            <button
-              onClick={() => {
-                history.push("/FengShui");
-              }}
-            >
-              Ver Mas
-            </button>
-            {/* <Link to="../FengShui">Ver Mas</Link> */}
-            {/* <InfoLink to="/FengShui">
+            <BoxThree>
+              <Image
+                src={ImageThree}
+                alt="home"
+                // css={`
+                //   // margin-top: 120px;
+                //   @media screen and (max-width: 768px) {
+                //     margin-top: 0px;
+                //   }
+                // `}
+              />
+              <h2>Decoracion Tendencias en Interiores</h2>
+              <button
+                onClick={() => {
+                  history.push("/Interior");
+                }}
+              >
+                Ver Mas
+              </button>
+              {/* <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-          </InfoWrap>
+            </BoxThree>
+            {/* </InfoWrap>
           <InfoWrap
             data-aos="zoom-out-down"
             data-aos-duration="1200"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
-          >
-            <Image
-              src={HomeTwo}
-              alt="home"
-              // css={`
-              //   // margin-top: 120px;
-              //   @media screen and (max-width: 768px) {
-              //     margin-top: 0px;
-              //   }
-              // `}
-            />
-            <h2>Decoracion Tendencias en Interiores</h2>
-            <button
-              onClick={() => {
-                history.push("/Interior");
-              }}
-            >
-              Ver Mas
-            </button>
-            {/* <InfoLink to="/homes">
+          > */}
+            <BoxFour>
+              <Image
+                src={ImageFour}
+                alt="home"
+                // css={`
+                //   // margin-top: 120px;
+                //   @media screen and (max-width: 768px) {
+                //     margin-top: 0px;
+                //   }
+                // `}
+              />
+              <h2>Decoracion Industrial</h2>
+              <button
+                onClick={() => {
+                  history.push("/Industrial");
+                }}
+              >
+                Ver Mas
+              </button>
+              {/* <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-          </InfoWrap>
-          <InfoWrap
-            data-aos="zoom-out-down"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image
-              src={HomeTwo}
-              alt="home"
-              // css={`
-              //   // margin-top: 120px;
-              //   @media screen and (max-width: 768px) {
-              //     margin-top: 0px;
-              //   }
-              // `}
-            />
-            <h2>Decoracion Industrial</h2>
-            <button
-              onClick={() => {
-                history.push("/Industrial");
-              }}
-            >
-              Ver Mas
-            </button>
-            {/* <InfoLink to="/homes">
-              <p>Ver Mas</p>
-              <Arrow />
-            </InfoLink> */}
+            </BoxFour>
           </InfoWrap>
         </InfoRow>
       </Container>
@@ -244,7 +350,6 @@ const BlogCoverPage = () => {
     /* <FengShui />
         </Redirect> */
     /* </Switch> */
-    /* </BrowserRouter> */
   );
 };
 
