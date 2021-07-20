@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components/macro";
-import HomeThree from "../images/img8.jpg";
+import HomeThree from "../images/img92.jpg";
 
 const Section = styled.section`
   width: 100%;
-  height: 100;
+  height: 100%;
   ${"" /* padding: 10rem calc((100vw - 1300px) / 2); */}
 `;
 const Container = styled.div`
@@ -24,7 +24,8 @@ const Heading = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    text-align: start;
+    justify-center: center;
+    padding-left: 1rem;
   }
 `;
 const Image = styled.img`
@@ -43,7 +44,11 @@ const InfoRow = styled.div`
   margin: 0 200px 0 200px;
 
   @media screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-direction: column;
+    justify-content: center;
   }
 `;
 const InfoWrap = styled.div`
@@ -54,10 +59,27 @@ const InfoWrap = styled.div`
 
   h2 {
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 350;
   }
   @media screen and (max-width: 768px) {
-    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    min-width: 500px;
+  }
+  @media screen and (max-width: 500px) {
+    min-width: 300px;
+    padding-right: 2rem;
+  }
+  @media screen and (max-width: 320px) {
+    min-width: 280px;
+    padding-right: 5.5rem;
+    padding-left: 0rem;
+  }
+  @media screen and (max-width: 280px) {
+    min-width: 280px;
+    padding-right: 7.5rem;
+    padding-left: 0rem;
   }
 `;
 
@@ -72,7 +94,7 @@ const AsianEnergy = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            Decoración Feng Shui para tu Hogar
+            <strong>Decoración Feng Shui para tu Hogar</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -86,8 +108,10 @@ const AsianEnergy = () => {
 
             <Image src={HomeThree} alt="home" />
             <h2>
-              La decoración de tu hogar es esencial para armonizar el espacio y
-              atraer la energía positiva a tu vida.
+              <strong>
+                La decoración de tu hogar es esencial para armonizar el espacio
+                y atraer la energía positiva a tu vida.
+              </strong>
             </h2>
 
             <h3>

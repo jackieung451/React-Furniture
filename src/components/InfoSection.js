@@ -5,7 +5,7 @@ import { Button } from "./Button";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  padding: 4rem 0rem;
+  padding: 1rem 0rem;
 
   @media screen and (max-width: 768px) {
     padding: 0rem 0rem;

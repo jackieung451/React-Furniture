@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components/macro";
 import HomeOne from "../images/img34.jpg";
 import HomeTwo from "../images/img33.jpg";
@@ -23,13 +23,20 @@ const Heading = styled.div`
   ${"" /* margin-bottom: 40px; */}
 
   h1 {
-    display: flex;
+    display: grid;
+    grid-template-rows: 10px;
     justify-content: center;
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0 0rem 0;
+    margin-bottom: 5rem;
   }
 
   @media screen and (max-width: 768px) {
-    text-align: start;
+    justify-content: center;
+    margin-bottom: 8rem;
+  }
+  @media screen and (max-width: 540px) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 `;
 const InfoRow = styled.div`
@@ -41,7 +48,7 @@ const InfoRow = styled.div`
   flex-direction: row; */
   }
   ${"" /* padding: 1rem 0rem; */}
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 100px 0 100px;
 
   @media screen and (max-width: 768px) {
@@ -50,6 +57,7 @@ const InfoRow = styled.div`
     object-fit: cover; */
     }
     display: flex;
+    justify-content: center;
     flex-direction: column;
     object-fit: contain;
     ${
@@ -61,10 +69,34 @@ const InfoRow = styled.div`
 const InfoWrap = styled.div`
   padding: 0rem 1rem;
 
-  height: 100%;
+  height: 70%;
+
+  button {
+    background: black;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    min-width: 100px;
+    max-width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    ${"" /* transition: 0.3s; */}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    color: #fff;
+    font-size: 20px;
+    ${"" /* border-radius: 50px; */}
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
 
   h2 {
     margin-bottom: 0rem;
+    margin-top: 0rem;
     padding: 0 0 0 0;
   }
   ${
@@ -73,20 +105,28 @@ const InfoWrap = styled.div`
     padding: 0 0 0 0;
   } */
   }
+  @media screen and (min-width: 769px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    height: 50%;
+  }
   @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
     ${"" /* margin-bottom: 1rem; */}
     ${
       "" /* display: flex;
     flex-direction: column; */
     }
-    display: grid;
-    grid-template-columns: 1fr;
   }
 `;
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  margin-bottom: 0 0 0 0;
+  margin-bottom: 0;
+  margin-top: 0;
   padding: 0 0 0 0;
   ${
     "" /* max-width: 600px;
@@ -128,6 +168,7 @@ const Arrow = styled(IoMdArrowForward)`
 `;
 
 const Listings = () => {
+  let history = useHistory();
   return (
     <Section>
       <Container>
@@ -138,7 +179,7 @@ const Listings = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            Todo lo que necesita para el hogar
+            <strong>Todo lo que necesita para el hogar</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -165,8 +206,14 @@ const Listings = () => {
             />
             <h2>Salas</h2>
             <InfoLink to="/homes" alt="home">
-              <p>Ver Mas</p>
-              <Arrow />
+              <button
+                onClick={() => {
+                  history.push("/home");
+                }}
+              >
+                Ver Mas
+              </button>
+              {/* <Arrow /> */}
             </InfoLink>
           </InfoWrap>
           <InfoWrap
@@ -192,8 +239,14 @@ const Listings = () => {
             />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
-              <p>Ver Mas</p>
-              <Arrow />
+              <button
+                onClick={() => {
+                  history.push("/home");
+                }}
+              >
+                Ver Mas
+              </button>
+              {/* <Arrow /> */}
             </InfoLink>
           </InfoWrap>
           <InfoWrap
@@ -219,8 +272,14 @@ const Listings = () => {
             />
             <h2>Recamaras</h2>
             <InfoLink to="/homes" alt="home">
-              <p>Ver Mas</p>
-              <Arrow />
+              <button
+                onClick={() => {
+                  history.push("/home");
+                }}
+              >
+                Ver Mas
+              </button>
+              {/* <Arrow /> */}
             </InfoLink>
           </InfoWrap>
         </InfoRow>

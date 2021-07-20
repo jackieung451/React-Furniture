@@ -53,16 +53,18 @@ const Container = styled.div`
 // `;
 const InfoRow = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
   grid-template-rows: 500px;
   justify-content: center;
   ${"" /* flex-direction: column; */}
-  margin: 0rem 5rem 0rem 5rem;
+  margin: 0 100px 0 100px;
   padding: 10rem 0rem 0rem 0rem;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    margin-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
   }
   ${"" /* padding: 1rem 0rem; */}
 
@@ -75,13 +77,16 @@ const InfoRow = styled.div`
   }
 `;
 const InfoWrap = styled.div`
-display: flex;
+padding: 0 0 10rem 0;
+${
+  "" /* display: flex;
 flex-direction: row;
 justify-content: space-around;
 margin-bottom: 0rem;
-align-items: flex-start;
+align-items: center; */
+}
 ${"" /* grid-template-columns: 1fr; */}
-  padding: 10rem 10rem;
+  ${"" /* padding: 10rem 10rem; */}
   ${"" /* margin-bottom: 10rem; */}
   ${"" /* min-height: 550px; */}
   ${"" /* height: 100%; */}
@@ -111,15 +116,20 @@ button {background: black;
     font-weight: 400;
   }
   @media screen and (max-width: 768px) {
-    margin: 10rem 0 0 0;
+    ${
+      "" /* margin: 10rem 0 0 0;
     padding: 15rem 0 10rem 0;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; */
+    }
+    display: grid;
+    grid-template-columns: 1fr;
 
     @media screen and (max-width: 320px) {
-    padding-right: 2rem;
+    ${"" /* padding-right: 2rem; */}
+    justify-content: center;
   }
   ${
     "" /* @media screen and (max-width: 768px) {
@@ -127,12 +137,13 @@ button {background: black;
   } */
   }
 `;
-const BoxOne = styled.div`
+/* const BoxOne = styled.div`
   margin-bottom: 3rem;
+
   @media screen and (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr;
-  } ;
+  }
 `;
 const BoxTwo = styled.div`
   margin-bottom: 3rem;
@@ -154,7 +165,7 @@ const BoxFour = styled.div`
     display: grid;
     grid-template-columns: 1fr;
   } ;
-`;
+`; */
 
 const Image = styled.img`
   width: 100%;
@@ -163,7 +174,7 @@ const Image = styled.img`
   max-width: 600px;
   max-height: 400px;
 
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 0.5rem;
   margin-top: 5rem;
 
@@ -213,30 +224,29 @@ const BlogCoverPage = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <BoxOne>
-              <Image src={ImageOne} alt="home" />
-              <h2>Ideas de Decoracion Thanksgiving</h2>
-              {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
+            <Image src={ImageOne} alt="home" />
+            <h2>Ideas de Decoracion Thanksgiving</h2>
+            {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
               <Arrow /> */}
-              <button
-                onClick={() => {
-                  history.push("/Thanksgiving");
-                }}
-              >
-                {/* <Route path="/Thanksgiving" component={Thanksgiving} />
+            <button
+              onClick={() => {
+                history.push("/Thanksgiving");
+              }}
+            >
+              {/* <Route path="/Thanksgiving" component={Thanksgiving} />
               <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
-                {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
-                Ver Mas
-                {/* <p>Ver Mas</p>
+              {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
+              Ver Mas
+              {/* <p>Ver Mas</p>
               <Arrow /> */}
-              </button>
-              {/* <Image src={HomeThree} alt="home" />
+            </button>
+            {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow /> */}
-              {/* </InfoLink> */}
-            </BoxOne>
+            {/* </InfoLink> */}
+
             {/* </InfoWrap>
           <InfoWrap
             data-aos="zoom-out-down"
@@ -244,31 +254,6 @@ const BlogCoverPage = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           > */}
-            <BoxTwo>
-              <Image
-                src={ImageTwo}
-                alt="home"
-                // css={`
-                // margin-top: 120px;
-                // @media screen and (max-width: 768px) {
-                //   margin-top: 0px;
-                // }
-                // `}
-              />
-              <h2>Decoracion Feng Shui para tu Hogar</h2>
-              <button
-                onClick={() => {
-                  history.push("/FengShui");
-                }}
-              >
-                Ver Mas
-              </button>
-              {/* <Link to="../FengShui">Ver Mas</Link> */}
-              {/* <InfoLink to="/FengShui">
-              <p>Ver Mas</p>
-              <Arrow />
-            </InfoLink> */}
-            </BoxTwo>
           </InfoWrap>
           <InfoWrap
             data-aos="zoom-out-down"
@@ -276,30 +261,41 @@ const BlogCoverPage = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <BoxThree>
-              <Image
-                src={ImageThree}
-                alt="home"
-                // css={`
-                //   // margin-top: 120px;
-                //   @media screen and (max-width: 768px) {
-                //     margin-top: 0px;
-                //   }
-                // `}
-              />
-              <h2>Decoracion Tendencias en Interiores</h2>
-              <button
-                onClick={() => {
-                  history.push("/Interior");
-                }}
-              >
-                Ver Mas
-              </button>
-              {/* <InfoLink to="/homes">
+            <Image src={ImageTwo} alt="home" />
+            <h2>Decoracion Feng Shui para tu Hogar</h2>
+            <button
+              onClick={() => {
+                history.push("/FengShui");
+              }}
+            >
+              Ver Mas
+            </button>
+            {/* <Link to="../FengShui">Ver Mas</Link> */}
+            {/* <InfoLink to="/FengShui">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-            </BoxThree>
+          </InfoWrap>
+          <InfoWrap
+            data-aos="zoom-out-down"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            <Image src={ImageThree} alt="home" />
+            <h2>Decoracion Tendencias en Interiores</h2>
+            <button
+              onClick={() => {
+                history.push("/Interior");
+              }}
+            >
+              Ver Mas
+            </button>
+            {/* <InfoLink to="/homes">
+              <p>Ver Mas</p>
+              <Arrow />
+            </InfoLink> */}
+
             {/* </InfoWrap>
           <InfoWrap
             data-aos="zoom-out-down"
@@ -307,30 +303,26 @@ const BlogCoverPage = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           > */}
-            <BoxFour>
-              <Image
-                src={ImageFour}
-                alt="home"
-                // css={`
-                //   // margin-top: 120px;
-                //   @media screen and (max-width: 768px) {
-                //     margin-top: 0px;
-                //   }
-                // `}
-              />
-              <h2>Decoracion Industrial</h2>
-              <button
-                onClick={() => {
-                  history.push("/Industrial");
-                }}
-              >
-                Ver Mas
-              </button>
-              {/* <InfoLink to="/homes">
+          </InfoWrap>
+          <InfoWrap
+            data-aos="zoom-out-down"
+            data-aos-duration="1200"
+            data-aos-once="true"
+            data-aos-anchor-placement="center bottom"
+          >
+            <Image src={ImageFour} alt="home" />
+            <h2>Decoracion Tendencias en Industrial</h2>
+            <button
+              onClick={() => {
+                history.push("/Industrial");
+              }}
+            >
+              Ver Mas
+            </button>
+            {/* <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-            </BoxFour>
           </InfoWrap>
         </InfoRow>
       </Container>

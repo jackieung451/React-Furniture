@@ -65,7 +65,7 @@ const InfoWrap = styled.div`
     ${"" /* padding-right: 5rem; */}
     display: flex;
     flex-flow: column;
-    justiy-content: flex-start;
+    justify-content: flex-start;
   }
   @media screen and (max-width: 320px) {
     padding-right: 5rem;
