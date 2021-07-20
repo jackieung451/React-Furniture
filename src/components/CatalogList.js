@@ -561,10 +561,15 @@ import { Button } from "./Button";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  padding: 3.5rem 0rem;
+  padding: 4.5rem 0rem;
 
   @media screen and (max-width: 768px) {
     padding: 5rem 0rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -580,13 +585,16 @@ const Container = styled.div`
 `;
 
 const ColumnLeft = styled.div`
-  display: flex;
+  ${
+    "" /* display: flex;
   flex-direction: column; 
   flex: 0 0 50%
   justify-content: center;
   align-items: center;
   max-width: 50%;
-  line-height: 1.4;
+  line-height: 1.4; */
+  }
+  height: 100%;
   padding: 0rem 2rem 2rem 2rem;
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
@@ -602,7 +610,14 @@ const ColumnLeft = styled.div`
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0rem;
-    padding-left: 4rem
+    padding-left: 4rem;
+    display: flex;
+    flex-flow: column;
+    justiy-content: flex-start;
+
+    @media screen and (max-width: 320px) {
+    padding-right: 5rem;
+  }
     ${
       "" /* display: flex;
     flex: 0 0 50%;} */
@@ -610,19 +625,24 @@ const ColumnLeft = styled.div`
 
 `;
 const RowOne = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
 `;
 const RowTwo = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
 `;
 const RowThree = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
 `;
 const RowFour = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
 `;
 const RowFive = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
 `;
 
 const ColumnRight = styled.div`
@@ -646,6 +666,8 @@ const ColumnRight = styled.div`
   img {
     width: 100%;
     height: 100%;
+    max-width: 600px;
+    max-height: 400px;
     object-fit: cover;
 
     @media screen and (max-width: 768px) {
@@ -657,11 +679,12 @@ const ColumnRight = styled.div`
   }
 `;
 
-const CatalogList = () => {
+const CatalogList = ({ reverse }) => {
   return (
     <Section>
       <RowOne>
         <ColumnLeft
+          reverse={reverse}
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -677,7 +700,7 @@ const CatalogList = () => {
             Catalog
           </Button>
         </ColumnLeft>
-        <ColumnRight>
+        <ColumnRight reverse={reverse}>
           <img
             src={HomeOne}
             alt="home"
@@ -690,6 +713,7 @@ const CatalogList = () => {
       </RowOne>
       <RowTwo>
         <ColumnLeft
+          reverse={reverse}
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -707,7 +731,7 @@ const CatalogList = () => {
             Catalog
           </Button>
         </ColumnLeft>
-        <ColumnRight>
+        <ColumnRight reverse={reverse}>
           <img
             src={HomeTwo}
             alt="home"
@@ -720,6 +744,7 @@ const CatalogList = () => {
       </RowTwo>
       <RowThree>
         <ColumnLeft
+          reverse={reverse}
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -736,7 +761,7 @@ const CatalogList = () => {
             Catalog
           </Button>
         </ColumnLeft>
-        <ColumnRight>
+        <ColumnRight reverse={reverse}>
           <img
             src={HomeThree}
             alt="home"
@@ -749,6 +774,7 @@ const CatalogList = () => {
       </RowThree>
       <RowFour>
         <ColumnLeft
+          reverse={reverse}
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -764,7 +790,7 @@ const CatalogList = () => {
             Catalog
           </Button>
         </ColumnLeft>
-        <ColumnRight>
+        <ColumnRight reverse={reverse}>
           <img
             src={HomeFour}
             alt="home"
@@ -777,6 +803,7 @@ const CatalogList = () => {
       </RowFour>
       <RowFive>
         <ColumnLeft
+          reverse={reverse}
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -793,7 +820,7 @@ const CatalogList = () => {
             Catalog
           </Button>
         </ColumnLeft>
-        <ColumnRight>
+        <ColumnRight reverse={reverse}>
           <img
             src={HomeFive}
             alt="home"
