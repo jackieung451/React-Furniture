@@ -3,17 +3,14 @@ import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { IoMdArrowRoundForward } from "react-icons/io";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYelp } from "react-icons/fa";
 
 const Section = styled.section`
   background: #000d1a;
   color: #fff;
   width: 100%;
+  padding-top: 0;
+  margin-top: 0;
   ${
     "" /* min-height: 600px;
   padding: 3rem FaCalculator((100vw - 1300px) / 2); */
@@ -30,7 +27,7 @@ const FooterTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0rem 4rem;
+  padding: 0rem 8rem;
   ${"" /* padding: 4rem 0rem; */}
 
   @media screen and (max-width: 768px) {
@@ -39,10 +36,10 @@ const FooterTop = styled.div`
 `;
 const Quote = styled.div`
   flex: 1;
-  padding: 2rem 0rem;
+  padding-top: 10px;
 
   h6 {
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: clamp(2rem, 8vw, 3rem);
     display: flex;
     justify-content: center;
   }
@@ -50,6 +47,8 @@ const Quote = styled.div`
     display: flex;
     justify-content: center;
     line-height: 3;
+    margin: 0;
+    padding: 0;
   }
 
   ${
@@ -59,18 +58,17 @@ const Quote = styled.div`
   }
 `;
 const FooterInfo = styled.div`
-  padding: 2rem;
+  padding: 0rem 0rem 0rem 0rem;
   line-height: 3;
 
   display: flex;
   flex-direction: row;
-  max-width: 700px;
-  ${
-    "" /* display: flex;
-  flex-direction: row; */
-  }
+  flex-wrap: wrap;
+  max-width: 500px;
   justify-content: space-around;
   margin: auto;
+  
+  }
 
   a {
     color: #fff;
@@ -114,10 +112,10 @@ const Instagram = styled(FaInstagram)`
 const Facebook = styled(FaFacebookF)`
   ${Icons}
 `;
-const LinkedIn = styled(FaLinkedinIn)`
-  ${Icons}
-`;
-const Youtube = styled(FaYoutube)`
+// const LinkedIn = styled(FaLinkedinIn)`
+//   ${Icons}
+// `;
+const Yelp = styled(FaYelp)`
   ${Icons}
 `;
 
@@ -139,8 +137,8 @@ const Footer = () => {
       <Container>
         <FooterTop>
           <Quote>
-            <h6>Open: Monday to Saturday </h6>
-            <h6>10:00am - 7:00pm</h6>
+            <h6>Open: Monday to Saturday 10:00am - 7:00pm</h6>
+
             <h6>Sunday 10:00am - 3:00pm</h6>
             <p>2619 N Broadway Los Angeles, CA 90031</p>
             <p>Call Now 323.247.9094</p>
@@ -162,14 +160,14 @@ const Footer = () => {
         <FooterBottom>
           <SocialIcons>
             <a
-              href="//www.google.com"
+              href="https://www.yelp.com/biz/la-nayarit-furniture-los-angeles"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Youtube />
+              <Yelp />
             </a>
             <a
-              href="//www.google.com"
+              href="//https://www.instagram.com/lanayaritfurniture/?hl=en"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -182,13 +180,13 @@ const Footer = () => {
             >
               <Facebook />
             </a>
-            <a
+            {/* <a
               href="//www.google.com"
               rel="noopener noreferrer"
               target="_blank"
             >
               <LinkedIn />
-            </a>
+            </a> */}
           </SocialIcons>
           {/* <Contact>
             <Button to="/homes">

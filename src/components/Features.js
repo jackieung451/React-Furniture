@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "./Button";
-import ImageOne from "../images/img6.jpg";
+import ImageOne from "../images/img97.jpg";
 
 // const Section = styled.section`
 //   background: #000d1a;
@@ -489,10 +489,11 @@ import ImageOne from "../images/img6.jpg";
 
 const Section = styled.section`
   background: #000d1a;
-  padding: 3.5rem 0rem;
+  padding: 3.5rem 0rem 0rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 1rem;
 `;
 
 const Container = styled.div`
