@@ -174,7 +174,7 @@ const Footer = () => {
               <Instagram />
             </a>
             <a
-              href="//www.google.com"
+              href="https://www.facebook.com/LaNayaritFurniture/about"
               rel="noopener noreferrer"
               target="_blank"
             >
