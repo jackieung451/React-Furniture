@@ -230,7 +230,7 @@ const BlogCoverPage = () => {
               <Arrow /> */}
             <button
               onClick={() => {
-                history.push("/Thanksgiving");
+                history.push("/thanksgiving");
               }}
             >
               {/* <Route path="/Thanksgiving" component={Thanksgiving} />
@@ -265,7 +265,7 @@ const BlogCoverPage = () => {
             <h2>Decoracion Feng Shui para tu Hogar</h2>
             <button
               onClick={() => {
-                history.push("/FengShui");
+                history.push("/fengshui");
               }}
             >
               Ver Mas
@@ -286,7 +286,7 @@ const BlogCoverPage = () => {
             <h2>Decoracion Tendencias en Interiores</h2>
             <button
               onClick={() => {
-                history.push("/Interior");
+                history.push("/interior");
               }}
             >
               Ver Mas
@@ -314,7 +314,7 @@ const BlogCoverPage = () => {
             <h2>Decoracion Tendencias en Industrial</h2>
             <button
               onClick={() => {
-                history.push("/Industrial");
+                history.push("/industrial");
               }}
             >
               Ver Mas

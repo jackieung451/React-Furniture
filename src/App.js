@@ -55,10 +55,10 @@ function App() {
         <Route path="/blog" exact component={Blog} />
         <Route path="/history" exact component={History} />
         <Route path="/contact" exact component={Contact} />
-        <Route path="/Thanksgiving" exact component={Thanksgiving} />
-        <Route path="/FengShui" exact component={FengShui} />
-        <Route path="/Interior" exact component={InteriorDesign} />
-        <Route path="/Industrial" exact component={IndustrialDesign} />
+        <Route path="/thanksgiving" exact component={Thanksgiving} />
+        <Route path="/fengshui" exact component={FengShui} />
+        <Route path="/interior" exact component={InteriorDesign} />
+        <Route path="/industrial" exact component={IndustrialDesign} />
       </Switch>
       <Footer />
     </BrowserRouter>

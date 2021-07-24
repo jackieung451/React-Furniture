@@ -146,9 +146,9 @@ const Footer = () => {
         </FooterTop>
         <FooterInfo>
           <Link to="/contact">Contact Us</Link>
-          <Link to="/homes">FAQ</Link>
-          <Link to="/homes">Support</Link>
-          <Link to="/homes">Questions</Link>
+          <Link to="/contact">FAQ</Link>
+          <Link to="/contact">Support</Link>
+          <Link to="/contact">Questions</Link>
         </FooterInfo>
         {/* <FooterInfo>
           <h4>Offices</h4>
@@ -167,7 +167,7 @@ const Footer = () => {
               <Yelp />
             </a>
             <a
-              href="//https://www.instagram.com/lanayaritfurniture/?hl=en"
+              href="https://www.instagram.com/lanayaritfurniture/?hl=en"
               rel="noopener noreferrer"
               target="_blank"
             >
