@@ -163,7 +163,7 @@ const InteriorDesign = () => {
               and neutral.
             </p>
             <p>
-              Although they can be reached
+              Although they can be reached{" "}
               <strong>mix up to three colors in a room</strong>, always there
               will be one that predominates over the rest and the others will
               serve to beautify the room.
@@ -175,7 +175,7 @@ const InteriorDesign = () => {
             <br />
             <ul>
               <li>
-                <strong>Inspired by the universe</strong>: colors such as
+                <strong>Inspired By The Universe</strong>: colors such as
                 purple, blue or metallic.
               </li>
               <li>

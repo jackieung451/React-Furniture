@@ -121,14 +121,14 @@ const IndustrialDesign = () => {
             <p>
               Predominantly masculine, it is a style that emerged in New York
               during the 50s, when young artists began to settle in spacious and
-              spacious abandoned factories in search of <strong>space</strong>
+              spacious abandoned factories in search of <strong>space</strong>{" "}
               and <strong>light</strong>.
             </p>
             <br />
             <Image src={HomeTwo} alt="home" />
             <br />
             <p>
-              Over time, the style evolved into what we know today as
+              Over time, the style evolved into what we know today as{" "}
               <strong>lofts</strong>.
             </p>
             <br />
