@@ -11,31 +11,31 @@ import styled from "styled-components";
 
 export const SliderData = [
   {
-    title: "Muebles de alta calidad",
-    price: "AL ALCANCE DE TODOS",
+    title: "High Quality Furniture",
+    price: "Within Everyone's Reach",
     // path: "/homes",
     // label: "View Home",
     image: ImageOne,
     alt: "Furniture",
   },
   {
-    title: "Muebles de alta calidad",
-    price: "AL ALCANCE DE TODOS",
+    title: "High Quality Furniture",
+    price: "Within Everyone's Reach",
     // path: "/homes",
     // label: "View Home",
     image: ImageTwo,
     alt: "Furniture",
   },
   {
-    title: "Muebles de alta calidad",
-    price: "AL ALCANCE DE TODOS",
+    title: "High Quality Furniture",
+    price: "Within Everyone's Reach",
     // path: "/homes",
     // label: "View Home",
     image: ImageThree,
     alt: "Furniture",
   },
   // {
-  //   title: "Muebles de alta calidad",
+  //   title: "High Quality Furniture",
   //   price: "AL ALCANCE DE TODOS",
   //   // path: "/homes",
   //   // label: "View Home",
@@ -50,36 +50,36 @@ export const SliderData = [
 
 export const SliderDataTwo = [
   {
-    title: "SALAS",
+    title: "Living Rooms",
     caption:
-      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
+      "Your room is the center of your home, that's why we offer a wide variety of options, styles and colors of rooms, so that you find the one that is perfect for you and your family.",
     path: "/catalog",
     label: "Catalog",
     image: ImageFive,
     alt: "Furniture",
   },
   {
-    title: "COMEDORES",
+    title: "Dining Rooms",
     caption:
-      "El comedor es donde la familia comparte alimentos, risas, amor y hace memorias. Nosotros sabemos la importancia de esta parte de tu hogar y es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de comedores, para que tu encuentres la que es perfecta para ti y tu familia.",
+      "The dining room is where the family shares food, laughter, love and makes memories. We know the importance of this part of your home and that is why we offer a wide variety of options, styles and colors of dining rooms, so that you find the one that is perfect for you and your family.",
     path: "/catalog",
     label: "Catalog",
     image: ImageSix,
     alt: "Furniture",
   },
   {
-    title: "RECAMARAS",
+    title: "Bedrooms",
     caption:
-      "La recamara es el lugar mas intimo de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de recamaras, para que tu encuentres la que es perfecta para ti y tu familia.",
+      "The bedroom is the most intimate place in your home, that is why we offer a wide variety of options, styles and colors of bedrooms, so that you find the one that is perfect for you and your family.",
     path: "/catalog",
     label: "Catalog",
     image: ImageEight,
     alt: "Furniture",
   },
   {
-    title: "FUTON/SOFA-CAMA",
+    title: "Futon",
     caption:
-      "Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de salas, para que tu encuentres la que es perfecta para ti y tu familia.",
+      "Your room is the center of your home, that's why we offer a wide variety of options, styles and colors of rooms, so that you find the one that is perfect for you and your family.",
     path: "/catalog",
     label: "Catalog",
     image: ImageSeven,
@@ -87,9 +87,9 @@ export const SliderDataTwo = [
   },
 
   {
-    title: "BUNK BEDS/LITERAS",
+    title: "Bunk Beds",
     caption:
-      "La recamara es el lugar mas intimo de tu hogar, es por eso que nosotros ofrecemos una gran variedad de opciones, estilos y colores de recamaras, para que tu encuentres la que es perfecta para ti y tu familia.",
+      "The bedroom is the most intimate place in your home, that is why we offer a wide variety of options, styles and colors of bedrooms, so that you find the one that is perfect for you and your family.",
     path: "/catalog",
     label: "Catalog",
     image: ImageNine,

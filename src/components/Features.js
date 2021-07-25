@@ -591,7 +591,7 @@ const Features = ({
         <Wrap>
           <ColumnLeft>
             <Content>
-              <h1>Nuestra Tienda</h1>
+              <h1>Our Store</h1>
               <p>2619 N Broadway</p>
               <p>Los Angeles, California 90031</p>
               <p>

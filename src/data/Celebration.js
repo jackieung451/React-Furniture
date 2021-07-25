@@ -98,7 +98,7 @@ const Celebration = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Ideas de Decoracion Thanksgiving</strong>
+            <strong>Thanksgiving Decoration Ideas</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -111,61 +111,57 @@ const Celebration = () => {
             {/* <Image src={HomeOne} alt="home" /> */}
 
             <Image src={HomeThree} alt="home" />
-            <h3>1. Una mesa en tonos tierra</h3>
+            <h3>1. A Table In Earth Tones</h3>
             <br />
             <p>
-              Siguiendo el color característico del otoño, podemos poner un
-              mantel marrón o un mantel blanco con manteles individuales en
-              tonos marrones. Un buen recurso son las piezas de esparto o
-              loneta, no es caro y el efecto es muy rústico. Si la mesa es
-              grande, ancha y de madera es perfecto para no poner mantel y
-              simplemente complementar con algún detalle.
+              Following the characteristic color of autumn, we can put a brown
+              tablecloth or a white tablecloth with individual tablecloths in
+              brown tones. A good resource are esparto pieces or loneta, it is
+              not expensive and the effect is very rustic. If the table is
+              large, wide and wooden is perfect for not putting tablecloth and
+              just supplement with some detail.
             </p>
             <br />
-            <h3>2. Naturaleza en la mesa de acción de gracias</h3>
+            <h3>2. Nature At The Thanksgiving Table</h3>
             <br />
             <p>
-              Preparando centros de mesa con flores secas y velas hechas a mano
-              con flores secas. Con parafina y hojas secas nos quedarán unas
-              velas muy bonitas. Cuándo las encendamos crearemos ese ambiente
-              tan tierno, cálido y familiar que nos trasmite la llama de las
-              velas.
+              Preparing centerpieces with dried flowers and handmade candles
+              with dried flowers. With paraffin and dried leaves we will have
+              some very nice candles. When we turn them on we will create that
+              atmosphere so tender, warm and familiar that it transmits to us
+              the flame of the candles.
             </p>
             <br />
-            <h3>
-              3. Los colores protagonistas pueden ser los marrones, anaranjados
-              o amarillos{" "}
-            </h3>
+            <h3>3. The Main Colors Can Be Brown, Orange, or Yellow</h3>
             <br />
             <p>
-              Siguiendo la línea podemos hacer un detalle para cada comensal y
-              añadirle un cartelito con su nombre. Por ejemplo, con una piña
-              seca, de las que en esta época encontramos por el suelo, un trozo
-              de papel semejando antigüedad (Con café y quemando los bordes) y
-              un trozo de hilo hacemos un detalle muy sencillo y propio de la
-              decoración de Thanskgiving.
+              Following the line we can make a detail for each diner and add a
+              little sign with your name on it. For example, with a pineapple
+              dry, of which at this time we find on the ground, a piece of paper
+              similar to antiquity (With coffee and burning the edges) and a
+              piece of thread we make a very simple detail and typical of the
+              thanskgiving decoration.
             </p>
             <br />
-            <h3>4. Adornar los exteriores de casa</h3>
+            <h3>4. Decorate The Exteriors Of The House</h3>
             <br />
             <p>
-              Colocar detalles en la entrada de la casa, como por ejemplo
-              podemos hacer un adorno para la puerta o también se pueden
-              comprar. Colocar unas manzanas rojas, como las que encontramos en
-              la frutería y unas hojas secas en la entrada. Hacemos una figura
-              con las manzanas y será un detalle que sorprenda a nuestros seres
-              queridos antes de ver la mesa que tenemos preparada para acción de
-              gracias.
+              Place details at the entrance of the house, such as we can make an
+              ornament for the door or we can also buy. Place some red apples,
+              like the ones we find in the greengrocer and some dried leaves at
+              the entrance. We make a figure with apples and will be a detail
+              that surprises our beings dear ones before seeing the table we
+              have prepared for action of Thank You.
             </p>
             <br />
-            <h3>5. Preparar la mesa con adornos Otoñales</h3>
+            <h3>5. Prepare The Table With Autumnal Ornaments</h3>
             <br />
             <p>
-              Otra de las ideas para sorprender a nuestra familia en acción de
-              gracias es preparando una mesa con frutas de otoño, hojas secas,
-              velas blancas y, en el centro de la mesa podemos poner un jarrón
-              con ramas (enteras) que hayan estado cayendo estos días de los
-              árboles.
+              Another idea to surprise our family in action of thanks is
+              preparing a table with autumn fruits, dried leaves, white
+              candlesticks and, in the center of the table we can put a vase
+              with (whole) branches that have been falling these days of the
+              trees.
             </p>
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031

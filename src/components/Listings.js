@@ -179,7 +179,7 @@ const Listings = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Todo lo que necesita para el hogar</strong>
+            <strong>Everything you need for the home</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -204,14 +204,14 @@ const Listings = () => {
                 }
               `}
             />
-            <h2>Salas</h2>
+            <h2>Bedrooms</h2>
             <InfoLink to="/homes" alt="home">
               <button
                 onClick={() => {
                   history.push("/home");
                 }}
               >
-                Ver Mas
+                See More
               </button>
               {/* <Arrow /> */}
             </InfoLink>
@@ -237,14 +237,14 @@ const Listings = () => {
                 }
               `}
             />
-            <h2>Comedores</h2>
+            <h2>Dining Rooms</h2>
             <InfoLink to="/homes">
               <button
                 onClick={() => {
                   history.push("/home");
                 }}
               >
-                Ver Mas
+                See More
               </button>
               {/* <Arrow /> */}
             </InfoLink>
@@ -270,14 +270,14 @@ const Listings = () => {
                 }
               `}
             />
-            <h2>Recamaras</h2>
+            <h2>Living Rooms</h2>
             <InfoLink to="/homes" alt="home">
               <button
                 onClick={() => {
                   history.push("/home");
                 }}
               >
-                Ver Mas
+                See More
               </button>
               {/* <Arrow /> */}
             </InfoLink>

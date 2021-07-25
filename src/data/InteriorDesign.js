@@ -111,7 +111,7 @@ const InteriorDesign = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Decoracion Tendencias en Interiores</strong>
+            <strong>Decoration Trends in Interiors</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -125,67 +125,66 @@ const InteriorDesign = () => {
 
             <Image src={HomeThree} alt="home" />
 
-            <h3>1. Estilo nórdico predominaba en términos de decoración </h3>
+            <h3>1. Nordic Style Predominated In Terms Of Decoration </h3>
             <br />
             <p>
-              Ahora se busca romper con la neutralidad de los espacios nórdicos
-              combinándolo con piezas modernas y tapizados mas arriesgados.
+              Now it seeks to break with the neutrality of the Nordic areas
+              combining it with modern parts and more risky upholstery.
             </p>
-            <p>Para ello puedes usar:</p>
+            <p>For this you can use:</p>
             <br />
             <ul>
               <li>
-                <strong>Corcho</strong>: se suele usar en la fabricación de
-                muebles, pero también para revestir paredes, además sirve para
-                aislar del ruido en ciertas zonas de nuestro hogar como la
-                habitación de los más pequeños.
+                <strong>Cork</strong>: is commonly used in the manufacture of
+                furniture, but also to cover walls, also serves to insulate from
+                noise in certain areas of our home such as the room of the
+                little ones.
               </li>
               <li>
-                <strong>Baldosas</strong>: como decíamos, se dejan de lado los
-                tonos fríos y nada mejor que las baldosas de terracota con
-                acabado mate para ello. No sólo sirven para el suelo ya que
-                también pueden usarse para revestir paredes o chimeneas.
+                <strong>Tiles</strong>: as we said, the cool tones and nothing
+                beats terracotta tiles with matte finish for it. They do not
+                only serve for the soil as they they can also be used to line
+                walls or fireplaces.
               </li>
               <li>
-                <strong>Cabeceros tapizados</strong>: actualmente se usan
-                cabeceros de madera lisa o con algún detalle, pero próximamente
-                veremos cómo los tapizados, tanto los clásicos con botones y
-                tonos neutros, como los de terciopelo, se irán imponiendo poco a
-                poco.
+                <strong>Upholstered Headboards</strong>: are currently used
+                smooth wooden headboards or with some detail, but soon we will
+                see how the upholstery, both the classics with buttons and
+                neutral tones, such as those of velvet, will be imposed little
+                to little.
               </li>
             </ul>
             <br />
-            <h3>2. Decoración de interiores en salones modernos</h3>
+            <h3>2. Interior Decoration In Modern Salons</h3>
             <br />
             <p>
-              En los salones modernos, se buscan colores que ayuden a dar más
-              amplitud a la estancia. Esto se puede conseguir con colores
-              frescos y neutros.
+              In modern salons, colors are sought that help give more
+              spaciousness to the stay. This can be achieved with colors fresh
+              and neutral.
             </p>
             <p>
-              Aunque se pueden llegar a{" "}
-              <strong>mezclar hasta tres colores en un salón</strong>, siempre
-              habrá uno que predomine sobre el resto y los demás servirán para
-              embellecer la estancia.
+              Although they can be reached
+              <strong>mix up to three colors in a room</strong>, always there
+              will be one that predominates over the rest and the others will
+              serve to beautify the room.
             </p>
             <p>
-              Algunos colores que veremos dentro de poco resaltando salones de
-              todo el mundo serán:
+              Some colors that we will see shortly highlighting salons of
+              everyone will be:
             </p>
             <br />
             <ul>
               <li>
-                <strong>Inspirados en el universo</strong>: colores como el
-                morado, azul o metálicos.
+                <strong>Inspired by the universe</strong>: colors such as
+                purple, blue or metallic.
               </li>
               <li>
-                <strong>Verde oscuro</strong>: aporta profundidad a las
-                habitaciones y combina bien con el blanco y colores neutros como
-                el beige.
+                <strong>Dark Green</strong>: brings depth to the rooms and
+                combines well with white and neutral colors such as the beige.
               </li>
               <li>
-                <strong>Rosa o fucsia</strong>: darán el toque brillante en un
-                salón donde el blanco sea el color principal.
+                <strong>Rose or Fuchsia</strong>: they will give the bright
+                touch in a living room where white is the main color.
               </li>
             </ul>
             {/* <h3>

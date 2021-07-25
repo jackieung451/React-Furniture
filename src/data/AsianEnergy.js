@@ -94,7 +94,7 @@ const AsianEnergy = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Decoración Feng Shui para tu Hogar</strong>
+            <strong>Feng Shui Decoration for Your Home</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -109,74 +109,72 @@ const AsianEnergy = () => {
             <Image src={HomeThree} alt="home" />
             <h2>
               <strong>
-                La decoración de tu hogar es esencial para armonizar el espacio
-                y atraer la energía positiva a tu vida.
+                The decoration of your home is essential to harmonize the space
+                and attract positive energy to your life.
               </strong>
             </h2>
 
             <h3>
-              1. Para lograr el equilibrio, en la decoración Feng Shui, se
-              utilizan los 5 elementos básicos de la naturaleza: madera, fuego,
-              tierra, agua y metal.
+              1. To achieve balance, in Feng Shui decoration, it is they use the
+              5 basic elements of nature: wood, fire, earth, water and metal.
             </h3>
             <br />
             <p>
-              Se busca la armonía y vibraciones positivas con cada elemento que
-              se coloque en el diseño interior. Así mismo, la ubicación según
-              los puntos cardinales, también juega un papel importante en el
-              equilibrio del Yin y el Yan, las malas y buenas energías. Sigue
-              estos sencillos consejos para armonizar tu casa y evitar flujos de
-              energía negativa
+              Harmony and positive vibrations are sought with each element that
+              is placed in the interior design. Also, the location according to
+              the cardinal points, also plays an important role in the balance
+              of the Yin and the Yan, the bad and good energies. Go on these
+              simple tips to harmonize your house and avoid flows of negative
+              energy.
             </p>
             <br />
-            <h3>2. Protege el Chi</h3>
+            <h3>2. Protect Chi</h3>
             <br />
             <p>
-              El chi asociado a estos aspectos lo representa el Norte de tu
-              hogar, y es por donde llegan las buenas oportunidades. Es
-              importante hacer de este espacio un lugar que invite a estar, con
-              flores, un tapete de bienvenida y mucha luz. Es la primera
-              impresión que otros tendrán al llegar a tu casa.
+              The chi associated with these aspects is represented by the North
+              of your home, and that's where the good opportunities come from.
+              is important to make this space a place that invites you to be,
+              with flowers, a welcome mat and lots of light. It is the first
+              impression that others will have when they arrive at your home.
             </p>
             <br />
-            <h3>3. Crea un ambiente armonioso</h3>
+            <h3>3. Create A Harmonious Environment</h3>
             <br />
             <p>
-              Para reducir tensiones y discusiones es importante colocar y
-              encender cuatro velas de color verde el Este del salón principal.
+              To reduce tensions and arguments it is important to place and
+              light four green candles east of the main hall.
             </p>
             <br />
-            <h3>4. Evita drenar tu energía</h3>
+            <h3>4. Avoid Draining Your Energy</h3>
             <br />
             <p>
-              Es recomendable que tu cama no se encuentre entre una puerta y una
-              ventana, y menos delante de un espejo, ya que estos absorben la
-              energía personal.
+              It is recommended that your bed is not between a door and a
+              window, and less in front of a mirror, since these absorb the
+              personal energy.
             </p>
             <br />
-            <h3>5. Coloca cuarzos y velas en esquinas o pasillos largos</h3>
+            <h3>5. Place Quartz And Candles In Corners Or Long Corridors</h3>
             <br />
             <p>
-              Estas se consideran zonas problemáticas que cortan la energía.
-              Esto actuará como protección.
+              These are considered problem areas that cut off energy. This will
+              act as protection.
             </p>
             <br />
-            <h3>6. Utiliza esta paleta de colores</h3>
+            <h3>6. Use This Color Palette</h3>
             <br />
             <p>
-              Utilizar tonos en color amarillo, mostaza o café atraerán la
-              estabilidad, mientras que el gris o el plateado generan una
-              energía de orden.
+              Using shades of yellow, mustard or brown will attract the
+              stability, while grey or silver generate a power of order.
             </p>
             <br />
             <h3>
-              7. Implementa la filosofía Ying-Yang en los espacios de tu hogar
+              7. Implement The Ying-Yang Philosophy In The Spaces Of Your Home
             </h3>
             <br />
             <p>
-              Crea espacios dirigidos a realizar actividades más energéticas
-              como la cocina o el estudio, balanceándolas con otros de
-              relajación como tu habitación o tu jardín.
+              Create spaces aimed at more energetic activities such as the
+              kitchen or the studio, balancing them with others of relaxation
+              like your room or your garden.
             </p>
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031

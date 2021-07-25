@@ -225,8 +225,8 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageOne} alt="home" />
-            <h2>Ideas de Decoracion Thanksgiving</h2>
-            {/* <NavLink to="../Thanksgiving">Ver Mas</NavLink>
+            <h2>Thanksgiving Decoration Ideas</h2>
+            {/* <NavLink to="../Thanksgiving">See More</NavLink>
               <Arrow /> */}
             <button
               onClick={() => {
@@ -236,14 +236,14 @@ const BlogCoverPage = () => {
               {/* <Route path="/Thanksgiving" component={Thanksgiving} />
               <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
               {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
-              Ver Mas
-              {/* <p>Ver Mas</p>
+              See More
+              {/* <p>See More</p>
               <Arrow /> */}
             </button>
             {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
-              <p>Ver Mas</p>
+              <p>See More</p>
               <Arrow /> */}
             {/* </InfoLink> */}
 
@@ -262,17 +262,17 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageTwo} alt="home" />
-            <h2>Decoracion Feng Shui para tu Hogar</h2>
+            <h2>Feng Shui Decoration for Your Home</h2>
             <button
               onClick={() => {
                 history.push("/fengshui");
               }}
             >
-              Ver Mas
+              See More
             </button>
-            {/* <Link to="../FengShui">Ver Mas</Link> */}
+            {/* <Link to="../FengShui">See More</Link> */}
             {/* <InfoLink to="/FengShui">
-              <p>Ver Mas</p>
+              <p>See More</p>
               <Arrow />
             </InfoLink> */}
           </InfoWrap>
@@ -283,16 +283,16 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageThree} alt="home" />
-            <h2>Decoracion Tendencias en Interiores</h2>
+            <h2>Decoration Trends in Interiors</h2>
             <button
               onClick={() => {
                 history.push("/interior");
               }}
             >
-              Ver Mas
+              See More
             </button>
             {/* <InfoLink to="/homes">
-              <p>Ver Mas</p>
+              <p>See More</p>
               <Arrow />
             </InfoLink> */}
 
@@ -311,16 +311,16 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageFour} alt="home" />
-            <h2>Decoracion Tendencias en Industrial</h2>
+            <h2>Decoration Trends in Industrial</h2>
             <button
               onClick={() => {
                 history.push("/industrial");
               }}
             >
-              Ver Mas
+              See More
             </button>
             {/* <InfoLink to="/homes">
-              <p>Ver Mas</p>
+              <p>See More</p>
               <Arrow />
             </InfoLink> */}
           </InfoWrap>

@@ -100,7 +100,7 @@ const IndustrialDesign = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Decoracion Industrial</strong>
+            <strong>Decoration Trends in Industrial</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -115,54 +115,52 @@ const IndustrialDesign = () => {
             <Image src={HomeThree} alt="home" />
 
             <p>
-              Sí, lo sé, la decoración industrial tiene poco de natural. Pero un
-              toque aquí y otro allá, siempre le aporta elegancia a cualquier
-              interior.
+              Yes, I know, industrial décor has little natural. But one touch
+              here and another there, always brings elegance to any interior.
             </p>
             <p>
-              Predominantemente masculino, es un estilo que surgió en Nueva York
-              durante la década de los 50, cuando jóvenes artistas comenzaron a
-              instalarse en amplias y espaciosas fábricas abandonadas en busca
-              de <strong>espacio</strong> y <strong>luz</strong>.
+              Predominantly masculine, it is a style that emerged in New York
+              during the 50s, when young artists began to settle in spacious and
+              spacious abandoned factories in search of <strong>space</strong>
+              and <strong>light</strong>.
             </p>
             <br />
             <Image src={HomeTwo} alt="home" />
             <br />
             <p>
-              Con el tiempo, el estilo evolucionó en lo que hoy conocemos como{" "}
+              Over time, the style evolved into what we know today as
               <strong>lofts</strong>.
             </p>
             <br />
-            <h3>1. Elementos estructurales a la vista</h3>
+            <h3>1. Structural Elements In Sight</h3>
             <br />
             <p>
-              La decoración de estilo industrial se caracteriza por no
-              enmascarar ni ocultar los materiales de construcción y no tener
-              miedo en mostrar sus estructuras al desnudo:
+              Industrial style decoration is characterized by no mask or hide
+              building materials and not have fear in showing their structures
+              in the nude:
             </p>
             <br />
             <ul>
-              <li>Vigas de madera sin tratar</li>
-              <li>Paredes de ladrillos vista</li>
-              <li>Hierro y hormigón al descubierto</li>
-              <li>Ventanas desnudas</li>
-              <li>Tuberías y conductos de metal</li>
+              <li>Untreated wooden beams</li>
+              <li>Exposed brick walls</li>
+              <li>Iron and concrete uncovered</li>
+              <li>Bare windows</li>
+              <li>Metal pipes and conduits</li>
             </ul>
             <br />
             <Image src={HomeOne} alt="home" />
             <br />
             <h3>
-              2. La decoración industrial es un estilo que se ha convertido en
-              una de las mayores tendencias en el mundo del diseño de interiores
-              de los últimos años. Paredes de ladrillos vistas, vigas de madera,
-              muebles vintage…{" "}
+              2. Industrial Decoration Is A Style That Has Become One Of The
+              Biggest Trends In The World Of Interior Design In Recent Years.
+              Exposed Brick Walls, Wooden Beams, Vintage Furniture...
             </h3>
             <br />
             <p>
-              No hay duda de que la decoración de estilo industrial seguirá
-              siendo una de las grandes tendencias de este 2019.
+              There is no doubt that industrial style decoration will continue
+              to be one of the great trends of this 2019.
             </p>
-            <p>¿Te animas a darle un acento industrial a tu hogar?</p>
+            <p>Dare to give an industrial accent to your home?</p>
 
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031

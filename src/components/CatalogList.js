@@ -690,11 +690,11 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>Salas</h1>
+          <h1>Living Rooms</h1>
           <p>
-            Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos
-            una gran variedad de opciones, estilos y colores de salas, para que
-            tu encuentres la que es perfecta para ti y tu familia.
+            Your room is the center of your home, that's why we offer a wide
+            variety of options, styles and colors of rooms, so that you find the
+            one that is perfect for you and your family.
           </p>
           <Button to="/homes" primary="true">
             Catalog
@@ -719,13 +719,13 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>COMEDORES</h1>
+          <h1>Dining Rooms</h1>
           <p>
-            El comedor es donde la familia comparte alimentos, risas, amor y
-            hace memorias. Nosotros sabemos la importancia de esta parte de tu
-            hogar y es por eso que nosotros ofrecemos una gran variedad de
-            opciones, estilos y colores de comedores, para que tu encuentres la
-            que es perfecta para ti y tu familia
+            The dining room is where the family shares food, laughter, love and
+            it makes memories. We know the importance of this part of your home
+            and that's why we offer a variety of options, styles and colors of
+            dining rooms, so that you find the which is perfect for you and your
+            family.
           </p>
           <Button to="/homes" primary="true">
             Catalog
@@ -750,12 +750,11 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>RECAMARAS</h1>
+          <h1>Beds</h1>
           <p>
-            La recamara es el lugar mas intimo de tu hogar, es por eso que
-            nosotros ofrecemos una gran variedad de opciones, estilos y colores
-            de recamaras, para que tu encuentres la que es perfecta para ti y tu
-            familia.
+            The bedroom is the most intimate place in your home, that's why we
+            offer a wide variety of options, styles and colors of bedrooms, so
+            that you find the one that is perfect for you and your family.
           </p>
           <Button to="/homes" primary="true">
             Catalog
@@ -780,11 +779,11 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>FUTON/SOFA-CAMA</h1>
+          <h1>Futon</h1>
           <p>
-            Tu sala es el centro de tu hogar, es por eso que nosotros ofrecemos
-            una gran variedad de opciones, estilos y colores de salas, para que
-            tu encuentres la que es perfecta para ti y tu familia.
+            Your room is the center of your home, that's why we offer a wide
+            variety of options, styles and colors of rooms, so that you find the
+            one that is perfect for you and your family.
           </p>
           <Button to="/homes" primary="true">
             Catalog
@@ -809,12 +808,11 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>BUNK BEDS/LITERAS</h1>
+          <h1>Bunk Beds</h1>
           <p>
-            La recamara es el lugar mas intimo de tu hogar, es por eso que
-            nosotros ofrecemos una gran variedad de opciones, estilos y colores
-            de recamaras, para que tu encuentres la que es perfecta para ti y tu
-            familia.
+            The bedroom is the most intimate place in your home, that is why we
+            offer a wide variety of options, styles and colors of bedrooms, so
+            that you find the one that is perfect for you and your family.
           </p>
           <Button to="/homes" primary="true">
             Catalog

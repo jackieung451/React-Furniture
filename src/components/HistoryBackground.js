@@ -159,40 +159,37 @@ const HistoryBackground = () => {
           >
             {/* <Image src={HomeOne} alt="home" /> */}
             <h2>
-              <strong>Nuestra Historia</strong>
+              <strong>Our History</strong>
             </h2>
             <p>
-              Fundado por Jose y su esposa, La Nayarit Furniture fue creada con
-              el enfoque de poder servir más de cerca las necesidades de
-              nuestros residentes de Lincoln Heights y sus alrededores.
+              Founded by Jose and his wife, La Nayarit Furniture was created
+              with the focus of being able to more closely serve the needs of
+              our residents of Lincoln Heights and the surrounding area.
             </p>
             <br />
 
             <p>
-              Para nosotros, los mas importante es siempre ofrecer muebles de la
-              mas alta calidad a un precio que sea accesible para nuestra
-              comunidad. Contamos con accesibles planes de financiamiento a su
-              servicio, para poder asegurar que todo cliente que entre por
-              nuestra puerta, tenga la opción de escoger y llevar a casa el
-              articulo deseado.
+              For us, the most important is always to offer furniture of the
+              highest quality at a price that is accessible to our community. We
+              have accessible financing plans at your service, to ensure that
+              every customer who enters through our door, has the option to
+              choose and take home the desired item.
             </p>
             <br />
 
             <p>
-              Jose Sanchez llego de Mexico como la mayoría de personas, buscando
-              una mejor opción para el y su familia. Al poco tiempo de haber
-              llegado, se dio cuenta que nuestra comunidad latina, enfrenta
-              muchos obstáculos en el camino hacia el sueño americano. Después
-              de trabajar en el “Field” y la construcción por un corto periodo,
-              tuvo la oportunidad de trabajar en una mueblería, primero como
-              empacador y eventualmente como vendedor. Fue así como se dio
-              cuenta que la mayoría de negocios en la industria, solo se
-              enfocaban a ver a los clientes con signos de peso y no interesarse
-              genuinamente por las persona, y después de ahorrar durante algunos
-              años, en el 2001, el y su esposa abrieron las puertas de su propio
-              negocio, con el enfoque en ayudar al cliente ofreciendo un
-              excelente servicio y siempre poniendo las necesidades de el
-              cliente primero.
+              Jose Sanchez came from Mexico like most people, looking for a
+              better option for him and his family. Shortly after arriving, he
+              realized that our Latino community faces many obstacles on the
+              road to the American dream. After working in the field and
+              construction for a short period, he had the opportunity to work in
+              a furniture mill, first as a packer and eventually as a salesman.
+              That's how he realized that most businesses in the industry, only
+              focused on seeing customers with signs of weight and not genuinely
+              interested in people, and after saving for a few years, in 2001,
+              he and his wife opened the doors of their own business, with the
+              focus on helping the customer by offering excellent service and
+              always putting the needs of the customer first.
             </p>
           </InfoWrap>
           <ImageContainer>
