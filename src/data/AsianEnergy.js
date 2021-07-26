@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components/macro";
 import HomeThree from "../images/img92.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -84,6 +86,7 @@ const InfoWrap = styled.div`
 `;
 
 const AsianEnergy = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -94,7 +97,7 @@ const AsianEnergy = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Feng Shui Decoration for Your Home</strong>
+            <strong>{t("fengshui")}</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -108,74 +111,36 @@ const AsianEnergy = () => {
 
             <Image src={HomeThree} alt="home" />
             <h2>
-              <strong>
-                The decoration of your home is essential to harmonize the space
-                and attract positive energy to your life.
-              </strong>
+              <strong>{t("energyheading")}</strong>
             </h2>
 
-            <h3>
-              1. To achieve balance, in Feng Shui decoration, it is they use the
-              5 basic elements of nature: wood, fire, earth, water and metal.
-            </h3>
+            <h3>1. {t("energy1title")}</h3>
             <br />
-            <p>
-              Harmony and positive vibrations are sought with each element that
-              is placed in the interior design. Also, the location according to
-              the cardinal points, also plays an important role in the balance
-              of the Yin and the Yan, the bad and good energies. Go on these
-              simple tips to harmonize your house and avoid flows of negative
-              energy.
-            </p>
+            <p>{t("energy1")}</p>
             <br />
-            <h3>2. Protect Chi</h3>
+            <h3>2. {t("energy2title")}</h3>
             <br />
-            <p>
-              The chi associated with these aspects is represented by the North
-              of your home, and that's where the good opportunities come from.
-              is important to make this space a place that invites you to be,
-              with flowers, a welcome mat and lots of light. It is the first
-              impression that others will have when they arrive at your home.
-            </p>
+            <p>{t("energy2")}</p>
             <br />
-            <h3>3. Create A Harmonious Environment</h3>
+            <h3>3. {t("energy3title")}</h3>
             <br />
-            <p>
-              To reduce tensions and arguments it is important to place and
-              light four green candles east of the main hall.
-            </p>
+            <p>{t("energy3")}</p>
             <br />
-            <h3>4. Avoid Draining Your Energy</h3>
+            <h3>4. {t("energy4title")}</h3>
             <br />
-            <p>
-              It is recommended that your bed is not between a door and a
-              window, and less in front of a mirror, since these absorb the
-              personal energy.
-            </p>
+            <p>{t("energy4")}</p>
             <br />
-            <h3>5. Place Quartz And Candles In Corners Or Long Corridors</h3>
+            <h3>5. {t("energy5title")}</h3>
             <br />
-            <p>
-              These are considered problem areas that cut off energy. This will
-              act as protection.
-            </p>
+            <p>{t("energy5")}</p>
             <br />
-            <h3>6. Use This Color Palette</h3>
+            <h3>6. {t("energy6title")}</h3>
             <br />
-            <p>
-              Using shades of yellow, mustard or brown will attract the
-              stability, while grey or silver generate a power of order.
-            </p>
+            <p>{t("energy6")}</p>
             <br />
-            <h3>
-              7. Implement The Ying-Yang Philosophy In The Spaces Of Your Home
-            </h3>
+            <h3>7. {t("energy7title")}</h3>
             <br />
-            <p>
-              Create spaces aimed at more energetic activities such as the
-              kitchen or the studio, balancing them with others of relaxation
-              like your room or your garden.
-            </p>
+            <p>{t("energy7")}</p>
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>

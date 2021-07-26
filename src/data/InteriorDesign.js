@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components/macro";
 import HomeThree from "../images/img93.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -101,6 +103,7 @@ const InfoWrap = styled.div`
 `;
 
 const InteriorDesign = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -111,7 +114,7 @@ const InteriorDesign = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Decoration Trends in Interiors</strong>
+            <strong>{t("interior")}</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -125,66 +128,42 @@ const InteriorDesign = () => {
 
             <Image src={HomeThree} alt="home" />
 
-            <h3>1. Nordic Style Predominated In Terms Of Decoration </h3>
+            <h3>1. {t("interiortitle1")}</h3>
             <br />
-            <p>
-              Now it seeks to break with the neutrality of the Nordic areas
-              combining it with modern parts and more risky upholstery.
-            </p>
-            <p>For this you can use:</p>
+            <p>{t("interior1a")}</p>
+            <p>{t("interior1b")}</p>
             <br />
             <ul>
               <li>
-                <strong>Cork</strong>: is commonly used in the manufacture of
-                furniture, but also to cover walls, also serves to insulate from
-                noise in certain areas of our home such as the room of the
-                little ones.
+                <strong>{t("interior1c")}</strong>
+                {t("interior1d")}
               </li>
               <li>
-                <strong>Tiles</strong>: as we said, the cool tones and nothing
-                beats terracotta tiles with matte finish for it. They do not
-                only serve for the soil as they they can also be used to line
-                walls or fireplaces.
+                <strong>{t("interior1e")}</strong>
+                {t("interior1f")}
               </li>
               <li>
-                <strong>Upholstered Headboards</strong>: are currently used
-                smooth wooden headboards or with some detail, but soon we will
-                see how the upholstery, both the classics with buttons and
-                neutral tones, such as those of velvet, will be imposed little
-                to little.
+                <strong>{t("interior1g")}</strong>
+                {t("interior1h")}
               </li>
             </ul>
             <br />
-            <h3>2. Interior Decoration In Modern Salons</h3>
+            <h3>2. {t("interiortitle2")}</h3>
             <br />
-            <p>
-              In modern salons, colors are sought that help give more
-              spaciousness to the stay. This can be achieved with colors fresh
-              and neutral.
-            </p>
-            <p>
-              Although they can be reached{" "}
-              <strong>mix up to three colors in a room</strong>, always there
-              will be one that predominates over the rest and the others will
-              serve to beautify the room.
-            </p>
-            <p>
-              Some colors that we will see shortly highlighting salons of
-              everyone will be:
-            </p>
+            <p>{t("interior2a")}</p>
             <br />
             <ul>
               <li>
-                <strong>Inspired By The Universe</strong>: colors such as
-                purple, blue or metallic.
+                <strong>{t("interior2b")}</strong>
+                {t("interior2c")}
               </li>
               <li>
-                <strong>Dark Green</strong>: brings depth to the rooms and
-                combines well with white and neutral colors such as the beige.
+                <strong>{t("interior2d")}</strong>
+                {t("interior2e")}
               </li>
               <li>
-                <strong>Rose or Fuchsia</strong>: they will give the bright
-                touch in a living room where white is the main color.
+                <strong>{t("interior2f")}</strong>
+                {t("interior2g")}
               </li>
             </ul>
             {/* <h3>
