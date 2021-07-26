@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "./Button";
+import ImageTwo from "../images/img8.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -90,6 +93,7 @@ const InfoSection = ({
   image,
   delay,
 }) => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -101,16 +105,16 @@ const InfoSection = ({
           data-aos-delay={delay}
           data-aos-anchor-placement="center bottom"
         >
-          <h1>{heading}</h1>
-          <p>{paragraphOne}</p>
+          <h1>{t("serviceheading")}</h1>
+          <p>{t("serviceparagraph")}</p>
           <p>{paragraphTwo}</p>
           <Button to="/homes" primary="true">
-            {buttonLabel}
+            {t("catalogbutton")}
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
           <img
-            src={image}
+            src={ImageTwo}
             alt="home"
             data-aos="zoom-out"
             data-aos-duration="1000"

@@ -11,24 +11,24 @@ import styled from "styled-components";
 
 export const SliderData = [
   {
-    title: "High Quality Furniture",
-    price: "Within Everyone's Reach",
+    // title: "High Quality Furniture",
+    // price: "Within Everyone's Reach",
     // path: "/homes",
     // label: "View Home",
     image: ImageOne,
     alt: "Furniture",
   },
   {
-    title: "High Quality Furniture",
-    price: "Within Everyone's Reach",
+    // title: "High Quality Furniture",
+    // price: "Within Everyone's Reach",
     // path: "/homes",
     // label: "View Home",
     image: ImageTwo,
     alt: "Furniture",
   },
   {
-    title: "High Quality Furniture",
-    price: "Within Everyone's Reach",
+    // title: "High Quality Furniture",
+    // price: "Within Everyone's Reach",
     // path: "/homes",
     // label: "View Home",
     image: ImageThree,

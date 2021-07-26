@@ -3,6 +3,8 @@ import styled from "styled-components/macro";
 import HomeThree from "../images/img94.jpg";
 import HomeTwo from "../images/img6.jpg";
 import HomeOne from "../images/img5.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -90,6 +92,7 @@ const InfoWrap = styled.div`
 `;
 
 const IndustrialDesign = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -100,7 +103,7 @@ const IndustrialDesign = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Decoration Trends in Industrial</strong>
+            <strong>{t("industrial")}</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -114,53 +117,30 @@ const IndustrialDesign = () => {
 
             <Image src={HomeThree} alt="home" />
 
-            <p>
-              Yes, I know, industrial décor has little natural. But one touch
-              here and another there, always brings elegance to any interior.
-            </p>
-            <p>
-              Predominantly masculine, it is a style that emerged in New York
-              during the 50s, when young artists began to settle in spacious and
-              spacious abandoned factories in search of <strong>space</strong>{" "}
-              and <strong>light</strong>.
-            </p>
+            <p>{t("industrial1")}</p>
             <br />
             <Image src={HomeTwo} alt="home" />
             <br />
-            <p>
-              Over time, the style evolved into what we know today as{" "}
-              <strong>lofts</strong>.
-            </p>
+            <p>{t("industrial2")}</p>
             <br />
-            <h3>1. Structural Elements In Sight</h3>
+            <h3>1. {t("industrial3")}</h3>
             <br />
-            <p>
-              Industrial style decoration is characterized by no mask or hide
-              building materials and not have fear in showing their structures
-              in the nude:
-            </p>
+            <p>{t("industrial4")}</p>
             <br />
             <ul>
-              <li>Untreated wooden beams</li>
-              <li>Exposed brick walls</li>
-              <li>Iron and concrete uncovered</li>
-              <li>Bare windows</li>
-              <li>Metal pipes and conduits</li>
+              <li>{t("industrial5")}</li>
+              <li>{t("industrial6")}</li>
+              <li>{t("industrial7")}</li>
+              <li>{t("industrial8")}</li>
+              <li>{t("industrial9")}</li>
             </ul>
             <br />
             <Image src={HomeOne} alt="home" />
             <br />
-            <h3>
-              2. Industrial Decoration Is A Style That Has Become One Of The
-              Biggest Trends In The World Of Interior Design In Recent Years.
-              Exposed Brick Walls, Wooden Beams, Vintage Furniture...
-            </h3>
+            <h3>2. {t("industrial10")}</h3>
             <br />
-            <p>
-              There is no doubt that industrial style decoration will continue
-              to be one of the great trends of this 2019.
-            </p>
-            <p>Dare to give an industrial accent to your home?</p>
+            <p>{t("industrial11")}</p>
+            <p>{t("industrial2")}</p>
 
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031

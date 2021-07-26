@@ -4,6 +4,11 @@ import { Button } from "./Button";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
+import ImageOne from "../images/img1.jpg";
+import ImageTwo from "../images/img2.jpg";
+import ImageThree from "../images/img3.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const HeroSection = styled.section`
   height: 100vh;

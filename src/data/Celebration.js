@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components/macro";
 import HomeThree from "../images/img91.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -88,6 +90,7 @@ const InfoWrap = styled.div`
 `;
 
 const Celebration = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -98,7 +101,7 @@ const Celebration = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Thanksgiving Decoration Ideas</strong>
+            <strong>{t("thanksgiving")}</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -111,58 +114,25 @@ const Celebration = () => {
             {/* <Image src={HomeOne} alt="home" /> */}
 
             <Image src={HomeThree} alt="home" />
-            <h3>1. A Table In Earth Tones</h3>
+            <h3>1. {t("celeb1title")}</h3>
             <br />
-            <p>
-              Following the characteristic color of autumn, we can put a brown
-              tablecloth or a white tablecloth with individual tablecloths in
-              brown tones. A good resource are esparto pieces or loneta, it is
-              not expensive and the effect is very rustic. If the table is
-              large, wide and wooden is perfect for not putting tablecloth and
-              just supplement with some detail.
-            </p>
+            <p>{t("celeb1")}</p>
             <br />
-            <h3>2. Nature At The Thanksgiving Table</h3>
+            <h3>2. {t("celeb2title")}</h3>
             <br />
-            <p>
-              Preparing centerpieces with dried flowers and handmade candles
-              with dried flowers. With paraffin and dried leaves we will have
-              some very nice candles. When we turn them on we will create that
-              atmosphere so tender, warm and familiar that it transmits to us
-              the flame of the candles.
-            </p>
+            <p>{t("celeb2")}</p>
             <br />
-            <h3>3. The Main Colors Can Be Brown, Orange, or Yellow</h3>
+            <h3>3. {t("celeb3title")}</h3>
             <br />
-            <p>
-              Following the line we can make a detail for each diner and add a
-              little sign with your name on it. For example, with a pineapple
-              dry, of which at this time we find on the ground, a piece of paper
-              similar to antiquity (With coffee and burning the edges) and a
-              piece of thread we make a very simple detail and typical of the
-              thanskgiving decoration.
-            </p>
+            <p>{t("celeb3title")}</p>
             <br />
-            <h3>4. Decorate The Exteriors Of The House</h3>
+            <h3>4. {t("celeb4title")}</h3>
             <br />
-            <p>
-              Place details at the entrance of the house, such as we can make an
-              ornament for the door or we can also buy. Place some red apples,
-              like the ones we find in the greengrocer and some dried leaves at
-              the entrance. We make a figure with apples and will be a detail
-              that surprises our beings dear ones before seeing the table we
-              have prepared for action of Thank You.
-            </p>
+            <p>{t("celeb4")}</p>
             <br />
-            <h3>5. Prepare The Table With Autumnal Ornaments</h3>
+            <h3>5. {t("celeb5title")}</h3>
             <br />
-            <p>
-              Another idea to surprise our family in action of thanks is
-              preparing a table with autumn fruits, dried leaves, white
-              candlesticks and, in the center of the table we can put a vase
-              with (whole) branches that have been falling these days of the
-              trees.
-            </p>
+            <p>{t("celeb5")}</p>
             {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>

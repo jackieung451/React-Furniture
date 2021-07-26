@@ -5,6 +5,8 @@ import styled from "styled-components/macro";
 import HomeOne from "../images/img34.jpg";
 import HomeTwo from "../images/img33.jpg";
 import HomeThree from "../images/img32.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -169,6 +171,7 @@ const Arrow = styled(IoMdArrowForward)`
 
 const Listings = () => {
   let history = useHistory();
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -179,7 +182,7 @@ const Listings = () => {
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           >
-            <strong>Everything you need for the home</strong>
+            <strong>{t("listingheading")}</strong>
           </h1>
         </Heading>
         <InfoRow>
@@ -204,14 +207,14 @@ const Listings = () => {
                 }
               `}
             />
-            <h2>Bedrooms</h2>
+            <h2>{t("listing1")}</h2>
             <InfoLink to="/homes" alt="home">
               <button
                 onClick={() => {
                   history.push("/home");
                 }}
               >
-                See More
+                {t("view")}
               </button>
               {/* <Arrow /> */}
             </InfoLink>
@@ -237,14 +240,14 @@ const Listings = () => {
                 }
               `}
             />
-            <h2>Dining Rooms</h2>
+            <h2>{t("listing2")}</h2>
             <InfoLink to="/homes">
               <button
                 onClick={() => {
                   history.push("/home");
                 }}
               >
-                See More
+                {t("view")}
               </button>
               {/* <Arrow /> */}
             </InfoLink>
@@ -270,14 +273,14 @@ const Listings = () => {
                 }
               `}
             />
-            <h2>Living Rooms</h2>
+            <h2>{t("listing3")}</h2>
             <InfoLink to="/homes" alt="home">
               <button
                 onClick={() => {
                   history.push("/home");
                 }}
               >
-                See More
+                {t("view")}
               </button>
               {/* <Arrow /> */}
             </InfoLink>

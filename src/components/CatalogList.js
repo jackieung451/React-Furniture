@@ -8,7 +8,8 @@ import HomeFive from "../images/img82.jpg";
 import { IoMdArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
-
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 // const Section = styled.section`
 //   width: 100%;
 //   height: 100%;
@@ -680,6 +681,7 @@ const ColumnRight = styled.div`
 `;
 
 const CatalogList = ({ reverse }) => {
+  const { t } = useTranslation();
   return (
     <Section>
       <RowOne>
@@ -690,14 +692,10 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>Living Rooms</h1>
-          <p>
-            Your room is the center of your home, that's why we offer a wide
-            variety of options, styles and colors of rooms, so that you find the
-            one that is perfect for you and your family.
-          </p>
+          <h1>{t("catalog1title")}</h1>
+          <p>{t("catalog1")}</p>
           <Button to="/homes" primary="true">
-            Catalog
+            {t("catalogbutton")}
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
@@ -719,16 +717,10 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>Dining Rooms</h1>
-          <p>
-            The dining room is where the family shares food, laughter, love and
-            it makes memories. We know the importance of this part of your home
-            and that's why we offer a variety of options, styles and colors of
-            dining rooms, so that you find the which is perfect for you and your
-            family.
-          </p>
+          <h1>{t("catalog2title")}</h1>
+          <p>{t("catalog2")}</p>
           <Button to="/homes" primary="true">
-            Catalog
+            {t("catalogbutton")}
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
@@ -750,14 +742,10 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>Beds</h1>
-          <p>
-            The bedroom is the most intimate place in your home, that's why we
-            offer a wide variety of options, styles and colors of bedrooms, so
-            that you find the one that is perfect for you and your family.
-          </p>
+          <h1>{t("catalog3title")}</h1>
+          <p>{t("catalog3")}</p>
           <Button to="/homes" primary="true">
-            Catalog
+            {t("catalogbutton")}
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
@@ -779,14 +767,10 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>Futon</h1>
-          <p>
-            Your room is the center of your home, that's why we offer a wide
-            variety of options, styles and colors of rooms, so that you find the
-            one that is perfect for you and your family.
-          </p>
+          <h1>{t("catalog4title")}</h1>
+          <p>{t("catalog4")}</p>
           <Button to="/homes" primary="true">
-            Catalog
+            {t("catalogbutton")}
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
@@ -808,14 +792,10 @@ const CatalogList = ({ reverse }) => {
           data-aos-once="true"
           data-aos-anchor-placement="center bottom"
         >
-          <h1>Bunk Beds</h1>
-          <p>
-            The bedroom is the most intimate place in your home, that is why we
-            offer a wide variety of options, styles and colors of bedrooms, so
-            that you find the one that is perfect for you and your family.
-          </p>
+          <h1>{t("catalog5title")}</h1>
+          <p>{t("catalog5")}</p>
           <Button to="/homes" primary="true">
-            Catalog
+            {t("catalogbutton")}
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>

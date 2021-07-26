@@ -14,7 +14,7 @@ const Home = () => {
       <Listings />
       {/* <Features /> */}
       <br />
-      <InfoSection {...InfoDataTwo} />
+      <InfoSection />
     </>
   );
 };

@@ -18,6 +18,8 @@ import {
 } from "react-router-dom";
 import Thanksgiving from "../pages/Thanksgiving";
 import FengShui from "../pages/FengShui";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -203,7 +205,7 @@ const Arrow = styled(IoMdArrowForward)`
 
 const BlogCoverPage = () => {
   let history = useHistory();
-
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -225,7 +227,7 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageOne} alt="home" />
-            <h2>Thanksgiving Decoration Ideas</h2>
+            <h2>{t("thanksgiving")}</h2>
             {/* <NavLink to="../Thanksgiving">See More</NavLink>
               <Arrow /> */}
             <button
@@ -236,14 +238,14 @@ const BlogCoverPage = () => {
               {/* <Route path="/Thanksgiving" component={Thanksgiving} />
               <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
               {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
-              See More
-              {/* <p>See More</p>
+              {t("view")}
+              {/* <p>{t("view")}</p>
               <Arrow /> */}
             </button>
             {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
-              <p>See More</p>
+              <p>{t("view")}</p>
               <Arrow /> */}
             {/* </InfoLink> */}
 
@@ -262,17 +264,17 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageTwo} alt="home" />
-            <h2>Feng Shui Decoration for Your Home</h2>
+            <h2>{t("fengshui")}</h2>
             <button
               onClick={() => {
                 history.push("/fengshui");
               }}
             >
-              See More
+              {t("view")}
             </button>
-            {/* <Link to="../FengShui">See More</Link> */}
+            {/* <Link to="../FengShui">{t("view")}</Link> */}
             {/* <InfoLink to="/FengShui">
-              <p>See More</p>
+              <p>{t("view")}</p>
               <Arrow />
             </InfoLink> */}
           </InfoWrap>
@@ -283,16 +285,16 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageThree} alt="home" />
-            <h2>Decoration Trends in Interiors</h2>
+            <h2>{t("interior")}</h2>
             <button
               onClick={() => {
                 history.push("/interior");
               }}
             >
-              See More
+              {t("view")}
             </button>
             {/* <InfoLink to="/homes">
-              <p>See More</p>
+              <p>{t("view")}</p>
               <Arrow />
             </InfoLink> */}
 
@@ -311,13 +313,13 @@ const BlogCoverPage = () => {
             data-aos-anchor-placement="center bottom"
           >
             <Image src={ImageFour} alt="home" />
-            <h2>Decoration Trends in Industrial</h2>
+            <h2>{t("industrial")}</h2>
             <button
               onClick={() => {
                 history.push("/industrial");
               }}
             >
-              See More
+              {t("view")}
             </button>
             {/* <InfoLink to="/homes">
               <p>See More</p>

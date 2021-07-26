@@ -11,6 +11,9 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import Home from "./pages";
+// import { ExampleComponent } from "./ExampleComponent";
+import "./styles.css";
+import i18n from "./translations/i18n";
 // import About from "./pages/About";
 // import Rentals from "./pages/Blog";
 import Catalog from "./pages/Catalog";
@@ -24,6 +27,7 @@ import FengShui from "./pages/FengShui";
 import Celebration from "./data/Celebration";
 import InteriorDesign from "./data/InteriorDesign";
 import IndustrialDesign from "./data/IndustrialDesign";
+import HistoryBackground from "./components/HistoryBackground";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +51,15 @@ function App() {
     <BrowserRouter>
       <GlobalStyle />
       <Navbar toggle={toggle} />
+      {/* <div className="App">
+        <button value="en" onClick={handleOnclick}>
+          English
+        </button>
+        <button value="es" onClick={handleOnclick}>
+          Spanish
+        </button>
+        <HistoryBackground lang={language} />
+      </div> */}
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route path="/" exact component={Home} />

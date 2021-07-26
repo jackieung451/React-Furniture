@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "./Button";
 import ImageOne from "../images/img97.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 // const Section = styled.section`
 //   background: #000d1a;
@@ -585,13 +587,14 @@ const Features = ({
   reverse,
   image,
 }) => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
         <Wrap>
           <ColumnLeft>
             <Content>
-              <h1>Our Store</h1>
+              <h1>{t("contact")}</h1>
               <p>2619 N Broadway</p>
               <p>Los Angeles, California 90031</p>
               <p>

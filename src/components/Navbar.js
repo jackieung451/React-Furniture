@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import { menuData } from "../data/MenuData";
 import { Button } from "./Button";
 import { FaBars } from "react-icons/fa";
+import "../styles.css";
+import { i18n } from "../translations/i18n";
 
 const Nav = styled.nav`
   height: 60px;
@@ -98,9 +100,23 @@ const Navbar = ({ toggle }) => {
     transition: "0.4s",
   };
 
+  const [language, setLanguage] = useState("en");
+
+  const handleOnclick = (e) => {
+    e.preventDefault();
+    setLanguage(e.target.value);
+    i18n.changeLanguage(e.target.value);
+  };
+
   return (
     <Nav style={style}>
       <Logo to="/">La Nayarit Furniture</Logo>
+      <button className="Button" value="en" onClick={handleOnclick}>
+        English
+      </button>
+      <button className="Button" value="es" onClick={handleOnclick}>
+        Spanish
+      </button>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (

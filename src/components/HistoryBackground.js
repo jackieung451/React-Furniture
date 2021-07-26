@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { IoMdArrowForward } from "react-icons/io";
 // import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
@@ -8,6 +8,10 @@ import styled from "styled-components/macro";
 import HistoryOne from "../images/img51.png";
 import HistoryTwo from "../images/img52.jpeg";
 import HistoryThree from "../images/img53.jpg";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
+// import "../styles.css";
+import i18n from "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
@@ -137,6 +141,7 @@ const Image = styled.img`
 // `;
 
 const HistoryBackground = () => {
+  const { t } = useTranslation();
   return (
     <Section>
       <Container>
@@ -159,38 +164,15 @@ const HistoryBackground = () => {
           >
             {/* <Image src={HomeOne} alt="home" /> */}
             <h2>
-              <strong>Our History</strong>
+              <strong>{t("historyheading")}</strong>
             </h2>
-            <p>
-              Founded by Jose and his wife, La Nayarit Furniture was created
-              with the focus of being able to more closely serve the needs of
-              our residents of Lincoln Heights and the surrounding area.
-            </p>
+            <p>{t("history1")}</p>
             <br />
 
-            <p>
-              For us, the most important is always to offer furniture of the
-              highest quality at a price that is accessible to our community. We
-              have accessible financing plans at your service, to ensure that
-              every customer who enters through our door, has the option to
-              choose and take home the desired item.
-            </p>
+            <p>{t("history2")}</p>
             <br />
 
-            <p>
-              Jose Sanchez came from Mexico like most people, looking for a
-              better option for him and his family. Shortly after arriving, he
-              realized that our Latino community faces many obstacles on the
-              road to the American dream. After working in the field and
-              construction for a short period, he had the opportunity to work in
-              a furniture mill, first as a packer and eventually as a salesman.
-              That's how he realized that most businesses in the industry, only
-              focused on seeing customers with signs of weight and not genuinely
-              interested in people, and after saving for a few years, in 2001,
-              he and his wife opened the doors of their own business, with the
-              focus on helping the customer by offering excellent service and
-              always putting the needs of the customer first.
-            </p>
+            <p>{t("history3")}</p>
           </InfoWrap>
           <ImageContainer>
             <ImageWrap>
