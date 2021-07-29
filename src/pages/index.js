@@ -8,14 +8,18 @@ import InfoSection from "../components/InfoSection";
 
 const Home = () => {
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: "darkgray",
+      }}
+    >
       <Hero slides={SliderData} />
       {/* <InfoSection {...InfoData} /> */}
       <Listings />
       {/* <Features /> */}
       <br />
       <InfoSection />
-    </>
+    </div>
   );
 };
 

@@ -1,4 +1,6 @@
 export const TRANSLATIONS_ES = {
+  history: "Historia",
+  contact: "Contacto",
   historyheading: "Nuestra Historia",
   history1:
     "Fundado por Jose y su esposa, La Nayarit Furniture fue creada con el enfoque de poder servir más de cerca las necesidades de nuestros residentes de Lincoln Heights y sus alrededores.",

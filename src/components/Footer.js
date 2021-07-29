@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYelp } from "react-icons/fa";
+import { ImPhone } from "react-icons/im";
 
 const Section = styled.section`
   background: #000d1a;
@@ -31,7 +32,16 @@ const FooterTop = styled.div`
   ${"" /* padding: 4rem 0rem; */}
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    ${"" /* flex-direction: column; */}
+    text-align: center;
+    min-width: 300px;
+    padding: 0rem 0.5rem;
+  }
+
+  @media screen and (max-width: 280px) {
+    text-align: center;
+    min-width: 300px;
+    padding-right: 2rem;
   }
 `;
 const Quote = styled.div`
@@ -42,6 +52,10 @@ const Quote = styled.div`
     font-size: clamp(2rem, 8vw, 3rem);
     display: flex;
     justify-content: center;
+    line-height: 0.75;
+    @media screen and (max-width: 768px) {
+      line-height: 1;
+    }
   }
   p {
     display: flex;
@@ -87,6 +101,11 @@ const FooterBottom = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
+  @media screen and (max-width: 280px) {
+    text-align: center;
+    min-width: 300px;
+    padding-left: 0.5rem;
+  }
 `;
 
 const SocialIcons = styled.div`
@@ -119,6 +138,12 @@ const Yelp = styled(FaYelp)`
   ${Icons}
 `;
 
+const Call = styled(ImPhone)`
+  ${Icons}
+  margin-top: 14px;
+  margin-right: 8px;
+`;
+
 const Contact = styled.div`
   width: 100%;
   display: flex;
@@ -141,7 +166,10 @@ const Footer = () => {
 
             <h6>Sunday 10:00am - 3:00pm</h6>
             <p>2619 N Broadway Los Angeles, CA 90031</p>
-            <p>Call Now 323.247.9094</p>
+            <p>
+              <Call />
+              Call Now (323) 247-9094
+            </p>
           </Quote>
         </FooterTop>
         <FooterInfo>
@@ -160,11 +188,11 @@ const Footer = () => {
         <FooterBottom>
           <SocialIcons>
             <a
-              href="https://www.yelp.com/biz/la-nayarit-furniture-los-angeles"
+              href="https://www.facebook.com/LaNayaritFurniture/about"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Yelp />
+              <Facebook />
             </a>
             <a
               href="https://www.instagram.com/lanayaritfurniture/?hl=en"
@@ -174,12 +202,13 @@ const Footer = () => {
               <Instagram />
             </a>
             <a
-              href="https://www.facebook.com/LaNayaritFurniture/about"
+              href="https://www.yelp.com/biz/la-nayarit-furniture-los-angeles"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Facebook />
+              <Yelp />
             </a>
+            <p>Copyright &copy; 2021</p>
             {/* <a
               href="//www.google.com"
               rel="noopener noreferrer"

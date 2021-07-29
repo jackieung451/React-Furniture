@@ -23,6 +23,7 @@ const Container = styled.div`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    grid-template-rows: 300px;
   }
 `;
 
@@ -95,36 +96,42 @@ const InfoSection = ({
 }) => {
   const { t } = useTranslation();
   return (
-    <Section>
-      <Container>
-        <ColumnLeft
-          reverse={reverse}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-          data-aos-delay={delay}
-          data-aos-anchor-placement="center bottom"
-        >
-          <h1>{t("serviceheading")}</h1>
-          <p>{t("serviceparagraph")}</p>
-          <p>{paragraphTwo}</p>
-          <Button to="/homes" primary="true">
-            {t("catalogbutton")}
-          </Button>
-        </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img
-            src={ImageTwo}
-            alt="home"
-            data-aos="zoom-out"
+    <div
+      style={{
+        backgroundColor: "darkgray",
+      }}
+    >
+      <Section>
+        <Container>
+          <ColumnLeft
+            reverse={reverse}
+            data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
             data-aos-delay={delay}
             data-aos-anchor-placement="center bottom"
-          />
-        </ColumnRight>
-      </Container>
-    </Section>
+          >
+            <h1>{t("serviceheading")}</h1>
+            <p>{t("serviceparagraph")}</p>
+            <p>{paragraphTwo}</p>
+            <Button to="/homes" primary="true">
+              {t("catalogbutton")}
+            </Button>
+          </ColumnLeft>
+          <ColumnRight reverse={reverse}>
+            <img
+              src={ImageTwo}
+              alt="home"
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-delay={delay}
+              data-aos-anchor-placement="center bottom"
+            />
+          </ColumnRight>
+        </Container>
+      </Section>
+    </div>
   );
 };
 

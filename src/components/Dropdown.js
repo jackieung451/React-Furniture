@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { menuData } from "../data/MenuData";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
+import { i18n } from "../translations/i18n";
 
 const DropdownContainer = styled.div`
   position: fixed;
@@ -65,12 +66,25 @@ const DropdownLink = styled(Link)`
 
 const BtnWrap = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 4rem;
+
+  button {
+    margin-top: 15px;
+  }
 `;
 
 const Dropdown = ({ isOpen, toggle }) => {
+  const [language, setLanguage] = useState("en");
+
+  const handleOnclick = (e) => {
+    e.preventDefault();
+    setLanguage(e.target.value);
+    i18n.changeLanguage(e.target.value);
+  };
+
   return (
     <DropdownContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -88,6 +102,12 @@ const Dropdown = ({ isOpen, toggle }) => {
           <Button primary="true" round="true" big="true" to="/contact">
             Contact Us
           </Button>
+          <button className="Button" value="en" onClick={handleOnclick}>
+            English
+          </button>
+          <button className="Button" value="es" onClick={handleOnclick}>
+            Spanish
+          </button>
         </BtnWrap>
       </DropdownWrapper>
     </DropdownContainer>

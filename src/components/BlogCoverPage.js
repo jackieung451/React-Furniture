@@ -24,6 +24,29 @@ import "../translations/i18n";
 const Section = styled.section`
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 768px) {
+    padding: 5rem 1rem 0rem 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    justify-content: center;
+  }
+  ${
+    "" /* @media screen and (max-width: 280px) {
+    padding: 1rem 0rem 0rem 0rem;
+    margin-bottom: 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center; */
+  }
+  ${"" /* min-width: 280px; */}
+    ${"" /* flex-wrap: wrap; */}
+    ${"" /* overflow: hidden; */}
+    ${"" /* margin-left: 1rem; */}
+    ${"" /* margin-right: 1rem; */}
+  ${"" /* } */}
+
   ${
     "" /* @media screen and (max-width: 768px) {
     padding: 5rem 0rem;
@@ -66,7 +89,9 @@ const InfoRow = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    object-fit: contain;
+    grid-template-rows: 100px;
+    grid-gap: 0rem;
+    object-fit: cover;
   }
   ${"" /* padding: 1rem 0rem; */}
 
@@ -79,39 +104,55 @@ const InfoRow = styled.div`
   }
 `;
 const InfoWrap = styled.div`
-padding: 0 0 10rem 0;
-${
-  "" /* display: flex;
+  padding: 0 0 5rem 0;
+
+  @media screen and (max-width: 280px) {
+    /* display: flex;
+    flex-direction: column;
+    grid-template-rows: 100px;
+    grid-gap: 0rem; */
+    display: flex;
+    justify-content: center;
+
+    ${"" /* max-width: 30px; */}
+    padding: 0 10rem 0 10rem;
+
+    object-fit: cover;
+  }
+  ${
+    "" /* display: flex;
 flex-direction: row;
 justify-content: space-around;
 margin-bottom: 0rem;
 align-items: center; */
-}
-${"" /* grid-template-columns: 1fr; */}
+  }
+  ${"" /* grid-template-columns: 1fr; */}
   ${"" /* padding: 10rem 10rem; */}
   ${"" /* margin-bottom: 10rem; */}
   ${"" /* min-height: 550px; */}
   ${"" /* height: 100%; */}
-button {background: black;
-  white-space: nowrap;
-  outline: none;
-  border: none;
-  min-width: 100px;
-  max-width: 200px;
-  cursor: pointer;
-  text-decoration: none;
-  ${"" /* transition: 0.3s; */}
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 40px;
-  color: #fff;
-  font-size: 20px;
-  ${"" /* border-radius: 50px; */}
+button {
+    background: black;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    min-width: 100px;
+    max-width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    ${"" /* transition: 0.3s; */}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    color: #fff;
+    font-size: 20px;
+    ${"" /* border-radius: 50px; */}
 
-  &:hover {
-    transform: translateY(-2px);
-  }}
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
 
   h2 {
     margin-bottom: 0.5rem;
@@ -128,10 +169,33 @@ button {background: black;
     }
     display: grid;
     grid-template-columns: 1fr;
+  }
 
-    @media screen and (max-width: 320px) {
+  @media screen and (max-width: 320px) {
     ${"" /* padding-right: 2rem; */}
     justify-content: center;
+  }
+  @media screen and (max-width: 280px) {
+    display: flex;
+    flex-direction: column;
+    ${"" /* padding-right: 2rem; */}
+    justify-content: center;
+
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
+    min-width: 300px;
+    min-height: 200px;
+    padding-right: 3px;
+    padding-left: 0.5px;
+    margin-left: 20px;
+    padding-bottom: 1.5rem;
+    ${
+      "" /* padding-left: 4rem;
+padding-right: 4rem; */
+    }
+    margin-top: 0rem;
+    margin-bottom: 0rem;
   }
   ${
     "" /* @media screen and (max-width: 768px) {
@@ -178,11 +242,14 @@ const Image = styled.img`
 
   object-fit: contain;
   margin-bottom: 0.5rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
 
   @media screen and (max-width: 768px) {
     width: 90%;
     height: 90%;
+    min-width: 300px;
+    min-height: 200px;
+
     margin-top: 0rem;
     margin-bottom: 0rem;
     object-fit: contain;
@@ -207,9 +274,14 @@ const BlogCoverPage = () => {
   let history = useHistory();
   const { t } = useTranslation();
   return (
-    <Section>
-      <Container>
-        {/* <Heading>
+    <div
+      style={{
+        backgroundColor: "darkgray",
+      }}
+    >
+      <Section>
+        <Container>
+          {/* <Heading>
             <h1
               data-aos="fade-right"
               data-aos-duration="1000"
@@ -219,116 +291,117 @@ const BlogCoverPage = () => {
               Todo lo que necesita para el hogar
             </h1>
           </Heading> */}
-        <InfoRow>
-          <InfoWrap
-            data-aos="zoom-out-up"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image src={ImageOne} alt="home" />
-            <h2>{t("thanksgiving")}</h2>
-            {/* <NavLink to="../Thanksgiving">See More</NavLink>
-              <Arrow /> */}
-            <button
-              onClick={() => {
-                history.push("/thanksgiving");
-              }}
+          <InfoRow>
+            <InfoWrap
+              data-aos="zoom-out-up"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
             >
-              {/* <Route path="/Thanksgiving" component={Thanksgiving} />
-              <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
-              {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
-              {t("view")}
-              {/* <p>{t("view")}</p>
+              <Image src={ImageOne} alt="home" />
+              <h2>{t("thanksgiving")}</h2>
+              {/* <NavLink to="../Thanksgiving">See More</NavLink>
               <Arrow /> */}
-            </button>
-            {/* <Image src={HomeThree} alt="home" />
+              <button
+                onClick={() => {
+                  history.push("/thanksgiving");
+                }}
+              >
+                {/* <Route path="/Thanksgiving" component={Thanksgiving} />
+              <Redirect exact from="/BlogCoverPage" to="/Thanksgiving" /> */}
+                {/* <button onClick={() => history.pushState("/Thanksgiving")}> */}
+                {t("view")}
+                {/* <p>{t("view")}</p>
+              <Arrow /> */}
+              </button>
+              {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
               <p>{t("view")}</p>
               <Arrow /> */}
-            {/* </InfoLink> */}
+              {/* </InfoLink> */}
 
-            {/* </InfoWrap>
+              {/* </InfoWrap>
           <InfoWrap
             data-aos="zoom-out-down"
             data-aos-duration="1200"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           > */}
-          </InfoWrap>
-          <InfoWrap
-            data-aos="zoom-out-down"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image src={ImageTwo} alt="home" />
-            <h2>{t("fengshui")}</h2>
-            <button
-              onClick={() => {
-                history.push("/fengshui");
-              }}
+            </InfoWrap>
+            <InfoWrap
+              data-aos="zoom-out-down"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
             >
-              {t("view")}
-            </button>
-            {/* <Link to="../FengShui">{t("view")}</Link> */}
-            {/* <InfoLink to="/FengShui">
+              <Image src={ImageTwo} alt="home" />
+              <h2>{t("fengshui")}</h2>
+              <button
+                onClick={() => {
+                  history.push("/fengshui");
+                }}
+              >
+                {t("view")}
+              </button>
+              {/* <Link to="../FengShui">{t("view")}</Link> */}
+              {/* <InfoLink to="/FengShui">
               <p>{t("view")}</p>
               <Arrow />
             </InfoLink> */}
-          </InfoWrap>
-          <InfoWrap
-            data-aos="zoom-out-down"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image src={ImageThree} alt="home" />
-            <h2>{t("interior")}</h2>
-            <button
-              onClick={() => {
-                history.push("/interior");
-              }}
+            </InfoWrap>
+            <InfoWrap
+              data-aos="zoom-out-down"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
             >
-              {t("view")}
-            </button>
-            {/* <InfoLink to="/homes">
+              <Image src={ImageThree} alt="home" />
+              <h2>{t("interior")}</h2>
+              <button
+                onClick={() => {
+                  history.push("/interior");
+                }}
+              >
+                {t("view")}
+              </button>
+              {/* <InfoLink to="/homes">
               <p>{t("view")}</p>
               <Arrow />
             </InfoLink> */}
 
-            {/* </InfoWrap>
+              {/* </InfoWrap>
           <InfoWrap
             data-aos="zoom-out-down"
             data-aos-duration="1200"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           > */}
-          </InfoWrap>
-          <InfoWrap
-            data-aos="zoom-out-down"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image src={ImageFour} alt="home" />
-            <h2>{t("industrial")}</h2>
-            <button
-              onClick={() => {
-                history.push("/industrial");
-              }}
+            </InfoWrap>
+            <InfoWrap
+              data-aos="zoom-out-down"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
             >
-              {t("view")}
-            </button>
-            {/* <InfoLink to="/homes">
+              <Image src={ImageFour} alt="home" />
+              <h2>{t("industrial")}</h2>
+              <button
+                onClick={() => {
+                  history.push("/industrial");
+                }}
+              >
+                {t("view")}
+              </button>
+              {/* <InfoLink to="/homes">
               <p>See More</p>
               <Arrow />
             </InfoLink> */}
-          </InfoWrap>
-        </InfoRow>
-      </Container>
-    </Section>
+            </InfoWrap>
+          </InfoRow>
+        </Container>
+      </Section>
+    </div>
 
     /* <Redirect from="/BlogCoverPage/" to="/Thanksgiving" /> */
     /* <Switch>

@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import IntlProvider from "react-intl";
+import "./styles.css";
 
 ReactDOM.render(
   <React.StrictMode>

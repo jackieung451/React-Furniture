@@ -143,10 +143,15 @@ const Image = styled.img`
 const HistoryBackground = () => {
   const { t } = useTranslation();
   return (
-    <Section>
-      <Container>
-        {/* <Heading> */}
-        {/* <h1
+    <div
+      style={{
+        backgroundColor: "darkgray",
+      }}
+    >
+      <Section>
+        <Container>
+          {/* <Heading> */}
+          {/* <h1
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-once="true"
@@ -154,38 +159,38 @@ const HistoryBackground = () => {
           >
             Todo lo que necesita para el hogar
           </h1> */}
-        {/* </Heading> */}
-        <InfoRow>
-          <InfoWrap
-            data-aos="zoom-out-up"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            {/* <Image src={HomeOne} alt="home" /> */}
-            <h2>
-              <strong>{t("historyheading")}</strong>
-            </h2>
-            <p>{t("history1")}</p>
-            <br />
+          {/* </Heading> */}
+          <InfoRow>
+            <InfoWrap
+              data-aos="zoom-out-up"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              {/* <Image src={HomeOne} alt="home" /> */}
+              <h2>
+                <strong>{t("historyheading")}</strong>
+              </h2>
+              <p>{t("history1")}</p>
+              <br />
 
-            <p>{t("history2")}</p>
-            <br />
+              <p>{t("history2")}</p>
+              <br />
 
-            <p>{t("history3")}</p>
-          </InfoWrap>
-          <ImageContainer>
-            <ImageWrap>
-              <Image src={HistoryOne} alt="history" />
-            </ImageWrap>
-            <ImageWrap>
-              <Image src={HistoryTwo} alt="history" />
-            </ImageWrap>
-            <ImageWrap>
-              <Image src={HistoryThree} alt="history" />
-            </ImageWrap>
-          </ImageContainer>
-          {/* <h3>
+              <p>{t("history3")}</p>
+            </InfoWrap>
+            <ImageContainer>
+              <ImageWrap>
+                <Image src={HistoryOne} alt="history" />
+              </ImageWrap>
+              <ImageWrap>
+                <Image src={HistoryTwo} alt="history" />
+              </ImageWrap>
+              <ImageWrap>
+                <Image src={HistoryThree} alt="history" />
+              </ImageWrap>
+            </ImageContainer>
+            {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>
             <br />
@@ -195,24 +200,24 @@ const HistoryBackground = () => {
             <h3>
               (323) 247-9094 <br /> sales@lanayaritfurniture.com
             </h3> */}
-          {/* <InfoLink to="/homes">
+            {/* <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-          {/* <Image src={HomeThree} alt="home" />
+            {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow /> */}
-          {/* </InfoLink> */}
+            {/* </InfoLink> */}
 
-          {/* <InfoWrap
+            {/* <InfoWrap
             data-aos="zoom-out-down"
             data-aos-duration="1200"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           > */}
-          {/* <Image
+            {/* <Image
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13219.034848151507!2d-118.22374474556887!3d34.07569910088133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd15fe4935319e285!2sLa%20Nayarit%20Furniture!5e0!3m2!1sen!2sus!4v1625958138842!5m2!1sen!2sus"
               width="600"
               height="450"
@@ -220,7 +225,7 @@ const HistoryBackground = () => {
               // allowfullscreen=""
               // loading="lazy"
             /> */}
-          {/* alt="home"
+            {/* alt="home"
               css={`
                 // margin-top: 120px;
                 @media screen and (max-width: 768px) {
@@ -228,15 +233,16 @@ const HistoryBackground = () => {
                 }
               `}
             /> */}
-          {/* <h2>Recamaras</h2>
+            {/* <h2>Recamaras</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-          {/* </InfoWrap> */}
-        </InfoRow>
-      </Container>
-    </Section>
+            {/* </InfoWrap> */}
+          </InfoRow>
+        </Container>
+      </Section>
+    </div>
   );
 };
 

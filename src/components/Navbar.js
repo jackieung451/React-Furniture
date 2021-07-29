@@ -64,7 +64,12 @@ const NavMenuLinks = styled(Link)`
 const NavBtn = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 24px;
+  margin-right: -30rem;
+
+  @media screen and (min-width: 1024px) {
+    padding-right: 24rem;
+  }
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -94,6 +99,27 @@ const Navbar = ({ toggle }) => {
     };
   }, []);
 
+  const Lingo = styled.div`
+  display: flex;
+  justify-content: space-between
+    max-width: 8000px;
+
+   
+
+    @media screen and (max-width: 768px) {
+    display: grid;
+    grid-templates-column: 1fr;
+    display: none;
+  }
+  `;
+
+  const Lang1 = styled.div`
+    padding-right: 5px;
+  `;
+  const Lang2 = styled.div`
+    padding-left: 5px;
+  `;
+
   let style = {
     backgroundColor:
       navbar || location.pathname !== "/" ? "#264348" : "transparent",
@@ -111,12 +137,7 @@ const Navbar = ({ toggle }) => {
   return (
     <Nav style={style}>
       <Logo to="/">La Nayarit Furniture</Logo>
-      <button className="Button" value="en" onClick={handleOnclick}>
-        English
-      </button>
-      <button className="Button" value="es" onClick={handleOnclick}>
-        Spanish
-      </button>
+
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
@@ -130,6 +151,18 @@ const Navbar = ({ toggle }) => {
           Contact Us
         </Button>
       </NavBtn>
+      <Lingo>
+        <Lang1>
+          <button className="Button" value="en" onClick={handleOnclick}>
+            English
+          </button>
+        </Lang1>
+        <Lang2>
+          <button className="Button" value="es" onClick={handleOnclick}>
+            Spanish
+          </button>
+        </Lang2>
+      </Lingo>
     </Nav>
   );
 };

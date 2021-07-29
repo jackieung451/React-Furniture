@@ -7,7 +7,7 @@ import HomeFour from "../images/img83.jpg";
 import HomeFive from "../images/img82.jpg";
 import { IoMdArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
+// import { Button } from "./Button";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 // const Section = styled.section`
@@ -565,7 +565,7 @@ const Section = styled.section`
   padding: 4.5rem 0rem;
 
   @media screen and (max-width: 768px) {
-    padding: 5rem 0rem;
+    padding: 5rem 0rem 0rem 0rem;
     margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -586,6 +586,11 @@ const Container = styled.div`
 `;
 
 const ColumnLeft = styled.div`
+${"" /* display: flex; */}
+text-align: center;
+max-width: 700px;
+
+
   ${
     "" /* display: flex;
   flex-direction: column; 
@@ -599,6 +604,8 @@ const ColumnLeft = styled.div`
   padding: 0rem 2rem 2rem 2rem;
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
+ 
+
   h1 {
     
      margin-top: 1rem;
@@ -611,13 +618,13 @@ const ColumnLeft = styled.div`
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0rem;
-    padding-left: 4rem;
+    padding-left: 2rem;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
 
     @media screen and (max-width: 320px) {
-    padding-right: 5rem;
+    padding-right: 2rem;
   }
     ${
       "" /* display: flex;
@@ -625,25 +632,77 @@ const ColumnLeft = styled.div`
     }
 
 `;
+
+const Button = styled(Link)`
+background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  min-width: 100px;
+  max-width: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: ${({ big }) => (big ? "16px 40px" : "14px 24px")};
+  color: ${({ primary }) => (primary ? "#fff" : "#000d1a")};
+  font-size: ${({ big }) => (big ? "20px" : "14px")};
+  border-radius: ${({ round }) => (round ? "50px" : "0px")}
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+  text-align: center;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+`;
 const RowOne = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-templates-column: 1fr;
+  }
 `;
 const RowTwo = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-templates-column: 1fr;
+  }
 `;
+
 const RowThree = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-templates-column: 1fr;
+  }
 `;
+
 const RowFour = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-templates-column: 1fr;
+  }
 `;
+
 const RowFive = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-templates-column: 1fr;
+  }
 `;
 
 const ColumnRight = styled.div`
@@ -675,6 +734,8 @@ const ColumnRight = styled.div`
       width: 90%;
       height: 90%;
       margin-top: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
       object-fit: cover;
     }
   }
@@ -683,133 +744,139 @@ const ColumnRight = styled.div`
 const CatalogList = ({ reverse }) => {
   const { t } = useTranslation();
   return (
-    <Section>
-      <RowOne>
-        <ColumnLeft
-          reverse={reverse}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-          data-aos-anchor-placement="center bottom"
-        >
-          <h1>{t("catalog1title")}</h1>
-          <p>{t("catalog1")}</p>
-          <Button to="/homes" primary="true">
-            {t("catalogbutton")}
-          </Button>
-        </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img
-            src={HomeOne}
-            alt="home"
-            data-aos="zoom-out"
+    <div
+      style={{
+        backgroundColor: "darkgray",
+      }}
+    >
+      <Section>
+        <RowOne>
+          <ColumnLeft
+            reverse={reverse}
+            data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
-          />
-        </ColumnRight>
-      </RowOne>
-      <RowTwo>
-        <ColumnLeft
-          reverse={reverse}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-          data-aos-anchor-placement="center bottom"
-        >
-          <h1>{t("catalog2title")}</h1>
-          <p>{t("catalog2")}</p>
-          <Button to="/homes" primary="true">
-            {t("catalogbutton")}
-          </Button>
-        </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img
-            src={HomeTwo}
-            alt="home"
-            data-aos="zoom-out"
+          >
+            <h1>{t("catalog1title")}</h1>
+            <p>{t("catalog1")}</p>
+            <Button to="/homes" primary="true">
+              {t("catalogbutton")}
+            </Button>
+          </ColumnLeft>
+          <ColumnRight reverse={reverse}>
+            <img
+              src={HomeOne}
+              alt="home"
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            />
+          </ColumnRight>
+        </RowOne>
+        <RowTwo>
+          <ColumnLeft
+            reverse={reverse}
+            data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
-          />
-        </ColumnRight>
-      </RowTwo>
-      <RowThree>
-        <ColumnLeft
-          reverse={reverse}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-          data-aos-anchor-placement="center bottom"
-        >
-          <h1>{t("catalog3title")}</h1>
-          <p>{t("catalog3")}</p>
-          <Button to="/homes" primary="true">
-            {t("catalogbutton")}
-          </Button>
-        </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img
-            src={HomeThree}
-            alt="home"
-            data-aos="zoom-out"
+          >
+            <h1>{t("catalog2title")}</h1>
+            <p>{t("catalog2")}</p>
+            <Button to="/homes" primary="true">
+              {t("catalogbutton")}
+            </Button>
+          </ColumnLeft>
+          <ColumnRight reverse={reverse}>
+            <img
+              src={HomeTwo}
+              alt="home"
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            />
+          </ColumnRight>
+        </RowTwo>
+        <RowThree>
+          <ColumnLeft
+            reverse={reverse}
+            data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
-          />
-        </ColumnRight>
-      </RowThree>
-      <RowFour>
-        <ColumnLeft
-          reverse={reverse}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-          data-aos-anchor-placement="center bottom"
-        >
-          <h1>{t("catalog4title")}</h1>
-          <p>{t("catalog4")}</p>
-          <Button to="/homes" primary="true">
-            {t("catalogbutton")}
-          </Button>
-        </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img
-            src={HomeFour}
-            alt="home"
-            data-aos="zoom-out"
+          >
+            <h1>{t("catalog3title")}</h1>
+            <p>{t("catalog3")}</p>
+            <Button to="/homes" primary="true">
+              {t("catalogbutton")}
+            </Button>
+          </ColumnLeft>
+          <ColumnRight reverse={reverse}>
+            <img
+              src={HomeThree}
+              alt="home"
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            />
+          </ColumnRight>
+        </RowThree>
+        <RowFour>
+          <ColumnLeft
+            reverse={reverse}
+            data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
-          />
-        </ColumnRight>
-      </RowFour>
-      <RowFive>
-        <ColumnLeft
-          reverse={reverse}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-          data-aos-anchor-placement="center bottom"
-        >
-          <h1>{t("catalog5title")}</h1>
-          <p>{t("catalog5")}</p>
-          <Button to="/homes" primary="true">
-            {t("catalogbutton")}
-          </Button>
-        </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img
-            src={HomeFive}
-            alt="home"
-            data-aos="zoom-out"
+          >
+            <h1>{t("catalog4title")}</h1>
+            <p>{t("catalog4")}</p>
+            <Button to="/homes" primary="true">
+              {t("catalogbutton")}
+            </Button>
+          </ColumnLeft>
+          <ColumnRight reverse={reverse}>
+            <img
+              src={HomeFour}
+              alt="home"
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            />
+          </ColumnRight>
+        </RowFour>
+        <RowFive>
+          <ColumnLeft
+            reverse={reverse}
+            data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
-          />
-        </ColumnRight>
-      </RowFive>
-    </Section>
+          >
+            <h1>{t("catalog5title")}</h1>
+            <p>{t("catalog5")}</p>
+            <Button to="/homes" primary="true">
+              {t("catalogbutton")}
+            </Button>
+          </ColumnLeft>
+          <ColumnRight reverse={reverse}>
+            <img
+              src={HomeFive}
+              alt="home"
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            />
+          </ColumnRight>
+        </RowFive>
+      </Section>
+    </div>
   );
 };
 

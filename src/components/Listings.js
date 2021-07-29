@@ -40,6 +40,10 @@ const Heading = styled.div`
     padding-left: 30px;
     padding-right: 30px;
   }
+  @media screen and (max-width: 411px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 const InfoRow = styled.div`
   display: grid;
@@ -66,6 +70,13 @@ const InfoRow = styled.div`
       "" /* grid-template-columns: 1fr;
     max-height: 900px; */
     }
+  }
+  @media screen and (max-width: 414px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    object-fit: cover;
+    margin: 0 1rem;
   }
 `;
 const InfoWrap = styled.div`
@@ -107,21 +118,29 @@ const InfoWrap = styled.div`
     padding: 0 0 0 0;
   } */
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     height: 50%;
   }
-  @media screen and (max-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    ${"" /* margin-bottom: 1rem; */}
-    ${
-      "" /* display: flex;
+  ${
+    "" /* @media screen and (max-width: 414px) {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 100%;
+  } */
+  }
+  ${"" /* margin-bottom: 1rem; */}
+  ${
+    "" /* display: flex;
     flex-direction: column; */
-    }
   }
 `;
 const Image = styled.img`
@@ -145,6 +164,20 @@ const Image = styled.img`
     ${"" /* max-height: 800px; */}
     ${"" /* background-size: cover; */}
     object-fit: cover;
+  }
+
+  ${
+    "" /* @media screen and (max-width: 411px) {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-left: 0px;
+    padding-right: 0px
+    object-fit: cover;;
+  } */
   }
 `;
 const InfoLink = styled(Link)`
@@ -173,121 +206,127 @@ const Listings = () => {
   let history = useHistory();
   const { t } = useTranslation();
   return (
-    <Section>
-      <Container>
-        <Heading>
-          <h1
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <strong>{t("listingheading")}</strong>
-          </h1>
-        </Heading>
-        <InfoRow>
-          <InfoWrap
-            data-aos="zoom-out-up"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image
-              src={HomeOne}
-              alt="home"
-              css={`
-                // margin-top: 120px;
-                @media screen and (max-width: 768px) {
-                  margin-top: 0px;
-                  // display: flex;
-                  // flex-direction: column;
-                  // justify-content: center;
-                  // align-items: flex-start;
-                  // order: 1;
-                }
-              `}
-            />
-            <h2>{t("listing1")}</h2>
-            <InfoLink to="/homes" alt="home">
-              <button
-                onClick={() => {
-                  history.push("/home");
-                }}
-              >
-                {t("view")}
-              </button>
-              {/* <Arrow /> */}
-            </InfoLink>
-          </InfoWrap>
-          <InfoWrap
-            data-aos="zoom-out-down"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image
-              src={HomeTwo}
-              alt="home"
-              css={`
-                // margin-top: 120px;
-                @media screen and (max-width: 768px) {
-                  margin-top: 0px;
-                  // display: flex;
-                  // flex-direction: column;
-                  // justify-content: center;
-                  // align-items: flex-start;
-                  // order: 1;
-                }
-              `}
-            />
-            <h2>{t("listing2")}</h2>
-            <InfoLink to="/homes">
-              <button
-                onClick={() => {
-                  history.push("/home");
-                }}
-              >
-                {t("view")}
-              </button>
-              {/* <Arrow /> */}
-            </InfoLink>
-          </InfoWrap>
-          <InfoWrap
-            data-aos="zoom-out-down"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <Image
-              src={HomeThree}
-              alt="home"
-              css={`
-                // margin-top: 120px;
-                @media screen and (max-width: 768px) {
-                  margin-top: 0px;
-                  // display: flex;
-                  // flex-direction: column;
-                  // justify-content: center;
-                  // align-items: flex-start;
-                  // order: 1;
-                }
-              `}
-            />
-            <h2>{t("listing3")}</h2>
-            <InfoLink to="/homes" alt="home">
-              <button
-                onClick={() => {
-                  history.push("/home");
-                }}
-              >
-                {t("view")}
-              </button>
-              {/* <Arrow /> */}
-            </InfoLink>
-          </InfoWrap>
-        </InfoRow>
-      </Container>
-    </Section>
+    <div
+      style={{
+        backgroundColor: "darkgray",
+      }}
+    >
+      <Section>
+        <Container>
+          <Heading>
+            <h1
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              <strong>{t("listingheading")}</strong>
+            </h1>
+          </Heading>
+          <InfoRow>
+            <InfoWrap
+              data-aos="zoom-out-up"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              <Image
+                src={HomeOne}
+                alt="home"
+                css={`
+                  // margin-top: 120px;
+                  @media screen and (max-width: 768px) {
+                    margin-top: 0px;
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    // align-items: flex-start;
+                    // order: 1;
+                  }
+                `}
+              />
+              <h2>{t("listing1")}</h2>
+              <InfoLink to="/homes" alt="home">
+                <button
+                  onClick={() => {
+                    history.push("/home");
+                  }}
+                >
+                  {t("view")}
+                </button>
+                {/* <Arrow /> */}
+              </InfoLink>
+            </InfoWrap>
+            <InfoWrap
+              data-aos="zoom-out-down"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              <Image
+                src={HomeTwo}
+                alt="home"
+                css={`
+                  // margin-top: 120px;
+                  @media screen and (max-width: 768px) {
+                    margin-top: 0px;
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    // align-items: flex-start;
+                    // order: 1;
+                  }
+                `}
+              />
+              <h2>{t("listing2")}</h2>
+              <InfoLink to="/homes">
+                <button
+                  onClick={() => {
+                    history.push("/home");
+                  }}
+                >
+                  {t("view")}
+                </button>
+                {/* <Arrow /> */}
+              </InfoLink>
+            </InfoWrap>
+            <InfoWrap
+              data-aos="zoom-out-down"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              <Image
+                src={HomeThree}
+                alt="home"
+                css={`
+                  // margin-top: 120px;
+                  @media screen and (max-width: 768px) {
+                    margin-top: 0px;
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    // align-items: flex-start;
+                    // order: 1;
+                  }
+                `}
+              />
+              <h2>{t("listing3")}</h2>
+              <InfoLink to="/homes" alt="home">
+                <button
+                  onClick={() => {
+                    history.push("/home");
+                  }}
+                >
+                  {t("view")}
+                </button>
+                {/* <Arrow /> */}
+              </InfoLink>
+            </InfoWrap>
+          </InfoRow>
+        </Container>
+      </Section>
+    </div>
   );
 };
 

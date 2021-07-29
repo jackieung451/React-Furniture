@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "./Button";
+// import { Button } from "./Button";
 import ImageOne from "../images/img97.jpg";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
@@ -589,37 +589,46 @@ const Features = ({
 }) => {
   const { t } = useTranslation();
   return (
-    <Section>
-      <Container>
-        <Wrap>
-          <ColumnLeft>
-            <Content>
-              <h1>{t("contact")}</h1>
-              <p>2619 N Broadway</p>
-              <p>Los Angeles, California 90031</p>
-              <p>
-                <strong>(323) 247-9094</strong>
-              </p>
-              <p>sales@lanayaritfurniture.com</p>
-            </Content>
-            <br />
-            <br />
-            <br />
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13219.317769356978!2d-118.2149471!3d34.0738862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd15fe4935319e285!2sLa%20Nayarit%20Furniture!5e0!3m2!1sen!2sus!4v1626564967160!5m2!1sen!2sus"
-              width="600"
-              height="450"
-              style={{ border: 0 }}
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </ColumnLeft>
-          <ColumnRight>
-            <Image src={ImageOne} alt="recruiting" />
-          </ColumnRight>
-        </Wrap>
-      </Container>
-    </Section>
+    <div
+      style={{
+        backgroundColor: "darkgray",
+      }}
+    >
+      <Section>
+        <Container>
+          <Wrap>
+            <ColumnLeft>
+              <Content>
+                <h1>{t("contact")}</h1>
+                <p>2619 N Broadway</p>
+                <p>Los Angeles, California 90031</p>
+                <p>
+                  <strong>(323) 247-9094</strong>
+                </p>
+                <p>sales@lanayaritfurniture.com</p>
+              </Content>
+
+              <br />
+              <br />
+              <br />
+              <iframe
+                title="map"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13219.317769356978!2d-118.2149471!3d34.0738862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd15fe4935319e285!2sLa%20Nayarit%20Furniture!5e0!3m2!1sen!2sus!4v1626564967160!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </ColumnLeft>
+
+            <ColumnRight>
+              <Image src={ImageOne} alt="home" />
+            </ColumnRight>
+          </Wrap>
+        </Container>
+      </Section>
+    </div>
   );
 };
 

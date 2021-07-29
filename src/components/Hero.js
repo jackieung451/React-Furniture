@@ -178,34 +178,35 @@ const Hero = ({ slides }) => {
   };
 
   return (
-    <HeroSection>
-      <HeroWrapper>
-        <AnimatePresence>
-          {slides.map((slide, index) => {
-            return (
-              <HeroSlide key={index}>
-                {index === current && (
-                  <HeroSlider>
-                    <HeroImage
-                      src={slide.image}
-                      alt={slide.alt}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      variants={fadeAnimation}
-                    />
-                    <HeroContent>
-                      <h1 data-aos="fade-down" data-aos-duration="600">
-                        {slide.title}
-                      </h1>
-                      <p
-                        data-aos="fade-down"
-                        data-aos-duration="600"
-                        data-aos-delay="200"
-                      >
-                        {slide.price}
-                      </p>
-                      {/* <Button
+    <div>
+      <HeroSection>
+        <HeroWrapper>
+          <AnimatePresence>
+            {slides.map((slide, index) => {
+              return (
+                <HeroSlide key={index}>
+                  {index === current && (
+                    <HeroSlider>
+                      <HeroImage
+                        src={slide.image}
+                        alt={slide.alt}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        variants={fadeAnimation}
+                      />
+                      <HeroContent>
+                        <h1 data-aos="fade-down" data-aos-duration="600">
+                          {slide.title}
+                        </h1>
+                        <p
+                          data-aos="fade-down"
+                          data-aos-duration="600"
+                          data-aos-delay="200"
+                        >
+                          {slide.price}
+                        </p>
+                        {/* <Button
                         data-aos="zoom-out"
                         data-aos-duration="500"
                         data-aos-delay="250"
@@ -218,19 +219,20 @@ const Hero = ({ slides }) => {
                         {slide.label}
                         <Arrow />
                       </Button> */}
-                    </HeroContent>
-                  </HeroSlider>
-                )}
-              </HeroSlide>
-            );
-          })}
-        </AnimatePresence>
-        <SliderButtons>
-          <PrevArrow onClick={prevSlide} />
-          <NextArrow onClick={nextSlide} />
-        </SliderButtons>
-      </HeroWrapper>
-    </HeroSection>
+                      </HeroContent>
+                    </HeroSlider>
+                  )}
+                </HeroSlide>
+              );
+            })}
+          </AnimatePresence>
+          <SliderButtons>
+            <PrevArrow onClick={prevSlide} />
+            <NextArrow onClick={nextSlide} />
+          </SliderButtons>
+        </HeroWrapper>
+      </HeroSection>
+    </div>
   );
 };
 
