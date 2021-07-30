@@ -76,6 +76,11 @@ const Container = styled.div`
 //     text-align: start;
 //   }
 // `;
+
+const Banner = styled.div`
+  height: 25vh;
+`;
+
 const InfoRow = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -85,6 +90,12 @@ const InfoRow = styled.div`
   ${"" /* flex-direction: column; */}
   margin: 0 100px 0 100px;
   padding: 10rem 0rem 0rem 0rem;
+
+  ${
+    "" /* @media screen and (min-width: 769px) {
+    margin-bottom: 40rem;
+  } */
+  }
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -157,6 +168,7 @@ button {
   h2 {
     margin-bottom: 0.5rem;
     font-weight: 400;
+    color: #fff;
   }
   @media screen and (max-width: 768px) {
     ${
@@ -276,11 +288,12 @@ const BlogCoverPage = () => {
   return (
     <div
       style={{
-        backgroundColor: "darkgray",
+        backgroundColor: "#121212",
       }}
     >
       <Section>
         <Container>
+          <Banner>Blog</Banner>
           {/* <Heading>
             <h1
               data-aos="fade-right"

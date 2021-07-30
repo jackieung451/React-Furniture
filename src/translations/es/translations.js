@@ -52,7 +52,7 @@ export const TRANSLATIONS_ES = {
   celeb5title: "Preparar la mesa con adornos Otoñales",
   celeb5:
     "Otra de las ideas para sorprender a nuestra familia en acción de gracias es preparando una mesa con frutas de otoño, hojas secas, velas blancas y, en el centro de la mesa podemos poner un jarrón con ramas (enteras) que hayan estado cayendo estos días de los árboles.",
-  fengshui: "Decoración Feng Shui Para Tu Hogar",
+  fengshui: "Feng Shui Para Tu Hogar",
   energyheading:
     "La decoración de tu hogar es esencial para armonizar el espacio y atraer la energía positiva a tu vida.",
   energy1title:

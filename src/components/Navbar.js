@@ -30,6 +30,12 @@ const NavLink = css`
 const Logo = styled(Link)`
   ${NavLink}
   font-style: bold;
+  ${
+    "" /* 
+  @media screen and (max-width: 1024px) {
+    position: relative;
+  } */
+  }
 `;
 
 const MenuBars = styled(FaBars)`
@@ -52,6 +58,14 @@ const NavMenu = styled.div`
   align-items: center;
   margin-right: -48px;
 
+  ${
+    "" /* @media screen and (max-width: 1024px) {
+    position: absolute;
+    justify-content: center;
+    padding-left: 20rem;
+  } */
+  }
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -65,10 +79,19 @@ const NavBtn = styled.div`
   display: flex;
   align-items: center;
   margin-right: -30rem;
+  margin-left: 20rem;
 
   @media screen and (min-width: 1024px) {
-    padding-right: 24rem;
+    position: absolute;
+    margin-left: 100rem;
+    ${"" /* margin-bottom: 20rem; */}
+    margin-top: -0.6rem;
   }
+  ${
+    "" /* margin-bottom: 22rem;
+    padding-left: 24rem; */
+  }
+  ${"" /* } */}
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -103,7 +126,18 @@ const Navbar = ({ toggle }) => {
   display: flex;
   justify-content: space-between
     max-width: 8000px;
-
+    button{
+      line-height: 0.5;
+    max-height: 10px;
+    }
+    p{
+      color: white;
+      font-weight:400px;
+    }
+    
+    @media screen and (max-width: 1024px) {
+      position: relative;
+    }
    
 
     @media screen and (max-width: 768px) {
@@ -122,7 +156,7 @@ const Navbar = ({ toggle }) => {
 
   let style = {
     backgroundColor:
-      navbar || location.pathname !== "/" ? "#264348" : "transparent",
+      navbar || location.pathname !== "/" ? "#d41920" : "transparent",
     transition: "0.4s",
   };
 
@@ -154,12 +188,13 @@ const Navbar = ({ toggle }) => {
       <Lingo>
         <Lang1>
           <button className="Button" value="en" onClick={handleOnclick}>
-            English
+            Eng.
           </button>
         </Lang1>
+        <p>|</p>
         <Lang2>
           <button className="Button" value="es" onClick={handleOnclick}>
-            Spanish
+            Esp.
           </button>
         </Lang2>
       </Lingo>

@@ -30,6 +30,7 @@ const Heading = styled.div`
     justify-content: center;
     padding: 3rem 0 0rem 0;
     margin-bottom: 5rem;
+    color: #fff;
   }
 
   @media screen and (max-width: 768px) {
@@ -111,6 +112,7 @@ const InfoWrap = styled.div`
     margin-bottom: 0rem;
     margin-top: 0rem;
     padding: 0 0 0 0;
+    color: #fff;
   }
   ${
     "" /* font-weight: 400;
@@ -208,7 +210,7 @@ const Listings = () => {
   return (
     <div
       style={{
-        backgroundColor: "darkgray",
+        backgroundColor: "#212121",
       }}
     >
       <Section>

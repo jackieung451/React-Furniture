@@ -51,7 +51,7 @@ export const TRANSLATIONS_EN = {
   celeb5title: "Prepare The Table With Autumnal Ornaments",
   celeb5:
     "Another idea to surprise our family in action of thanks is preparing a table with autumn fruits, dried leaves, white candlesticks and, in the center of the table we can put a vase with (whole) branches that have been falling these days of the trees.",
-  fengshui: "Feng Shui Decoration for Your Home",
+  fengshui: "Feng Shui for Your Home",
   energyheading:
     "The decoration of your home is essential to harmonize the space and attract positive energy to your life.",
   energy1title:

@@ -25,6 +25,7 @@ const Heading = styled.div`
     display: flex;
     justify-content: center;
     padding: 5rem 0 0 0;
+    color: #fff;
   }
 
   @media screen and (max-width: 768px) {
@@ -65,6 +66,12 @@ const InfoWrap = styled.div`
   height: 100%;
   margin-bottom: 2rem;
 
+  h3,
+  ul,
+  p {
+    color: #fff;
+  }
+
   h2 {
     margin-bottom: 1rem;
     font-weight: 350;
@@ -94,55 +101,60 @@ const InfoWrap = styled.div`
 const IndustrialDesign = () => {
   const { t } = useTranslation();
   return (
-    <Section>
-      <Container>
-        <Heading>
-          <h1
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            <strong>{t("industrial")}</strong>
-          </h1>
-        </Heading>
-        <InfoRow>
-          <InfoWrap
-            data-aos="zoom-out-up"
-            data-aos-duration="1200"
-            data-aos-once="true"
-            data-aos-anchor-placement="center bottom"
-          >
-            {/* <Image src={HomeOne} alt="home" /> */}
+    <div
+      style={{
+        backgroundColor: "#121212",
+      }}
+    >
+      <Section>
+        <Container>
+          <Heading>
+            <h1
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              <strong>{t("industrial")}</strong>
+            </h1>
+          </Heading>
+          <InfoRow>
+            <InfoWrap
+              data-aos="zoom-out-up"
+              data-aos-duration="1200"
+              data-aos-once="true"
+              data-aos-anchor-placement="center bottom"
+            >
+              {/* <Image src={HomeOne} alt="home" /> */}
 
-            <Image src={HomeThree} alt="home" />
+              <Image src={HomeThree} alt="home" />
 
-            <p>{t("industrial1")}</p>
-            <br />
-            <Image src={HomeTwo} alt="home" />
-            <br />
-            <p>{t("industrial2")}</p>
-            <br />
-            <h3>1. {t("industrial3")}</h3>
-            <br />
-            <p>{t("industrial4")}</p>
-            <br />
-            <ul>
-              <li>{t("industrial5")}</li>
-              <li>{t("industrial6")}</li>
-              <li>{t("industrial7")}</li>
-              <li>{t("industrial8")}</li>
-              <li>{t("industrial9")}</li>
-            </ul>
-            <br />
-            <Image src={HomeOne} alt="home" />
-            <br />
-            <h3>2. {t("industrial10")}</h3>
-            <br />
-            <p>{t("industrial11")}</p>
-            <p>{t("industrial2")}</p>
+              <p>{t("industrial1")}</p>
+              <br />
+              <Image src={HomeTwo} alt="home" />
+              <br />
+              <p>{t("industrial2")}</p>
+              <br />
+              <h3>1. {t("industrial3")}</h3>
+              <br />
+              <p>{t("industrial4")}</p>
+              <br />
+              <ul>
+                <li>{t("industrial5")}</li>
+                <li>{t("industrial6")}</li>
+                <li>{t("industrial7")}</li>
+                <li>{t("industrial8")}</li>
+                <li>{t("industrial9")}</li>
+              </ul>
+              <br />
+              <Image src={HomeOne} alt="home" />
+              <br />
+              <h3>2. {t("industrial10")}</h3>
+              <br />
+              <p>{t("industrial11")}</p>
+              <p>{t("industrial2")}</p>
 
-            {/* <h3>
+              {/* <h3>
               2619 N Broadway <br /> Los Angeles, California 90031
             </h3>
             <br />
@@ -152,24 +164,24 @@ const IndustrialDesign = () => {
             <h3>
               (323) 247-9094 <br /> sales@lanayaritfurniture.com
             </h3> */}
-            {/* <InfoLink to="/homes">
+              {/* <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-            {/* <Image src={HomeThree} alt="home" />
+              {/* <Image src={HomeThree} alt="home" />
             <h2>Comedores</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow /> */}
-            {/* </InfoLink> */}
-          </InfoWrap>
-          {/* <InfoWrap
+              {/* </InfoLink> */}
+            </InfoWrap>
+            {/* <InfoWrap
             data-aos="zoom-out-down"
             data-aos-duration="1200"
             data-aos-once="true"
             data-aos-anchor-placement="center bottom"
           > */}
-          {/* <Image
+            {/* <Image
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13219.034848151507!2d-118.22374474556887!3d34.07569910088133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd15fe4935319e285!2sLa%20Nayarit%20Furniture!5e0!3m2!1sen!2sus!4v1625958138842!5m2!1sen!2sus"
               width="600"
               height="450"
@@ -177,7 +189,7 @@ const IndustrialDesign = () => {
               // allowfullscreen=""
               // loading="lazy"
             /> */}
-          {/* alt="home"
+            {/* alt="home"
               css={`
                 // margin-top: 120px;
                 @media screen and (max-width: 768px) {
@@ -185,15 +197,16 @@ const IndustrialDesign = () => {
                 }
               `}
             /> */}
-          {/* <h2>Recamaras</h2>
+            {/* <h2>Recamaras</h2>
             <InfoLink to="/homes">
               <p>Ver Mas</p>
               <Arrow />
             </InfoLink> */}
-          {/* </InfoWrap> */}
-        </InfoRow>
-      </Container>
-    </Section>
+            {/* </InfoWrap> */}
+          </InfoRow>
+        </Container>
+      </Section>
+    </div>
   );
 };
 

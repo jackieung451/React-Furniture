@@ -64,6 +64,10 @@ const InfoWrap = styled.div`
     padding: 6rem 0 0 0;
     margin-bottom: 1rem;
     font-weight: 400;
+    color: #fff;
+  }
+  p {
+    color: #fff;
   }
   @media screen and (max-width: 768px) {
     ${"" /* padding-right: 5rem; */}
@@ -145,7 +149,7 @@ const HistoryBackground = () => {
   return (
     <div
       style={{
-        backgroundColor: "darkgray",
+        backgroundColor: "#212121",
       }}
     >
       <Section>

@@ -7,11 +7,18 @@ import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYelp } from "react-icons/fa";
 import { ImPhone } from "react-icons/im";
 
 const Section = styled.section`
-  background: #000d1a;
+  background: #323232;
   color: #fff;
   width: 100%;
   padding-top: 0;
   margin-top: 0;
+
+  ${
+    "" /* @media screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+  } */
+  }
+
   ${
     "" /* min-height: 600px;
   padding: 3rem FaCalculator((100vw - 1300px) / 2); */
@@ -21,6 +28,11 @@ const Section = styled.section`
 const Container = styled.div`
   height: 100%;
   width: 100%;
+  ${"" /* height: 100px; */}
+  background: -webkit-linear-gradient(left top, #53565a, #1d1d1d);
+  background: -o-linear-gradient(bottom right, #53565a, #1d1d1d);
+  background: -moz-linear-gradient(bottom right, #53565a, #1d1d1d);
+  background: linear-gradient(to bottom right, #53565a, #1d1d1d);
   ${"" /* padding: 2rem; */}
 `;
 
@@ -29,6 +41,10 @@ const FooterTop = styled.div`
   flex-direction: row;
   justify-content: center;
   padding: 0rem 8rem;
+  background: -webkit-linear-gradient(left top, #f06569, #6e0d10);
+  background: -o-linear-gradient(bottom right, #f06569, #6e0d10);
+  background: -moz-linear-gradient(bottom right, #f06569, #6e0d10);
+  background: linear-gradient(to bottom right, #f06569, #6e0d10);
   ${"" /* padding: 4rem 0rem; */}
 
   @media screen and (max-width: 768px) {
@@ -48,11 +64,35 @@ const Quote = styled.div`
   flex: 1;
   padding-top: 10px;
 
-  h6 {
-    font-size: clamp(2rem, 8vw, 3rem);
+  h5 {
     display: flex;
     justify-content: center;
+    text-align: center;
     line-height: 0.75;
+    margin-top: 1rem;
+    font-weight: 200rem;
+    color: #121212;
+  }
+
+  h6 {
+    font-size: clamp(1rem, 8vw, 3rem);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.75;
+    margin-left: 3rem;
+    ${
+      "" /* padding-left: 6rem;
+    padding-right: 0rem; */
+    }
+
+    @media screen and (min-width: 1024px) {
+      justify-content: center;
+      padding-left: 0rem;
+      padding-right: 3rem;
+      max-width: 100rem;
+    }
+
     @media screen and (max-width: 768px) {
       line-height: 1;
     }
@@ -60,7 +100,7 @@ const Quote = styled.div`
   p {
     display: flex;
     justify-content: center;
-    line-height: 3;
+    line-height: 2;
     margin: 0;
     padding: 0;
   }
@@ -93,6 +133,7 @@ const FooterInfo = styled.div`
     padding: 1rem 1rem;
   }
 `;
+
 const FooterBottom = styled.div`
   display: flex;
   justify-content: center;
@@ -122,7 +163,7 @@ const SocialIcons = styled.div`
 const Icons = css`
   font-size: clamp(1rem, 6vw, 2rem);
   margin-right: 1.5rem;
-  color: #cd853f;
+  color: #d41920;
 `;
 const Instagram = styled(FaInstagram)`
   ${Icons}
@@ -144,6 +185,11 @@ const Call = styled(ImPhone)`
   margin-right: 8px;
 `;
 
+const Copyright = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const Contact = styled.div`
   width: 100%;
   display: flex;
@@ -160,15 +206,32 @@ const Footer = () => {
   return (
     <Section>
       <Container>
-        <FooterTop>
+        <FooterTop
+          style={{
+            backgroundColor: "#d41920",
+          }}
+        >
           <Quote>
-            <h6>Open: Monday to Saturday 10:00am - 7:00pm</h6>
-
-            <h6>Sunday 10:00am - 3:00pm</h6>
-            <p>2619 N Broadway Los Angeles, CA 90031</p>
+            <h6>
+              <strong>VISIT US</strong>
+            </h6>
+            <h5>
+              <strong>HOURS</strong>
+            </h5>
             <p>
-              <Call />
-              Call Now (323) 247-9094
+              <strong>MON - SAT | 10AM - 7PM</strong>
+            </p>
+            <p>
+              <strong>SUN | 10AM - 3PM</strong>
+            </p>
+            <h5>
+              <strong>ADDRESS</strong>
+            </h5>
+            <p>
+              <strong>2619 N Broadway Los Angeles, CA 90031</strong>
+            </p>
+            <p>
+              <strong>(323) 247-9094</strong>
             </p>
           </Quote>
         </FooterTop>
@@ -208,7 +271,6 @@ const Footer = () => {
             >
               <Yelp />
             </a>
-            <p>Copyright &copy; 2021</p>
             {/* <a
               href="//www.google.com"
               rel="noopener noreferrer"
@@ -217,12 +279,16 @@ const Footer = () => {
               <LinkedIn />
             </a> */}
           </SocialIcons>
+
           {/* <Contact>
             <Button to="/homes">
               Let's Chat <IoMdArrowRoundForward />
             </Button>
           </Contact> */}
         </FooterBottom>
+        <Copyright>
+          <p>Copyright &copy; 2021</p>
+        </Copyright>
       </Container>
     </Section>
   );

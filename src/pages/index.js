@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div
       style={{
-        backgroundColor: "darkgray",
+        backgroundColor: "#212121",
       }}
     >
       <Hero slides={SliderData} />

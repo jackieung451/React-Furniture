@@ -41,9 +41,11 @@ const ColumnLeft = styled.div`
      margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
+    color: #fff;
   }
   p {
     margin-bottom: 0.5rem;
+    color: #fff;
   }
 
   @media screen and (max-width: 768px) {
@@ -98,7 +100,7 @@ const InfoSection = ({
   return (
     <div
       style={{
-        backgroundColor: "darkgray",
+        backgroundColor: "#212121",
       }}
     >
       <Section>

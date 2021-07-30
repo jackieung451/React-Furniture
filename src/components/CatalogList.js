@@ -567,6 +567,7 @@ const Section = styled.section`
   @media screen and (max-width: 768px) {
     padding: 5rem 0rem 0rem 0rem;
     margin-bottom: 1rem;
+
     display: grid;
     grid-template-columns: 1fr;
     flex-direction: column;
@@ -607,13 +608,14 @@ max-width: 700px;
  
 
   h1 {
-    
      margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
+    color: #fff;
   }
   p {
     margin-bottom: 0.5rem;
+    color: #fff;
   }
 
   @media screen and (max-width: 768px) {
@@ -658,6 +660,8 @@ background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
   max-width: 700px;
   display: flex;
   justify-content: center;
+
+  
 `;
 const RowOne = styled.div`
   display: flex;
@@ -746,10 +750,14 @@ const CatalogList = ({ reverse }) => {
   return (
     <div
       style={{
-        backgroundColor: "darkgray",
+        backgroundColor: "#212121",
       }}
     >
-      <Section>
+      <Section
+        style={{
+          backgroundColor: "#212121",
+        }}
+      >
         <RowOne>
           <ColumnLeft
             reverse={reverse}
