@@ -6,8 +6,9 @@ import styled from "styled-components/macro";
 // import HomeTwo from "../images/img2.jpg";
 // import HomeThree from "../images/img4.jpg";
 import HistoryOne from "../images/img51.png";
+import HomeTwo from "../images/img84.jpg";
 import HistoryTwo from "../images/img52.jpeg";
-import HistoryThree from "../images/img53.jpg";
+import HistoryThree from "../images/img54.jpg";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 // import "../styles.css";
@@ -16,8 +17,82 @@ import i18n from "../translations/i18n";
 const Section = styled.section`
   width: 100%;
   height: 100%;
+  ${"" /* padding-top: 20rem; */}
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 12rem;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    margin-top: 5rem;
+  }
+
+  ${
+    "" /* @media screen and (min-width: 769px) and (max-width: 1023px) {
+    margin-top: 0rem;
+  } */
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 7rem;
+  }
+
+  ${
+    "" /* @media screen and (max-width: 768px) {
+    padding-top: 10rem;
+  } */
+  }
+
   ${"" /* padding: 10rem calc((100vw - 1300px) / 2); */}
 `;
+
+const Banner = styled.div`
+  height: 25vh;
+  width: 100vw;
+  margin-bottom: 0rem;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0rem;
+  }
+
+  img {
+    position: absolute;
+    height: 45vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc{100% - 100px};
+  color: #fff;
+;
+
+h1{
+   font-size: clamp(3rem, 8vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  @media screen and (max-width: 375px) {
+      ${
+        "" /* padding-left: 4rem;
+      padding-right: 4rem; */
+      }
+    }
+  ${"" /* margin-bottom: 0.8rem; */}
+  ${
+    "" /* dislay: flex;
+  align-items: center; */
+  }
+}`;
 const Container = styled.div`
   height: 100%;
   width: 100%;
@@ -44,7 +119,7 @@ const InfoRow = styled.div`
   flex-direction: row; */
   }
   ${"" /* padding: 1rem 0rem; */}
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 200px 0 200px;
 
   @media screen and (max-width: 768px) {
@@ -56,7 +131,8 @@ const InfoRow = styled.div`
   }
 `;
 const InfoWrap = styled.div`
-  padding: 0rem 1rem 0rem 0rem;
+  padding: 0rem 1rem 0rem 1rem;
+  min-width: 260px;
   ${"" /* min-height: 550px; */}
   height: 100%;
 
@@ -73,10 +149,19 @@ const InfoWrap = styled.div`
     ${"" /* padding-right: 5rem; */}
     display: flex;
     flex-flow: column;
-    justify-content: flex-start;
+    justify-content: center;
   }
-  @media screen and (max-width: 320px) {
-    padding-right: 5rem;
+  @media screen and (max-width: 375px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-right: 2rem;
+  }
+  @media screen and (max-width: 280px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-right: 7rem;
   }
 `;
 const ImageContainer = styled.div`
@@ -88,15 +173,17 @@ const ImageContainer = styled.div`
 `;
 
 const ImageWrap = styled.div`
-  overflow: hidden;
-  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-  background-color: white;
-  text-align: center;
+  ${"" /* overflow: hidden; */}
+  ${"" /* box-shadow: 0px 2px 8px 0px var(--clr-gray-light); */}
+  ${"" /* background-color: white; */}
+  ${
+    "" /* text-align: center;
   border-radius: 1rem;
   position: relative;
-  width: 280px;
+  width: 260px;
   margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.5rem; */
+  }
 `;
 
 const Image = styled.img`
@@ -109,8 +196,14 @@ const Image = styled.img`
     "" /* margin-bottom: 0.5rem;
   margin-top: 5rem; */
   }
-  @media screen and (max-width: 320px) {
-    padding-right: 5rem;
+  @media screen and (max-width: 375px) {
+    padding-right: 2rem;
+  }
+  @media screen and (max-width: 280px) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-right: 7rem;
   }
 `;
 
@@ -152,6 +245,12 @@ const HistoryBackground = () => {
         backgroundColor: "#212121",
       }}
     >
+      <Banner>
+        <img src={HomeTwo} />
+        <HeroContent>
+          <h1>{t("history")}</h1>
+        </HeroContent>
+      </Banner>
       <Section>
         <Container>
           {/* <Heading> */}

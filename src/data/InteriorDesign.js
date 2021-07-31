@@ -1,14 +1,74 @@
 import React from "react";
 import styled from "styled-components/macro";
 import HomeThree from "../images/img93.jpg";
+import HomeTwo from "../images/img84.jpg";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 
 const Section = styled.section`
   width: 100%;
   height: 100%;
+  padding: 0rem 1rem 0rem 1rem;
+  text-align: center;
+  ${"" /* vertical-align: center; */}
+
+  @media screen and (min-width: 1024px) {
+    padding: 33rem 1rem 0rem 1rem;
+  }
+  ${
+    "" /* @media screen and (min-width: 769px) and (max-width: 1023px) {
+    padding: 15rem 1rem 0rem 1rem;
+  } */
+  }
+  @media screen and (max-width: 360px) {
+    padding: 15rem 1rem 0rem 1rem;
+  }
+
+  @media screen and (min-width: 361px) and (max-width: 540px) {
+    padding: 17rem 1rem 0rem 1rem;
+  }
+
+  @media screen and (min-width: 541px) and (max-width: 768px) {
+    padding: 23rem 1rem 0rem 1rem;
+  }
   ${"" /* padding: 10rem calc((100vw - 1300px) / 2); */}
 `;
+const Banner = styled.div`
+  max-height: 1rem;
+  width: 100vw;
+
+  img {
+    position: absolute;
+    height: 45vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc{100% - 100px};
+  color: #fff;
+;
+
+h1{
+   font-size: clamp(3rem, 8vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  ${"" /* margin-bottom: 0.8rem; */}
+  ${
+    "" /* dislay: flex;
+  align-items: center; */
+  }
+}`;
 const Container = styled.div`
   height: 100%;
   width: 100%;
@@ -24,6 +84,15 @@ const Heading = styled.div`
     justify-content: center;
     padding: 5rem 0 0 0;
     color: #fff;
+    @media screen and (max-width: 411px) {
+      padding-right: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-center: center;
+    padding-left: 1rem;
+  }
   }
   p {
     ${
@@ -49,6 +118,9 @@ const Image = styled.img`
   max-height: 400px;
   object-fit: cover;
   margin-bottom: 1rem;
+  @media screen and (max-width: 411px) {
+    padding-right: 2rem;
+  }
 `;
 const InfoRow = styled.div`
   display: flex;
@@ -73,11 +145,17 @@ const InfoWrap = styled.div`
   h3,
   p {
     color: #fff;
+    @media screen and (max-width: 411px) {
+      padding-right: 2rem;
+    }
   }
 
   ul {
     vertical-align: middle;
     color: #fff;
+    @media screen and (max-width: 411px) {
+      padding-right: 2rem;
+    }
     ${"" /* text-align: right; */}
     ${"" /* margin-top: 2rem; */}
   }
@@ -86,6 +164,9 @@ const InfoWrap = styled.div`
     margin-bottom: 1rem;
     font-weight: 350;
     color: #fff;
+    @media screen and (max-width: 411px) {
+      padding-right: 2rem;
+    }
   }
   @media screen and (max-width: 768px) {
     display: flex;
@@ -99,13 +180,20 @@ const InfoWrap = styled.div`
   }
   @media screen and (max-width: 320px) {
     min-width: 280px;
-    padding-right: 5.5rem;
+    padding-right: 6rem;
     padding-left: 0rem;
   }
   @media screen and (max-width: 280px) {
     min-width: 280px;
-    padding-right: 7.5rem;
+    padding-right: 8rem;
     padding-left: 0rem;
+  }
+  @media screen and (min-width: 360px) and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 4rem;
+    ${"" /* padding-right: 25rem; */}
   }
 `;
 
@@ -117,6 +205,12 @@ const InteriorDesign = () => {
         backgroundColor: "#121212",
       }}
     >
+      <Banner>
+        <img src={HomeTwo} />
+        <HeroContent>
+          <h1>Blog</h1>
+        </HeroContent>
+      </Banner>
       <Section>
         <Container>
           <Heading>

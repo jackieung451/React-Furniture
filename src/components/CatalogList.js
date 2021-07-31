@@ -562,18 +562,64 @@ import "../translations/i18n";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  padding: 4.5rem 0rem;
+${"" /* padding-top: 15rem; */}
 
-  @media screen and (max-width: 768px) {
-    padding: 5rem 0rem 0rem 0rem;
-    margin-bottom: 1rem;
+  
 
     display: grid;
     grid-template-columns: 1fr;
     flex-direction: column;
     justify-content: center;
   }
+  @media screen and (min-width: 1024px) {
+   margin-top: 18rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 12rem;
+  }
 `;
+
+const Banner = styled.div`
+  height: 25vh;
+  width: 100vw;
+  margin-bottom: 0rem;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0rem;
+  }
+
+  img {
+    position: absolute;
+    height: 45vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc{100% - 100px};
+  color: #fff;
+;
+
+h1{
+   font-size: clamp(3rem, 8vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  ${"" /* margin-bottom: 0.8rem; */}
+  ${
+    "" /* dislay: flex;
+  align-items: center; */
+  }
+}`;
 
 const Container = styled.div`
   ${"" /* padding: 3 rem calc((100vw - 1300px) / 2); */}
@@ -636,7 +682,7 @@ max-width: 700px;
 `;
 
 const Button = styled(Link)`
-background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
+background: ${({ primary }) => (primary ? "#53565a" : "#CD853F")};
   white-space: nowrap;
   outline: none;
   border: none;
@@ -753,6 +799,12 @@ const CatalogList = ({ reverse }) => {
         backgroundColor: "#212121",
       }}
     >
+      <Banner>
+        <img src={HomeTwo} />
+        <HeroContent>
+          <h1>{t("catalogbutton")}</h1>
+        </HeroContent>
+      </Banner>
       <Section
         style={{
           backgroundColor: "#212121",

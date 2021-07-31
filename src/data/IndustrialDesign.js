@@ -9,8 +9,59 @@ import "../translations/i18n";
 const Section = styled.section`
   width: 100%;
   height: 100%;
+  padding: 12rem 1rem 0rem 1rem;
+  text-align: center;
+  ${"" /* vertical-align: center; */}
+
+  @media screen and (min-width: 1024px) {
+    padding: 20rem 1rem 0rem 1rem;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    padding: 12rem 1rem 0rem 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 12rem 1rem 0rem 1rem;
+  }
   ${"" /* padding: 10rem calc((100vw - 1300px) / 2); */}
 `;
+const Banner = styled.div`
+  max-height: 1rem;
+  width: 100vw;
+
+  img {
+    position: absolute;
+    height: 45vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc{100% - 100px};
+  color: #fff;
+;
+
+h1{
+   font-size: clamp(5rem, 8vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  ${"" /* margin-bottom: 0.8rem; */}
+  ${
+    "" /* dislay: flex;
+  align-items: center; */
+  }
+}`;
+
 const Container = styled.div`
   height: 100%;
   width: 100%;
@@ -106,6 +157,12 @@ const IndustrialDesign = () => {
         backgroundColor: "#121212",
       }}
     >
+      <Banner>
+        <img src={HomeTwo} />
+        <HeroContent>
+          <h1>Blog</h1>
+        </HeroContent>
+      </Banner>
       <Section>
         <Container>
           <Heading>

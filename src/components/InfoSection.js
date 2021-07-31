@@ -8,7 +8,7 @@ import "../translations/i18n";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  padding: 1rem 0rem;
+  padding: 2rem 0rem;
 
   @media screen and (max-width: 768px) {
     padding: 0rem 0rem;
@@ -42,14 +42,17 @@ const ColumnLeft = styled.div`
     margin-bottom: 0.5rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
     color: #fff;
+    
   }
   p {
     margin-bottom: 0.5rem;
     color: #fff;
+    
   }
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0rem;
+    
     ${
       "" /* display: flex;
     flex: 0 0 50%;} */

@@ -6,6 +6,9 @@ import { Button } from "./Button";
 import { FaBars } from "react-icons/fa";
 import "../styles.css";
 import { i18n } from "../translations/i18n";
+// import ImageLogo from "../images/brand-color-alt-white.svg";
+import ImageLogo from "../images/brand-color-alt-white.png";
+import ImageLogo2 from "../images/brand-white.png";
 
 const Nav = styled.nav`
   height: 60px;
@@ -31,6 +34,21 @@ const Logo = styled(Link)`
   ${NavLink}
   font-style: bold;
   ${
+    "" /* line-height: 12px;
+  max-height: 10px;
+  max-width: 10px;
+  object-fit: shrink; */
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  @media screen and (max-width: 768px) {
+    ${"" /* display: none; */}
+  }
+  ${
     "" /* 
   @media screen and (max-width: 1024px) {
     position: relative;
@@ -50,24 +68,25 @@ const MenuBars = styled(FaBars)`
     top: 0;
     right: 0;
     transform: translate(-50%, 25%);
+    color: #fff;
   }
 `;
 
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -48px;
+  padding-right: -102rem;
 
-  ${
-    "" /* @media screen and (max-width: 1024px) {
-    position: absolute;
+   @media screen and (min-width: 1024px) {
+    position: relative;
     justify-content: center;
-    padding-left: 20rem;
-  } */
+    margin-right: -25rem;
+  } 
   }
 
   @media screen and (max-width: 768px) {
     display: none;
+    
   }
 `;
 
@@ -82,16 +101,21 @@ const NavBtn = styled.div`
   margin-left: 20rem;
 
   @media screen and (min-width: 1024px) {
-    position: absolute;
-    margin-left: 100rem;
+    position: relative;
+    margin-right: -20rem;
     ${"" /* margin-bottom: 20rem; */}
-    margin-top: -0.6rem;
+    ${"" /* margin-top: -0.6rem; */}
   }
   ${
     "" /* margin-bottom: 22rem;
     padding-left: 24rem; */
   }
   ${"" /* } */}
+
+  @media screen and (min-width: 769px) {
+    position: relative;
+    padding-right: 10rem;
+  }
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -135,7 +159,7 @@ const Navbar = ({ toggle }) => {
       font-weight:400px;
     }
     
-    @media screen and (max-width: 1024px) {
+    @media screen and (min-width: 769px) {
       position: relative;
     }
    
@@ -144,6 +168,7 @@ const Navbar = ({ toggle }) => {
     display: grid;
     grid-templates-column: 1fr;
     display: none;
+   
   }
   `;
 
@@ -159,6 +184,10 @@ const Navbar = ({ toggle }) => {
       navbar || location.pathname !== "/" ? "#d41920" : "transparent",
     transition: "0.4s",
   };
+  // let raster = {
+  //   img: navbar || location.pathname !== "/" ? "ImageLogo" : "ImageLogo2",
+  //   transition: "0.4s",
+  // };
 
   const [language, setLanguage] = useState("en");
 
@@ -170,7 +199,9 @@ const Navbar = ({ toggle }) => {
 
   return (
     <Nav style={style}>
-      <Logo to="/">La Nayarit Furniture</Logo>
+      <Logo to="/">
+        <img src={ImageLogo2} />
+      </Logo>
 
       <MenuBars onClick={toggle} />
       <NavMenu>

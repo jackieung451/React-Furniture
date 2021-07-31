@@ -1,5 +1,6 @@
 export const TRANSLATIONS_EN = {
   history: "History",
+  blog: "Blog",
   contact: "Contact",
   historyheading: "Our History",
   history1:
@@ -32,7 +33,7 @@ export const TRANSLATIONS_EN = {
   view: "See More",
   serviceheading: "Service Changes Due To Covid-19",
   serviceparagraph:
-    "We are committed to the safety and health of our customers and employees. Therefore, we continue to offer furniture services with restrictions. If you have any questions, please visit us or call us at (323)247-9094.",
+    "We are committed to the safety and health of our customers and employees. Therefore, we continue to offer furniture services with restrictions. If you have any questions, please visit us or call us at (323) 247-9094.",
   herotitle: "High Quality Furniture",
   herosubtitle: "Within Everyone's Reach",
   thanksgiving: "Thanksgiving Decoration Ideas",

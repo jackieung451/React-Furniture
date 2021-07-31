@@ -1,5 +1,6 @@
 export const TRANSLATIONS_ES = {
   history: "Historia",
+  blog: "Blog",
   contact: "Contacto",
   historyheading: "Nuestra Historia",
   history1:
@@ -32,7 +33,7 @@ export const TRANSLATIONS_ES = {
   view: "Ver Mas",
   serviceheading: "Cambios De Servicios Debido Al Covid-19",
   serviceparagraph:
-    "Estamos comprometidos a la seguridad y salud de nuestros clientes y empleados. Por lo tanto, seguimos ofreciendo servicios de muebleria con restricciónes. Si tiene alguna pregunta, por favor visítenos o llámenos al (323)247-9094.",
+    "Estamos comprometidos a la seguridad y salud de nuestros clientes y empleados. Por lo tanto, seguimos ofreciendo servicios de muebleria con restricciónes. Si tiene alguna pregunta, por favor visítenos o llámenos al (323) 247-9094.",
   herotitle: "Muebles De Alta Calidad",
   herosubtitle: "Al Alcance De Todos",
   thanksgiving: "Ideas De Decoración Thanksgiving",

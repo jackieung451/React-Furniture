@@ -86,7 +86,7 @@ const InfoWrap = styled.div`
   height: 70%;
 
   button {
-    background: black;
+    background: #53565a;
     white-space: nowrap;
     outline: none;
     border: none;

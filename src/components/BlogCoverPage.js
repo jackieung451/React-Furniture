@@ -3,6 +3,7 @@ import { IoMdArrowForward } from "react-icons/io";
 // import {  } from "react-router-dom";
 import styled from "styled-components/macro";
 import ImageOne from "../images/img91.jpg";
+import HomeTwo from "../images/img84.jpg";
 import ImageTwo from "../images/img92.jpg";
 import ImageThree from "../images/img93.jpg";
 import ImageFour from "../images/img94.jpg";
@@ -24,8 +25,24 @@ import "../translations/i18n";
 const Section = styled.section`
   width: 100%;
   height: 100%;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 12rem;
+    ${"" /* padding-bottom: 5rem; */}
+  }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    margin-top: 5rem;
+  }
+
+  @media screen and (max-width: 540px) {
+    margin-top: 6rem;
+  }
+  @media screen and (max-width: 320px) {
+    margin-top: 0rem;
+  }
   @media screen and (max-width: 768px) {
-    padding: 5rem 1rem 0rem 1rem;
+    ${"" /* padding: 6rem 1rem 0rem 1rem; */}
+    margin-top: 7rem;
     margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -79,7 +96,48 @@ const Container = styled.div`
 
 const Banner = styled.div`
   height: 25vh;
+  width: 100vw;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    ${"" /* padding-bottom: 5rem; */}
+  }
+  @media screen and (max-width: 320px) {
+    margin-bottom: 0rem;
+  }
+
+  img {
+    position: absolute;
+    height: 45vh;
+    width: 100vw;
+    object-fit: cover;
+  }
 `;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc{100% - 100px};
+  color: #fff;
+;
+
+h1{
+   font-size: clamp(3rem, 8vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  ${"" /* margin-bottom: 0.8rem; */}
+  ${
+    "" /* dislay: flex;
+  align-items: center; */
+  }
+}`;
 
 const InfoRow = styled.div`
   display: grid;
@@ -143,7 +201,7 @@ align-items: center; */
   ${"" /* min-height: 550px; */}
   ${"" /* height: 100%; */}
 button {
-    background: black;
+    background: #53565a;
     white-space: nowrap;
     outline: none;
     border: none;
@@ -162,6 +220,17 @@ button {
 
     &:hover {
       transform: translateY(-2px);
+    }
+    @media screen and (max-width: 280px) {
+      display: flex;
+      flex-direction: column;
+      ${"" /* padding-right: 2rem; */}
+      justify-content: center;
+      text-align: center;
+      padding-right: 5px;
+      padding-left: 3px;
+      margin-left: 40px;
+      padding-bottom: 1.5rem;
     }
   }
 
@@ -196,8 +265,9 @@ button {
     object-fit: contain;
     width: 90%;
     height: 90%;
-    min-width: 300px;
+    min-width: 250px;
     min-height: 200px;
+    text-align: center;
     padding-right: 3px;
     padding-left: 0.5px;
     margin-left: 20px;
@@ -291,9 +361,14 @@ const BlogCoverPage = () => {
         backgroundColor: "#121212",
       }}
     >
+      <Banner>
+        <img src={HomeTwo} />
+        <HeroContent>
+          <h1>{t("blog")}</h1>
+        </HeroContent>
+      </Banner>
       <Section>
         <Container>
-          <Banner>Blog</Banner>
           {/* <Heading>
             <h1
               data-aos="fade-right"
