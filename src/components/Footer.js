@@ -7,6 +7,7 @@ import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYelp } from "react-icons/fa";
 import { ImPhone } from "react-icons/im";
 import pattern from "../images/footerpattern.jpg";
 import { motion, AnimatePresence } from "framer-motion";
+import ImageLogo2 from "../images/brand-color-alt-white.png";
 
 const Section = styled.section`
   background: #323232;
@@ -117,8 +118,9 @@ const FooterTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 42rem;
+  margin-right: 42rem;
+  margin-bottom: 1rem;
   ${"" /* padding: 0rem 8rem; */}
 
   ${
@@ -149,18 +151,28 @@ const FooterTop = styled.div`
 const ColumnLeft = styled.div`
   display: flex;
   flex-direction: column;
+  min-width: 230px;
 `;
 const ColumnRight = styled.div`
   display: flex;
   flex-direction: column;
+  border-left: 2px solid #bbbcbc;
+  padding-left: 1rem;
+  height: 100px;
+  min-width: 220px;
 `;
 const Quote = styled.div`
   flex: 1;
   padding-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding-left: 5rem;
-  padding-right: 5rem;
+  padding-right: 6rem;
+
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
 
   h5 {
     display: flex;
@@ -202,6 +214,7 @@ const Quote = styled.div`
     line-height: 2;
     margin: 0;
     padding: 0;
+    color: #bbbcbc;
   }
 
   ${
@@ -261,8 +274,11 @@ const SocialIcons = styled.div`
 
 const Icons = css`
   font-size: clamp(1rem, 6vw, 2rem);
-  margin-right: 1.5rem;
-  color: #d41920;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #bbbcbc;
 `;
 const Instagram = styled(FaInstagram)`
   ${Icons}
@@ -287,6 +303,24 @@ const Call = styled(ImPhone)`
 const Copyright = styled.div`
   display: flex;
   justify-content: center;
+  ${'' /* padding-bottom: 1rem; */}
+  margin-right: 20rem;
+  margin-left: 20rem;
+`;
+
+const Rights = styled.div`
+  margin-right: 20rem;
+  max-height: 20px;
+`;
+
+const BottomLogo = styled.div`
+  img {
+    width: 15%;
+    height: 140%;
+    object-fit: contain;
+    margin-left: 20rem;
+    ${"" /* margin-bottom: 2rem; */}
+  }
 `;
 
 // const Contact = styled.div`
@@ -349,7 +383,6 @@ const Footer = () => {
                 <strong>SUN | 10AM - 3PM</strong>
               </p>
             </ColumnLeft>
-
             <ColumnRight>
               <h5>
                 <strong>ADDRESS</strong>
@@ -366,12 +399,12 @@ const Footer = () => {
             </p> */}
           </Quote>
         </FooterTop>
-        <FooterInfo>
+        {/* <FooterInfo>
           <Link to="/contact">Contact Us</Link>
           <Link to="/contact">FAQ</Link>
           <Link to="/contact">Support</Link>
           <Link to="/contact">Questions</Link>
-        </FooterInfo>
+        </FooterInfo> */}
         {/* <FooterInfo>
           <h4>Offices</h4>
           <Link to="/homes">United States</Link>
@@ -418,7 +451,12 @@ const Footer = () => {
           </Contact> */}
         </FooterBottom>
         <Copyright>
-          <p>Copyright &copy; 2021</p>
+          <BottomLogo>
+            <img src={ImageLogo2} />
+          </BottomLogo>
+          <Rights>
+            <p>&copy; 2021 LA Nayarit Furniture. All rights reserved.</p>
+          </Rights>
         </Copyright>
       </Container>
     </Section>

@@ -101,6 +101,7 @@ const InfoWrap = styled.div`
     padding: 16px 40px;
     color: #fff;
     font-size: 20px;
+    ${"" /* font-weight: 900; */}
     ${"" /* border-radius: 50px; */}
 
     &:hover {

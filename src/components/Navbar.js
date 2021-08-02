@@ -153,6 +153,7 @@ const Navbar = ({ toggle }) => {
     button{
       line-height: 0.5;
     max-height: 10px;
+    font-weight: 900;
     }
     p{
       color: white;
@@ -204,7 +205,7 @@ const Navbar = ({ toggle }) => {
       </Logo>
 
       <MenuBars onClick={toggle} />
-      <NavMenu>
+      <NavMenu className="black">
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
             {item.title}

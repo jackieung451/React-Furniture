@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "./Button";
+// import { Button } from "./Button";
 import ImageTwo from "../images/img8.jpg";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
@@ -47,8 +47,8 @@ const ColumnLeft = styled.div`
   p {
     margin-bottom: 0.5rem;
     color: #fff;
-    
   }
+ 
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0rem;
@@ -57,8 +57,31 @@ const ColumnLeft = styled.div`
       "" /* display: flex;
     flex: 0 0 50%;} */
     }
-
 `;
+
+const Button = styled.div`
+  background: #53565a;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  min-width: 100px;
+  max-width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  ${"" /* transition: 0.3s; */}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 40px;
+  color: #fff;
+  font-size: 20px;
+  ${"" /* border-radius: 50px; */}
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+`;
+
 const ColumnRight = styled.div`
   padding: 0rem 2rem 0rem 2rem;
   order: ${({ reverse }) => (reverse ? "2" : "1")};
