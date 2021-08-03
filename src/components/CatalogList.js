@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 // import { Button } from "./Button";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
+import IconBanner from "../images/tab-header-catalog.png";
 // const Section = styled.section`
 //   width: 100%;
 //   height: 100%;
@@ -574,8 +575,15 @@ ${"" /* padding-top: 15rem; */}
   @media screen and (min-width: 1024px) {
    margin-top: 18rem;
   }
-  @media screen and (max-width: 768px) {
-    margin-top: 12rem;
+  @media screen and (min-width: 768px) {
+    margin-top: 18rem;
+  }
+
+  @media screen and (min-width: 361px) (max-width: 540px) {
+    margin-top: 26rem;
+
+  @media screen and (max-width: 360px) {
+    margin-top: 10rem;
   }
 `;
 
@@ -604,6 +612,18 @@ const HeroContent = styled.div`
   max-width: 1600px;
   width: calc{100% - 100px};
   color: #fff;
+
+  img{
+    z-index: 10000;
+    height: 85vh;
+    width: 100vw;
+    object-fit: contain;
+    padding-top: 8rem;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 0rem;
+  }
+  }
 ;
 
 h1{
@@ -803,6 +823,7 @@ const CatalogList = ({ reverse }) => {
         <img src={HomeTwo} />
         <HeroContent>
           <h1>{t("catalogbutton")}</h1>
+          <img src={IconBanner} />
         </HeroContent>
       </Banner>
       <Section

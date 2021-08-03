@@ -29,7 +29,7 @@ const Section = styled.section`
 const Container = styled.div`
   height: 100%;
   width: 100%;
-  backgroundcolor: #323232;
+  background-color: #323232;
   ${"" /* height: 100px; */}
   ${
     "" /* background: -webkit-linear-gradient(left top, #53565a, #1d1d1d);
@@ -39,88 +39,110 @@ const Container = styled.div`
   }
   ${"" /* padding: 2rem; */}
 `;
-const HeroSection = styled.section`
-  height: 25vh;
-  ${"" /* max-height: 1100px; */}
-  position: relative;
-  overflow: hidden;
-`;
+// const HeroSection = styled.section`
+//   height: 100vh;
+//   max-height: 1100px;
+//   ${"" /* max-height: 1100px; */}
+//   position: relative;
+//   overflow: hidden;
+// `;
 
-const HeroWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-`;
-const HeroSlider = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+// const HeroWrapper = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   overflow: hidden;
+//   position: relative;
+// `;
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 0vh;
-    bottom: 0vh;
-    left: 0;
-    overflow: hidden;
-    opacity: 0.4;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
-  }
-`;
-const HeroImage = styled(motion.img)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 25vh;
-  object-fit: contain;
-`;
-const HeroContent = styled.div`
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  max-width: 1600px;
-  width: calc{100% - 100px};
-  color: #fff;
-;
+// const HeroSlide = styled.div`
+//   z-index: 1;
+//   width: 100%;
+//   height: 100%;
+// `;
 
-h1{
-   font-size: clamp(1rem, 8vw, 2rem);
-  font-weight: 400;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-  text-align: left;
-  margin-bottom: 0.8rem;
-}
+// const HeroSlider = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
-p{
-  margin-bottom: 1.2rem;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-}`;
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     z-index: 2;
+//     width: 100%;
+//     height: 100vh;
+//     bottom: 0vh;
+//     left: 0;
+//     overflow: hidden;
+//     opacity: 0.4;
+//     background: linear-gradient(
+//       0deg,
+//       rgba(0, 0, 0, 0.2) 0%,
+//       rgba(0, 0, 0, 0.2) 50%,
+//       rgba(0, 0, 0, 0.6) 100%
+//     );
+//   }
+
+/* @media screen and (max-width: 768px) {
+    height: 50vh;
+  } */
+
+// `;
+// const HeroImage = styled(motion.img)`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 25vh;
+//   object-fit: cover;
+
+/* @media screen and (max-width: 768px) {
+    height: 10vh;
+  } */
+
+// `;
+// const HeroContent = styled.div`
+//   position: relative;
+//   z-index: 10;
+//   display: flex;
+//   flex-direction: column;
+//   max-width: 1600px;
+//   width: calc{100% - 100px};
+//   color: #fff;
+// ;
+
+// h1{
+//    font-size: clamp(1rem, 8vw, 2rem);
+//   font-weight: 900;
+//   text-transform: uppercase;
+//   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+//   text-align: left;
+//   margin-bottom: 0.8rem;
+// }
+
+// p{
+//   margin-bottom: 1.2rem;
+//   display: flex;
+//   font-weight: 400;
+//   justify-content: center;
+//   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+// }`;
 const FooterTop = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-left: 42rem;
-  margin-right: 42rem;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 25rem;
+  margin-right: 25rem;
   margin-bottom: 1rem;
+
   ${"" /* padding: 0rem 8rem; */}
 
   ${
@@ -137,9 +159,12 @@ const FooterTop = styled.div`
 
   @media screen and (max-width: 768px) {
     ${"" /* flex-direction: column; */}
+
     text-align: center;
-    min-width: 300px;
-    padding: 1rem 0.5rem;
+    ${"" /* min-width: 300px; */}
+    ${"" /* margin-left: 1px; */}
+    padding: 0 0rem;
+    object-fit: cover;
   }
 
   @media screen and (max-width: 280px) {
@@ -148,26 +173,79 @@ const FooterTop = styled.div`
     padding-right: 2rem;
   }
 `;
-const ColumnLeft = styled.div`
+const TopRow = styled.div`
+  order: ${({ reverse }) => (reverse ? "2" : "1")};
   display: flex;
   flex-direction: column;
-  min-width: 230px;
-`;
-const ColumnRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  border-left: 2px solid #bbbcbc;
-  padding-left: 1rem;
+  justify-content: center;
+  align-items: center;
+  ${"" /* min-width: 100vw; */}
+  background-color: #d41920;
   height: 100px;
-  min-width: 220px;
+  text-align: center;
+  ${"" /* width: 100vw; */}
+  font-size: clamp(1rem, 3vw, 2rem);
+  width: clamp(40rem, 100vw, 50rem);
+  @media screen and (max-width: 768px) {
+    margin-right: 2rem;
+  }
+  @media screen and (max-width: 540px) {
+    margin-right: 16.5rem;
+  }
+  @media screen and (max-width: 414px) {
+    margin-right: 25rem;
+  }
+  @media screen and (max-width: 375px) {
+    margin-right: 27rem;
+  }
+  @media screen and (max-width: 320px) {
+    margin-right: 30rem;
+  }
+  @media screen and (max-width: 280px) {
+    margin-right: 49rem;
+  }
 `;
+
 const Quote = styled.div`
   flex: 1;
   padding-top: 10px;
+  order: ${({ reverse }) => (reverse ? "2" : "1")};
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding-left: 5rem;
   padding-right: 6rem;
+
+  @media screen and (max-width: 768px) {
+    ${"" /* flex-direction: column; */}
+    order: ${({ reverse }) => (reverse ? "1" : "2")};
+    text-align: center;
+    max-width: 700px;
+    ${"" /* font-size: clamp(0.75rem, 1vw, 1rem); */}
+    ${"" /* margin: 0rem 100px; */}
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media screen and (max-width: 540px) {
+    padding-left: 0rem;
+    padding-right: 17rem;
+  }
+  @media screen and (max-width: 414px) {
+    padding-left: 0rem;
+    padding-right: 25rem;
+  }
+  @media screen and (max-width: 375px) {
+    padding-left: 0rem;
+    padding-right: 27rem;
+  }
+  @media screen and (max-width: 320px) {
+    padding-left: 0rem;
+    padding-right: 30.5rem;
+  }
+  @media screen and (max-width: 280px) {
+    padding-left: 0rem;
+    padding-right: 50rem;
+  }
 
   h4 {
     margin: 0;
@@ -182,6 +260,17 @@ const Quote = styled.div`
     margin-top: 1rem;
     font-weight: 200rem;
     color: #f06569;
+
+    @media screen and (max-width: 768px) {
+      ${"" /* flex-direction: column; */}
+      order: ${({ reverse }) => (reverse ? "1" : "2")};
+      text-align: center;
+      max-width: 700px;
+      ${"" /* font-size: clamp(0.75rem, 1vw, 1rem); */}
+      ${"" /* margin: 0rem 100px; */}
+    padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 
   h6 {
@@ -206,6 +295,8 @@ const Quote = styled.div`
       line-height: 1;
       display: flex;
       justify-content: center;
+      max-width: 200rem;
+      padding: 0rem;
     }
   }
   p {
@@ -215,41 +306,78 @@ const Quote = styled.div`
     margin: 0;
     padding: 0;
     color: #bbbcbc;
-  }
 
-  ${
-    "" /* h3 {
-    font-size: clamp(2rem, 8vw, 5rem);
-  } */
+    @media screen and (max-width: 768px) {
+      ${"" /* flex-direction: column; */}
+      order: ${({ reverse }) => (reverse ? "1" : "2")};
+      text-align: center;
+      max-width: 700px;
+      ${"" /* font-size: clamp(0.75rem, 1vw, 1rem); */}
+      ${"" /* margin: 0rem 100px; */}
+    padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 `;
-const FooterInfo = styled.div`
-  padding: 0rem 0rem 0rem 0rem;
-  line-height: 3;
-
+const ColumnLeft = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 500px;
-  justify-content: space-around;
-  margin: auto;
-  
-  }
-
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
+  flex-direction: column;
+  min-width: 230px;
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 1rem;
+    line-height: 1;
+    padding-left: 2rem;
+    padding-right: 0rem;
+    max-width: 200rem;
   }
 `;
+const ColumnRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #bbbcbc;
+  padding-left: 1rem;
+  height: 100px;
+  min-width: 220px;
+
+  @media screen and (max-width: 768px) {
+    line-height: 7;
+    max-width: 200rem;
+    padding-right: 3rem;
+    padding-left: 0rem;
+  }
+`;
+
+/* h3 {
+    font-size: clamp(2rem, 8vw, 5rem);
+  } */
+
+// const FooterInfo = styled.div`
+//   padding: 0rem 0rem 0rem 0rem;
+//   line-height: 3;
+
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   max-width: 500px;
+//   justify-content: space-around;
+//   margin: auto;
+
+//   }
+
+//   a {
+//     color: #fff;
+//     text-decoration: none;
+//   }
+
+//   @media screen and (max-width: 768px) {
+//     padding: 1rem 1rem;
+//   }
+// `;
 
 const FooterBottom = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0rem 0rem 1rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -273,12 +401,16 @@ const SocialIcons = styled.div`
 `;
 
 const Icons = css`
-  font-size: clamp(1rem, 6vw, 2rem);
+  font-size: clamp(2rem, 6vw, 3rem);
   margin-right: 1rem;
   margin-left: 1rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   color: #bbbcbc;
+
+  @media screen and (max-width: 280px) {
+    margin-right: 3rem;
+  }
 `;
 const Instagram = styled(FaInstagram)`
   ${Icons}
@@ -303,22 +435,98 @@ const Call = styled(ImPhone)`
 const Copyright = styled.div`
   display: flex;
   justify-content: center;
-  ${'' /* padding-bottom: 1rem; */}
-  margin-right: 20rem;
-  margin-left: 20rem;
+  ${"" /* padding-bottom: 1rem; */}
+  margin-left: 30rem;
+  margin-right: 40rem;
+  padding-bottom: 1rem;
 `;
 
 const Rights = styled.div`
-  margin-right: 20rem;
-  max-height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15rem;
+  min-width: 700px;
+  ${"" /* min-width: 700px; */}
+  margin-top: 3.5rem;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 39rem;
+  }
+
+  @media screen and (max-width: 414px) {
+    margin-right: 45rem;
+    min-width: 400px;
+    margin-left: 0rem;
+    padding-left: 0rem;
+    ${
+      "" /* width: 50px;
+    word-break: break-word; */
+    }
+    ${"" /* white-space: initial; */}
+    ${
+      "" /* width: 10px;
+    word-wrap: break-word; */
+    }
+    ${
+      "" /* flex-wrap: wrap;
+    white-space: initial; */
+    }
+    ${"" /* font-size: 10vw; */}
+  }
+  @media screen and (max-width: 375px) {
+    margin-right: 50rem;
+  }
+
+  ${
+    "" /* @media screen and (max-width: 320px) {
+    margin-right: 25rem;
+    font-size: 8vw 10vh;
+  } */
+  }
+  @media screen and (max-width: 320px) {
+    margin-right: 54rem;
+    font-size: 4vw 1vh;
+  }
 `;
 
 const BottomLogo = styled.div`
   img {
-    width: 15%;
-    height: 140%;
+    width: 20%;
+    height: 30%;
     object-fit: contain;
-    margin-left: 20rem;
+    margin-top: 3.5rem;
+    margin-left: 27rem;
+
+    @media screen and (max-width: 414px) {
+      margin-right: 10rem;
+    }
+    @media screen and (max-width: 375px) {
+      margin-right: 9rem;
+    }
+    @media screen and (max-width: 320px) {
+      margin-right: 7rem;
+    }
+    ${"" /* width: clamp(5rem, 2vw, 2rem); */}
+
+    ${
+      "" /* @media screen and (max-width: 414px) {
+      margin-right: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      padding-left: 0rem;
+    }
+    @media screen and (max-width: 375px) {
+      margin-right: 0rem;
+    }
+    @media screen and (max-width: 320px) {
+      margin-right: 0rem;
+      margin-left: ;
+    }
+    @media screen and (max-width: 280px) {
+      margin-right: 49rem;
+    } */
+    }
+    ${"" /* margin-bottom: 4rem; */}
     ${"" /* margin-bottom: 2rem; */}
   }
 `;
@@ -339,17 +547,24 @@ const Footer = () => {
   return (
     <Section>
       <Container>
-        <HeroSection>
+        {/* <HeroSection>
           <HeroWrapper>
-            <HeroSlider>
-              <HeroImage
-                src={pattern}
-                // alt={slide.alt}
-              />
-              <HeroContent>
-                <h1>Like what you see?</h1>
-                <p>Give us a call (323) 247-9094</p>
-                {/* <Button
+            {slides.map((slide, index) => {
+              return (
+                <HeroSlide key={index}>
+                  {index === current && (
+                    <HeroSlider>
+                      <HeroImage
+                        src={slide.image}
+                        alt={slide.alt}
+                        // alt={slide.alt}
+                      />
+                      <HeroContent>
+                        <h1>{slide.title}</h1>
+                        <p>
+                          <strong>{slide.phone}</strong>
+                        </p> */}
+        {/* <Button
                         data-aos="zoom-out"
                         data-aos-duration="500"
                         data-aos-delay="250"
@@ -362,16 +577,25 @@ const Footer = () => {
                         {slide.label}
                         <Arrow />
                       </Button> */}
-              </HeroContent>
-            </HeroSlider>
+        {/* </HeroContent>
+                    </HeroSlider>
+                  )}
+                </HeroSlide>
+              );
+            })}
           </HeroWrapper>
-        </HeroSection>
+        </HeroSection> */}
         {/* <FooterTop style={{ backgroundImage: `url(${pattern})` }}> */}
         <FooterTop>
+          <TopRow>
+            <h6>
+              <strong>Like what you see?</strong>
+            </h6>
+            <p>
+              <strong>Give us a call (323) 247-9094</strong>
+            </p>
+          </TopRow>
           <Quote>
-            {/* <h6>
-              <strong>VISIT US</strong>
-            </h6> */}
             <ColumnLeft>
               <h5>
                 <strong>HOURS</strong>
@@ -394,9 +618,6 @@ const Footer = () => {
                 <strong>Los Angeles, CA 90031</strong>
               </p>
             </ColumnRight>
-            {/* <p>
-              <strong>(323) 247-9094</strong>
-            </p> */}
           </Quote>
         </FooterTop>
         {/* <FooterInfo>
